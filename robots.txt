@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://haroldsoul.github.io/youin.github.io/sitemap.xml

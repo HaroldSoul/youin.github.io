@@ -1,0 +1,5 @@
+# TEMPLATE ONLY. Not an active app-ads.txt authorization.
+# Replace the placeholder with the publisher ID issued in your AdMob account.
+# Publish as app-ads.txt at the FINAL DEVELOPER WEBSITE HOSTNAME ROOT.
+# Read README.md before publishing; the project subdirectory is insufficient.
+google.com, pub-발급받은번호, DIRECT, f08c47fec0942fa0

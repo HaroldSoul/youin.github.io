@@ -1,0 +1,38 @@
+name: Deploy official website to GitHub Pages
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out public website
+        uses: actions/checkout@v4
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Prepare static public files (no build)
+        run: |
+          mkdir _site
+          cp index.html 404.html robots.txt sitemap.xml .nojekyll _site/
+          cp -R assets privacy support en _site/
+          if [ -f app-ads.txt ]; then cp app-ads.txt _site/; fi
+          if [ -f CNAME ]; then cp CNAME _site/; fi
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
