@@ -66,17 +66,17 @@ python3 -m http.server 8001 --directory "$preview_dir"
 3. GitHub 저장소 Settings → Pages → Source를 **GitHub Actions**로 설정합니다.
 4. `Deploy official website to GitHub Pages` 워크플로 성공과 실제 공개 URL을 확인합니다.
 
-워크플로는 `index.html`, `404.html`, `robots.txt`, `sitemap.xml`, `.nojekyll`, `assets/`, `privacy/`, `support/`, `en/`만 배포합니다. 향후 `CNAME` 또는 실제 `app-ads.txt`가 있으면 포함합니다. README, 문서, 예제 파일, 로컬 캡처는 배포 아티팩트에서 제외합니다. 공개 Git 저장소에 커밋한 파일 자체는 누구나 볼 수 있으므로 비밀키·개인정보·미승인 자산을 커밋하지 마세요.
+워크플로는 `index.html`, `404.html`, `robots.txt`, `sitemap.xml`, `.nojekyll`, `app-ads.txt`, `assets/`, `privacy/`, `support/`, `en/`을 배포합니다. `CNAME`이 있으면 함께 포함합니다. README, 문서, 예제 파일, 로컬 캡처는 배포 아티팩트에서 제외합니다. 공개 Git 저장소에 커밋한 파일 자체는 누구나 볼 수 있으므로 비밀키·개인정보·미승인 자산을 커밋하지 마세요.
 
-## AdMob: 아직 인증 완료가 아닙니다
+## AdMob app-ads.txt
 
-실제 Publisher ID가 아직 없으므로 **최종 `app-ads.txt`는 게시하지 않았습니다.** `app-ads.txt.example`은 형식 안내이며 인증 파일이 아닙니다.
+AdMob Publisher ID `pub-2220559415412771`을 사용한 `app-ads.txt`를 저장소 루트에 게시합니다.
 
 ```text
-google.com, pub-발급받은번호, DIRECT, f08c47fec0942fa0
+google.com, pub-2220559415412771, DIRECT, f08c47fec0942fa0
 ```
 
-`pub-발급받은번호`를 AdMob 계정의 실제 `pub-...` 값으로 바꿔야 합니다. 앱 ID (`ca-app-pub-...~...`)나 광고 단위 ID가 아닙니다.
+현재 공개 파일은 **https://haroldsoul.github.io/youin.github.io/app-ads.txt** 에서 확인할 수 있습니다. 앱 ID (`ca-app-pub-...~...`)나 광고 단위 ID는 포함하지 않습니다.
 
 현재 사이트 hostname은 `haroldsoul.github.io`입니다. AdMob이 개발자 웹사이트에서 일반적으로 확인할 위치는 **https://haroldsoul.github.io/app-ads.txt**입니다. **https://haroldsoul.github.io/youin.github.io/app-ads.txt 만 만들면 hostname 루트의 인증을 해결한 것이 아닙니다.**
 
@@ -85,11 +85,11 @@ google.com, pub-발급받은번호, DIRECT, f08c47fec0942fa0
 1. **YouIN 전용 커스텀 도메인**을 이 저장소에 연결하고 그 도메인 루트 `/app-ads.txt`에 제공합니다.
 2. **HaroldSoul 계정 루트 Pages 사이트**(일반적으로 별도의 `HaroldSoul/HaroldSoul.github.io` 저장소)에서 `/app-ads.txt`를 제공합니다. 이 홈페이지 저장소의 프로젝트 경로와 별개로 설정해야 합니다.
 
-이 작업에서는 다른 계정 루트 사이트나 DNS를 수정하지 않습니다. 공식 참고: [AdMob app-ads.txt 설정](https://support.google.com/admob/answer/9363762?hl=en).
+이 저장소는 YouIN 프로젝트 Pages만 관리하며 다른 계정 루트 사이트나 DNS는 수정하지 않습니다. 공식 참고: [AdMob app-ads.txt 설정](https://support.google.com/admob/answer/9363762?hl=en).
 
 ### Publisher ID와 도메인 결정 후 체크리스트
 
-- [ ] AdMob에서 실제 `pub-...`를 받아 예제의 해당 값만 교체한다.
+- [x] AdMob Publisher ID를 `app-ads.txt`에 반영한다.
 - [ ] 전용 커스텀 도메인 또는 계정 루트 Pages 중 제공 위치를 확정한다.
 - [ ] 그 hostname의 루트 `/app-ads.txt`를 익명 HTTP 요청으로 확인한다. 응답은 200, 본문은 텍스트여야 한다.
 - [ ] App Store / Google Play의 개발자 웹사이트를 해당 도메인으로 설정하고 반영을 확인한다.
