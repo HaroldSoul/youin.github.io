@@ -1,13 +1,14 @@
 @charset "UTF-8";
 :root {
   color-scheme: dark;
-  --bg: #141617;
-  --panel: #1b1e20;
-  --text: #f4f5ed;
-  --muted: #b0b5b6;
-  --line: #383d3f;
-  --lime: #e4fc53;
-  --cyan: #78e7ed;
+  --bg: #121313;
+  --panel: #1a1b1b;
+  --text: #f2efe7;
+  --muted: #aaa9a4;
+  --line: #393a38;
+  --accent: #f2efe7;
+  --accent-ink: #171817;
+  --focus: #d8d4ca;
   --radius: 16px;
   --max: 1200px;
   font-family:
@@ -39,11 +40,11 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 a:hover {
-  color: var(--lime);
+  color: var(--text);
 }
 a:focus-visible,
 summary:focus-visible {
-  outline: 3px solid var(--cyan);
+  outline: 3px solid var(--focus);
   outline-offset: 6px;
   border-radius: 3px;
 }
@@ -70,7 +71,7 @@ p {
   overflow-wrap: break-word;
 }
 ::selection {
-  background: var(--lime);
+  background: var(--accent);
   color: var(--bg);
 }
 .wrap {
@@ -83,12 +84,12 @@ p {
   top: -100px;
   z-index: 10;
   padding: 12px 20px;
-  background: var(--lime);
-  color: #141617;
+  background: var(--accent);
+  color: var(--accent-ink);
 }
 .skip:focus {
   top: 12px;
-  color: #141617;
+  color: var(--accent-ink);
 }
 .header {
   min-height: 90px;
@@ -109,6 +110,7 @@ p {
   width: 35px;
   height: 35px;
   border-radius: 8px;
+  filter: grayscale(1) contrast(1.08);
 }
 .brand span {
   font-size: 25px;
@@ -117,7 +119,7 @@ p {
 }
 .brand i {
   font-style: normal;
-  color: var(--lime);
+  color: inherit;
 }
 .navigation {
   display: flex;
@@ -137,7 +139,7 @@ p {
 .languages {
   display: flex;
   gap: 2px;
-  border: 1px solid #53595b;
+  border: 1px solid #50514f;
   border-radius: 7px;
   padding: 3px;
 }
@@ -177,7 +179,7 @@ p {
   content: "";
   width: 20px;
   height: 2px;
-  background: var(--cyan);
+  background: var(--muted);
 }
 .hero h1 {
   font-size: clamp(40px, 4.65vw, 64px);
@@ -185,7 +187,7 @@ p {
   letter-spacing: -0.065em;
 }
 .hero h1 span {
-  color: var(--lime);
+  color: var(--text);
 }
 .hero-copy > p {
   font-size: 17px;
@@ -205,15 +207,15 @@ p {
   text-decoration: none;
   font-size: 15px;
   font-weight: 750;
-  background: var(--lime);
-  color: var(--bg);
+  background: var(--accent);
+  color: var(--accent-ink);
   transition:
     transform 0.18s ease,
     background 0.18s ease;
 }
 .button:hover {
-  background: #f0ff88;
-  color: var(--bg);
+  background: #dcd8cf;
+  color: var(--accent-ink);
   transform: translateY(-2px);
 }
 .button:active {
@@ -256,7 +258,7 @@ p {
   font-size: 11px;
   font-weight: 600;
   color: var(--muted);
-  border: 1px solid #4c5355;
+  border: 1px solid #4d4e4c;
   border-radius: 4px;
   padding: 3px 7px;
 }
@@ -292,7 +294,7 @@ p {
 }
 .game .game-note {
   font-size: 12px;
-  color: #a4abac;
+  color: #a8a7a2;
   margin-top: 13px;
 }
 .play-note {
@@ -300,7 +302,7 @@ p {
   color: var(--muted);
   margin-top: 32px;
   padding-left: 15px;
-  border-left: 2px solid var(--cyan);
+  border-left: 2px solid #77766f;
 }
 .privacy-band {
   display: grid;
@@ -310,7 +312,7 @@ p {
   padding-block: 70px 85px;
 }
 .privacy-label {
-  color: var(--cyan);
+  color: var(--muted);
   font: 12px/1.4 monospace;
   letter-spacing: 0.1em;
   margin-bottom: 18px;
@@ -360,7 +362,7 @@ p {
   border-bottom: 1px solid var(--line);
 }
 .page-heading .kicker {
-  color: var(--cyan);
+  color: var(--muted);
   font: 12px/1.4 monospace;
   letter-spacing: 0.13em;
   margin-bottom: 18px;
@@ -424,7 +426,7 @@ p {
 .document p,
 .document li {
   font-size: 16px;
-  color: #c6cacb;
+  color: #c8c6bf;
   line-height: 1.9;
 }
 .document p + p {
@@ -437,7 +439,7 @@ p {
   margin-top: 9px;
 }
 .document a:not(.button) {
-  color: var(--cyan);
+  color: var(--text);
   overflow-wrap: anywhere;
 }
 .document strong {
@@ -445,10 +447,10 @@ p {
 }
 .notice {
   padding: 22px 25px;
-  border: 1px solid #4d5751;
-  border-left: 3px solid var(--lime);
+  border: 1px solid #4f504d;
+  border-left: 3px solid #77766f;
   border-radius: 0 10px 10px 0;
-  background: #1c211f;
+  background: #1e1f1e;
   margin-bottom: 36px;
 }
 .notice p {
@@ -480,7 +482,7 @@ p {
   position: absolute;
   right: 3px;
   top: 22px;
-  color: var(--cyan);
+  color: var(--text);
   font-size: 25px;
   font-weight: 400;
 }
@@ -489,7 +491,7 @@ p {
 }
 .answer {
   padding: 0 25px 25px 0;
-  color: #c6cacb;
+  color: #c8c6bf;
   font-size: 15px;
   line-height: 1.9;
 }
@@ -529,7 +531,7 @@ p {
 .error-code {
   font: 900 clamp(90px, 16vw, 170px) / 1 Arial;
   letter-spacing: -0.08em;
-  color: var(--lime);
+  color: var(--text);
   margin-bottom: 24px;
 }
 .error-main h1 {
@@ -873,7 +875,7 @@ p {
   margin-top: 12px;
 }
 .game-screenshot:hover > span {
-  color: var(--cyan);
+  color: var(--text);
 }
 .screenshots-note {
   margin-top: 16px;
