@@ -1,289 +1,182 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="home-scroll">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#121313" />
     <title>YOU IN? - Think of a friend. Call them out.</title>
-    <meta
-      name="description"
-      content="A social party game for friends. Explore Caught You, Last Kick, Who More?, and Punch King. Coming to iOS and Android."
-    />
-    <link
-      rel="canonical"
-      href="https://haroldsoul.github.io/youin.github.io/en/"
-    />
+    <meta name="description" content="A social party game for friends. Explore Caught You, Last Kick, Who More?, and Punch King. Coming to iOS and Android." />
+    <link rel="canonical" href="https://haroldsoul.github.io/youin.github.io/en/" />
     <link rel="alternate" hreflang="ko" href="../" />
     <link rel="alternate" hreflang="en" href="./" />
     <link rel="alternate" hreflang="x-default" href="../" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="YOU IN?" />
-    <meta
-      property="og:title"
-      content="YOU IN? - Think of a friend. Call them out."
-    />
-    <meta
-      property="og:description"
-      content="A social party game for friends. Explore Caught You, Last Kick, Who More?, and Punch King. Coming to iOS and Android."
-    />
-    <meta
-      property="og:url"
-      content="https://haroldsoul.github.io/youin.github.io/en/"
-    />
+    <meta property="og:title" content="YOU IN? - Think of a friend. Call them out." />
+    <meta property="og:description" content="A social party game for friends. Explore Caught You, Last Kick, Who More?, and Punch King. Coming to iOS and Android." />
+    <meta property="og:url" content="https://haroldsoul.github.io/youin.github.io/en/" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:locale:alternate" content="ko_KR" />
-    <meta
-      property="og:image"
-      content="https://haroldsoul.github.io/youin.github.io/assets/og-card.png?v=20260922-monochrome"
-    />
+    <meta property="og:image" content="https://haroldsoul.github.io/youin.github.io/assets/og-card.png?v=20260922-scenes" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta
-      property="og:image:alt"
-      content="YOU IN? - Think of a friend. Call them out."
-    />
+    <meta property="og:image:alt" content="YOU IN? - Think of a friend. Call them out." />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" type="image/svg+xml" href="../assets/app-icon.svg" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="../assets/favicon-32.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="../assets/apple-touch-icon.png"
-    />
-    <link rel="stylesheet" href="../assets/styles.css?v=20260922-monochrome" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png" />
+    <link rel="stylesheet" href="../assets/styles.css?v=20260922-paging" />
     <script src="../assets/language.js"></script>
     <script src="../assets/config.js" defer></script>
     <script src="../assets/site.js" defer></script>
   </head>
-  <body>
+  <body class="home-page">
     <a class="skip" href="#main">Skip to content</a>
     <header class="header wrap">
-      <a class="brand" href="./" aria-label="YOU IN? home"
-        ><img src="../assets/app-icon.svg" width="35" height="35" alt="" /><span
-          >YOU IN<i>?</i></span
-        ></a
-      >
+      <a class="brand" href="#intro" aria-label="YOU IN? home">
+        <img src="../assets/app-icon.svg" width="35" height="35" alt="" />
+        <span>YOU IN<i>?</i></span>
+      </a>
       <nav class="navigation" aria-label="Main navigation">
-        <a class="nav-games" href="./#games">Games</a>
+        <a class="nav-games" href="#caught">Games</a>
         <a class="nav-privacy" href="privacy/">Privacy</a>
         <a class="nav-support" href="support/">Support</a>
         <div class="languages" role="group" aria-label="Language">
-          <a
-            href="../?lang=ko"
-            data-language="ko"
-            lang="ko"
-            hreflang="ko"
-            aria-label="한국어"
-            >KO</a
-          >
-          <a
-            href="./?lang=en"
-            data-language="en"
-            lang="en"
-            hreflang="en"
-            aria-label="English"
-            aria-current="true"
-            >EN</a
-          >
+          <a href="../?lang=ko" data-language="ko" lang="ko" hreflang="ko" aria-label="한국어">KO</a>
+          <a href="./?lang=en" data-language="en" lang="en" hreflang="en" aria-label="English" aria-current="true">EN</a>
         </div>
       </nav>
     </header>
-    <main id="main" tabindex="-1">
-      <div class="wrap">
-        <section class="hero" aria-labelledby="hero-title">
-          <div class="hero-copy">
+
+    <nav class="page-rail" aria-label="Homepage sections">
+      <a href="#intro" data-scene-link="intro" aria-label="Introduction"><span>00</span><i>INTRO</i></a>
+      <a href="#caught" data-scene-link="caught" aria-label="Caught You"><span>01</span><i>CAUGHT</i></a>
+      <a href="#last-kick" data-scene-link="last-kick" aria-label="Last Kick"><span>02</span><i>KICK</i></a>
+      <a href="#who-more" data-scene-link="who-more" aria-label="Who More?"><span>03</span><i>WHO</i></a>
+      <a href="#punch-king" data-scene-link="punch-king" aria-label="Punch King"><span>04</span><i>PUNCH</i></a>
+      <a href="#privacy" data-scene-link="privacy" aria-label="Privacy principle"><span>05</span><i>DEVICE</i></a>
+      <a href="#release" data-scene-link="release" aria-label="Release information"><span>06</span><i>READY</i></a>
+    </nav>
+
+    <main id="main" class="home-main" tabindex="-1">
+      <section class="scene scene-hero" id="intro" data-scene aria-labelledby="hero-title">
+        <div class="wrap scene-hero-grid">
+          <div class="scene-hero-copy">
             <div class="eyebrow">THE PARTY STARTS WITH YOU.</div>
-            <h1 id="hero-title">
-              Think of a friend.<br /><span>Call them out.</span>
-            </h1>
-            <p>
-              Questions, reactions, and playful penalties.<br />A social party
-              game made for your kind of friends.
-            </p>
-            <a class="button" href="#games"
-              >Meet the games<span class="arrow" aria-hidden="true">↗</span></a
-            >
+            <h1 id="hero-title">Think of a friend.<br />Call them out.</h1>
+            <p>Questions, reactions, and playful penalties.<br />A social party game for your kind of friends.</p>
+            <a class="button" href="#caught">Meet the games <span class="arrow" aria-hidden="true">↓</span></a>
           </div>
-          <figure class="app-preview">
-            <div class="preview-screens">
-              <img
-                src="../assets/screenshots/home.png"
-                width="390"
-                height="844"
-                fetchpriority="high"
-                alt="YouIN app home screen with four games (Korean UI)"
-              />
-              <img
-                src="../assets/screenshots/last-kick.png"
-                width="390"
-                height="844"
-                alt="Last Kick penalty shootout result screen (Korean UI)"
-              />
+          <figure class="scene-hero-visual">
+            <div class="hero-phone hero-phone-back">
+              <img src="../assets/screenshots/home.png" width="390" height="844" fetchpriority="high" alt="YouIN app home screen with four games in Korean" />
             </div>
-            <figcaption>A look inside YOU IN? · Korean app screens</figcaption>
+            <div class="hero-phone hero-phone-front">
+              <img src="../assets/screenshots/last-kick.png" width="390" height="844" fetchpriority="high" alt="Last Kick penalty shootout result screen in Korean" />
+            </div>
+            <figcaption>ACTUAL APP SCREENS / DEVELOPMENT BUILD</figcaption>
           </figure>
-        </section>
-        <div class="release-strip">
-          <p>Your next game night is on its way.</p>
-          <div class="release-platforms">
-            <div class="platform">
-              <strong>iOS</strong><span>COMING SOON</span>
-            </div>
-            <div class="platform">
-              <strong>Android</strong><span>COMING SOON</span>
-            </div>
-          </div>
+          <div class="scene-counter" aria-hidden="true"><span>00</span><b>06</b></div>
         </div>
-        <section class="section" id="games" aria-labelledby="games-title">
-          <h2 id="games-title">Same friends. New stories.</h2>
-          <p class="section-lead">
-            Four ways to turn “one more round” into a plan.
-          </p>
-          <p class="screenshots-note">
-            Screens from the app in development. Final release screens may vary.
-          </p>
-          <div class="games-grid">
-            <article class="game">
-              <a
-                class="game-screenshot"
-                href="../assets/screenshots/caught-you.png"
-                target="_blank"
-                rel="noopener"
-                aria-label="Caught You: view full screenshot in a new tab"
-              >
-                <img
-                  src="../assets/screenshots/caught-you.png"
-                  width="390"
-                  height="844"
-                  loading="lazy"
-                  decoding="async"
-                  alt="Game entry screen explaining spoken questions and camera reactions (Korean UI)"
-                />
-                <span>View screenshot <span aria-hidden="true">↗</span></span>
-              </a>
-              <h3>Caught You</h3>
-              <p>
-                A question, a reaction, and a very suspicious friend. Put each
-                other on the spot.
-              </p>
-              <p class="game-note">
-                For entertainment. Not a scientific lie detector.
-              </p>
-            </article>
-            <article class="game">
-              <a
-                class="game-screenshot"
-                href="../assets/screenshots/last-kick.png"
-                target="_blank"
-                rel="noopener"
-                aria-label="Last Kick: view full screenshot in a new tab"
-              >
-                <img
-                  src="../assets/screenshots/last-kick.png"
-                  width="390"
-                  height="844"
-                  loading="lazy"
-                  decoding="async"
-                  alt="Penalty shootout showing the kicker win result (Korean UI)"
-                />
-                <span>View screenshot <span aria-hidden="true">↗</span></span>
-              </a>
-              <h3>Last Kick</h3>
-              <p>
-                A little rivalry, one last challenge. Bring your friends into
-                the next round.
-              </p>
-            </article>
-            <article class="game">
-              <a
-                class="game-screenshot"
-                href="../assets/screenshots/who-more.png"
-                target="_blank"
-                rel="noopener"
-                aria-label="Who More?: view full screenshot in a new tab"
-              >
-                <img
-                  src="../assets/screenshots/who-more.png"
-                  width="390"
-                  height="844"
-                  loading="lazy"
-                  decoding="async"
-                  alt="Game introduction asking whose taste matches you today (Korean UI)"
-                />
-                <span>View screenshot <span aria-hidden="true">↗</span></span>
-              </a>
-              <h3>Who More?</h3>
-              <p>
-                Who will the fictional NPC pick? A different taste in every
-                game.
-              </p>
-              <p class="game-note">
-                Fictional preferences, never an objective looks rating.
-              </p>
-            </article>
-            <article class="game">
-              <a
-                class="game-screenshot"
-                href="../assets/screenshots/punch-king.png"
-                target="_blank"
-                rel="noopener"
-                aria-label="Punch King: view full screenshot in a new tab"
-              >
-                <img
-                  src="../assets/screenshots/punch-king.png"
-                  width="390"
-                  height="844"
-                  loading="lazy"
-                  decoding="async"
-                  alt="Ready screen with a wall and punch gauge (Korean UI)"
-                />
-                <span>View screenshot <span aria-hidden="true">↗</span></span>
-              </a>
-              <h3>Punch King</h3>
-              <p>
-                Step up for a playful challenge. See who gets the last laugh.
-              </p>
-            </article>
+      </section>
+
+      <section class="scene game-scene scene-caught" id="caught" data-scene aria-labelledby="caught-title">
+        <div class="wrap game-scene-grid">
+          <div class="game-scene-copy">
+            <p class="scene-label"><span>01</span> REACTION GAME</p>
+            <h2 id="caught-title">Caught You</h2>
+            <p class="scene-tagline">Your question.<br />The camera catches the reaction.</p>
+            <p class="scene-description">One question. One suspicious expression. Put a friend on the spot and let their reaction play the round.</p>
+            <p class="game-note">Entertainment only. It is not a scientific lie detector.</p>
           </div>
-          <p class="play-note">
-            Play for laughs, with everyone’s consent. Anyone can pass on a
-            question or a penalty.
-          </p>
-        </section>
-        <section class="privacy-band" aria-labelledby="privacy-title">
+          <a class="game-screenshot scene-device" href="../assets/screenshots/caught-you.png" target="_blank" rel="noopener" aria-label="Caught You: view full screenshot in a new tab">
+            <img src="../assets/screenshots/caught-you.png" width="390" height="844" loading="lazy" decoding="async" alt="Game entry screen explaining spoken questions and camera reactions in Korean" />
+            <span>Actual app screen <span aria-hidden="true">↗</span></span>
+          </a>
+          <div class="scene-word" aria-hidden="true">CAUGHT</div>
+          <div class="scene-counter" aria-hidden="true"><span>01</span><b>06</b></div>
+        </div>
+      </section>
+
+      <section class="scene game-scene scene-kick" id="last-kick" data-scene aria-labelledby="kick-title">
+        <div class="wrap game-scene-grid scene-grid-reverse">
+          <div class="game-scene-copy">
+            <p class="scene-label"><span>02</span> NEARBY BATTLE</p>
+            <h2 id="kick-title">Last Kick</h2>
+            <p class="scene-tagline">Nobody knows<br />until the final kick.</p>
+            <p class="scene-description">Connect nearby, play a quick round, and keep teasing the result long after the game is over.</p>
+          </div>
+          <a class="game-screenshot scene-device" href="../assets/screenshots/last-kick.png" target="_blank" rel="noopener" aria-label="Last Kick: view full screenshot in a new tab">
+            <img src="../assets/screenshots/last-kick.png" width="390" height="844" loading="lazy" decoding="async" alt="Penalty shootout showing the kicker win result in Korean" />
+            <span>Actual app screen <span aria-hidden="true">↗</span></span>
+          </a>
+          <div class="scene-word" aria-hidden="true">LAST KICK</div>
+          <div class="scene-counter" aria-hidden="true"><span>02</span><b>06</b></div>
+        </div>
+      </section>
+
+      <section class="scene game-scene scene-who" id="who-more" data-scene aria-labelledby="who-title">
+        <div class="wrap game-scene-grid">
+          <div class="game-scene-copy">
+            <p class="scene-label"><span>03</span> RANDOM CHOICE</p>
+            <h2 id="who-title">Who More?</h2>
+            <p class="scene-tagline">Whose type<br />am I today?</p>
+            <p class="scene-description">A fictional NPC with a different taste every round. The choice is fun precisely because it means nothing.</p>
+            <p class="game-note">Fictional preferences, never an objective looks rating.</p>
+          </div>
+          <a class="game-screenshot scene-device" href="../assets/screenshots/who-more.png" target="_blank" rel="noopener" aria-label="Who More?: view full screenshot in a new tab">
+            <img src="../assets/screenshots/who-more.png" width="390" height="844" loading="lazy" decoding="async" alt="Game introduction asking whose taste matches you today in Korean" />
+            <span>Actual app screen <span aria-hidden="true">↗</span></span>
+          </a>
+          <div class="scene-word" aria-hidden="true">WHO MORE</div>
+          <div class="scene-counter" aria-hidden="true"><span>03</span><b>06</b></div>
+        </div>
+      </section>
+
+      <section class="scene game-scene scene-punch" id="punch-king" data-scene aria-labelledby="punch-title">
+        <div class="wrap game-scene-grid scene-grid-reverse">
+          <div class="game-scene-copy">
+            <p class="scene-label"><span>04</span> QUICK CHALLENGE</p>
+            <h2 id="punch-title">Punch King</h2>
+            <p class="scene-tagline">One challenge.<br />One big laugh.</p>
+            <p class="scene-description">Step up while your friends watch, take a playful swing, and turn a quick challenge into the loudest moment.</p>
+          </div>
+          <a class="game-screenshot scene-device" href="../assets/screenshots/punch-king.png" target="_blank" rel="noopener" aria-label="Punch King: view full screenshot in a new tab">
+            <img src="../assets/screenshots/punch-king.png" width="390" height="844" loading="lazy" decoding="async" alt="Ready screen with a wall and punch gauge in Korean" />
+            <span>Actual app screen <span aria-hidden="true">↗</span></span>
+          </a>
+          <div class="scene-word" aria-hidden="true">PUNCH</div>
+          <div class="scene-counter" aria-hidden="true"><span>04</span><b>06</b></div>
+        </div>
+      </section>
+
+      <section class="scene privacy-scene" id="privacy" data-scene aria-labelledby="privacy-title">
+        <div class="wrap privacy-scene-grid">
           <div>
-            <div class="privacy-label">YOUR CAMERA. YOUR DEVICE.</div>
-            <h2 id="privacy-title">
-              The fun stays with friends.<br />The camera data, on your device.
-            </h2>
+            <p class="scene-label"><span>05</span> YOUR CAMERA. YOUR DEVICE.</p>
+            <h2 id="privacy-title">The fun stays with friends.<br />Camera data stays<br />on your device.</h2>
           </div>
-          <div>
-            <p>
-              Camera footage and photos are processed on your device for
-              reaction effects and gameplay. Original footage and photos are not
-              uploaded to our servers or stored permanently. Temporary
-              face-analysis data is designed to be discarded after a round or
-              when you exit the game.
-            </p>
-            <a class="text-link" href="privacy/"
-              >Read the privacy policy <span aria-hidden="true">↗</span></a
-            >
+          <div class="privacy-scene-copy">
+            <p>Camera footage and photos are processed on your device for reaction effects and gameplay. Originals are not uploaded to our servers or stored permanently.</p>
+            <p>Temporary face-analysis data is designed to be discarded after a round or when you exit the game.</p>
+            <a class="button button-outline" href="privacy/">Privacy policy <span aria-hidden="true">↗</span></a>
           </div>
-        </section>
-      </div>
+          <div class="privacy-orbit" aria-hidden="true"><span>ON DEVICE</span><i></i><b>LOCAL</b></div>
+          <div class="scene-counter" aria-hidden="true"><span>05</span><b>06</b></div>
+        </div>
+      </section>
+
+      <section class="scene release-scene" id="release" data-scene aria-labelledby="release-title">
+        <div class="wrap release-scene-inner">
+          <p class="scene-label"><span>06</span> COMING SOON</p>
+          <h2 id="release-title">Next game night.<br />YOU IN?</h2>
+          <p>Getting ready for iOS and Android.</p>
+          <div class="release-actions"><span>iOS / COMING SOON</span><span>Android / COMING SOON</span></div>
+          <nav class="release-links" aria-label="Footer"><a href="privacy/">Privacy policy</a><a href="support/">Support</a></nav>
+          <footer class="scene-footer"><strong>YOU IN?</strong><span>© 2026 YouIN</span></footer>
+          <div class="scene-counter" aria-hidden="true"><span>06</span><b>06</b></div>
+        </div>
+      </section>
     </main>
-    <footer class="footer wrap">
-      <div class="footer-brand">
-        <strong>YOU IN?</strong><span>© 2026 YouIN</span>
-      </div>
-      <nav class="footer-links" aria-label="Footer">
-        <a href="privacy/">Privacy policy</a><a href="support/">Support</a>
-      </nav>
-    </footer>
   </body>
 </html>

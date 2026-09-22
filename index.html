@@ -1,289 +1,182 @@
 <!doctype html>
-<html lang="ko">
+<html lang="ko" class="home-scroll">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#121313" />
     <title>YOU IN? - 떠오르는 친구가 있다면, 지목해.</title>
-    <meta
-      name="description"
-      content="친구 사이의 질문, 반응, 벌칙을 짧고 웃긴 도전으로. 딱 걸렸어, 라스트 킥, 누가 더?, 펀치 킹. iOS · Android 출시 예정."
-    />
-    <link
-      rel="canonical"
-      href="https://haroldsoul.github.io/youin.github.io/"
-    />
+    <meta name="description" content="친구 사이의 질문, 반응, 벌칙을 짧고 웃긴 도전으로. 딱 걸렸어, 라스트 킥, 누가 더?, 펀치 킹. iOS · Android 출시 예정." />
+    <link rel="canonical" href="https://haroldsoul.github.io/youin.github.io/" />
     <link rel="alternate" hreflang="ko" href="./" />
     <link rel="alternate" hreflang="en" href="en/" />
     <link rel="alternate" hreflang="x-default" href="./" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="YOU IN?" />
-    <meta
-      property="og:title"
-      content="YOU IN? - 떠오르는 친구가 있다면, 지목해."
-    />
-    <meta
-      property="og:description"
-      content="친구 사이의 질문, 반응, 벌칙을 짧고 웃긴 도전으로. 딱 걸렸어, 라스트 킥, 누가 더?, 펀치 킹. iOS · Android 출시 예정."
-    />
-    <meta
-      property="og:url"
-      content="https://haroldsoul.github.io/youin.github.io/"
-    />
+    <meta property="og:title" content="YOU IN? - 떠오르는 친구가 있다면, 지목해." />
+    <meta property="og:description" content="친구 사이의 질문, 반응, 벌칙을 짧고 웃긴 도전으로. 딱 걸렸어, 라스트 킥, 누가 더?, 펀치 킹. iOS · Android 출시 예정." />
+    <meta property="og:url" content="https://haroldsoul.github.io/youin.github.io/" />
     <meta property="og:locale" content="ko_KR" />
     <meta property="og:locale:alternate" content="en_US" />
-    <meta
-      property="og:image"
-      content="https://haroldsoul.github.io/youin.github.io/assets/og-card.png?v=20260922-monochrome"
-    />
+    <meta property="og:image" content="https://haroldsoul.github.io/youin.github.io/assets/og-card.png?v=20260922-scenes" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta
-      property="og:image:alt"
-      content="YOU IN? - 떠오르는 친구가 있다면, 지목해."
-    />
+    <meta property="og:image:alt" content="YOU IN? - 떠오르는 친구가 있다면, 지목해." />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" type="image/svg+xml" href="assets/app-icon.svg" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="assets/favicon-32.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="assets/apple-touch-icon.png"
-    />
-    <link rel="stylesheet" href="assets/styles.css?v=20260922-monochrome" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+    <link rel="stylesheet" href="assets/styles.css?v=20260922-paging" />
     <script src="assets/language.js"></script>
     <script src="assets/config.js" defer></script>
     <script src="assets/site.js" defer></script>
   </head>
-  <body>
+  <body class="home-page">
     <a class="skip" href="#main">본문 바로가기</a>
     <header class="header wrap">
-      <a class="brand" href="./" aria-label="YOU IN? 홈"
-        ><img src="assets/app-icon.svg" width="35" height="35" alt="" /><span
-          >YOU IN<i>?</i></span
-        ></a
-      >
+      <a class="brand" href="#intro" aria-label="YOU IN? 홈">
+        <img src="assets/app-icon.svg" width="35" height="35" alt="" />
+        <span>YOU IN<i>?</i></span>
+      </a>
       <nav class="navigation" aria-label="주 메뉴">
-        <a class="nav-games" href="./#games">게임 소개</a>
+        <a class="nav-games" href="#caught">게임 소개</a>
         <a class="nav-privacy" href="privacy/">개인정보</a>
         <a class="nav-support" href="support/">사용자 지원</a>
         <div class="languages" role="group" aria-label="언어 선택">
-          <a
-            href="./?lang=ko"
-            data-language="ko"
-            lang="ko"
-            hreflang="ko"
-            aria-label="한국어"
-            aria-current="true"
-            >KO</a
-          >
-          <a
-            href="en/?lang=en"
-            data-language="en"
-            lang="en"
-            hreflang="en"
-            aria-label="English"
-            >EN</a
-          >
+          <a href="./?lang=ko" data-language="ko" lang="ko" hreflang="ko" aria-label="한국어" aria-current="true">KO</a>
+          <a href="en/?lang=en" data-language="en" lang="en" hreflang="en" aria-label="English">EN</a>
         </div>
       </nav>
     </header>
-    <main id="main" tabindex="-1">
-      <div class="wrap">
-        <section class="hero" aria-labelledby="hero-title">
-          <div class="hero-copy">
+
+    <nav class="page-rail" aria-label="홈페이지 섹션">
+      <a href="#intro" data-scene-link="intro" aria-label="첫 화면"><span>00</span><i>INTRO</i></a>
+      <a href="#caught" data-scene-link="caught" aria-label="딱 걸렸어"><span>01</span><i>CAUGHT</i></a>
+      <a href="#last-kick" data-scene-link="last-kick" aria-label="라스트 킥"><span>02</span><i>KICK</i></a>
+      <a href="#who-more" data-scene-link="who-more" aria-label="누가 더?"><span>03</span><i>WHO</i></a>
+      <a href="#punch-king" data-scene-link="punch-king" aria-label="펀치 킹"><span>04</span><i>PUNCH</i></a>
+      <a href="#privacy" data-scene-link="privacy" aria-label="개인정보 원칙"><span>05</span><i>DEVICE</i></a>
+      <a href="#release" data-scene-link="release" aria-label="출시 안내"><span>06</span><i>READY</i></a>
+    </nav>
+
+    <main id="main" class="home-main" tabindex="-1">
+      <section class="scene scene-hero" id="intro" data-scene aria-labelledby="hero-title">
+        <div class="wrap scene-hero-grid">
+          <div class="scene-hero-copy">
             <div class="eyebrow">THE PARTY STARTS WITH YOU.</div>
-            <h1 id="hero-title">
-              떠오르는 친구가<br />있다면, <span>지목해.</span>
-            </h1>
-            <p>
-              질문도, 반응도, 벌칙도 놀이가 되는 곳.<br />친구와 함께하는 소셜
-              파티 게임, YOU IN?
-            </p>
-            <a class="button" href="#games"
-              >어떤 게임이 있나요?<span class="arrow" aria-hidden="true"
-                >↗</span
-              ></a
-            >
+            <h1 id="hero-title">떠오르는 친구가<br />있다면, 지목해.</h1>
+            <p>질문도, 반응도, 벌칙도 놀이가 되는 곳.<br />친구와 함께하는 소셜 파티 게임.</p>
+            <a class="button" href="#caught">게임 고르기 <span class="arrow" aria-hidden="true">↓</span></a>
           </div>
-          <figure class="app-preview">
-            <div class="preview-screens">
-              <img
-                src="assets/screenshots/home.png"
-                width="390"
-                height="844"
-                fetchpriority="high"
-                alt="네 가지 게임이 있는 YouIN 앱 홈 화면"
-              />
-              <img
-                src="assets/screenshots/last-kick.png"
-                width="390"
-                height="844"
-                alt="라스트 킥의 페널티킥 결과 화면"
-              />
+          <figure class="scene-hero-visual">
+            <div class="hero-phone hero-phone-back">
+              <img src="assets/screenshots/home.png" width="390" height="844" fetchpriority="high" alt="네 가지 게임이 있는 YouIN 앱 홈 화면" />
             </div>
-            <figcaption>YOU IN? 실제 앱 화면</figcaption>
+            <div class="hero-phone hero-phone-front">
+              <img src="assets/screenshots/last-kick.png" width="390" height="844" fetchpriority="high" alt="라스트 킥의 페널티킥 결과 화면" />
+            </div>
+            <figcaption>ACTUAL APP SCREENS / DEVELOPMENT BUILD</figcaption>
           </figure>
-        </section>
-        <div class="release-strip">
-          <p>우리의 다음 모임을 위해, 준비 중.</p>
-          <div class="release-platforms">
-            <div class="platform">
-              <strong>iOS</strong><span>출시 예정</span>
-            </div>
-            <div class="platform">
-              <strong>Android</strong><span>출시 예정</span>
-            </div>
-          </div>
+          <div class="scene-counter" aria-hidden="true"><span>00</span><b>06</b></div>
         </div>
-        <section class="section" id="games" aria-labelledby="games-title">
-          <h2 id="games-title">늘 보던 친구, 처음 보는 반응.</h2>
-          <p class="section-lead">
-            분위기에 맞게 골라요. 한 판만 하기엔 아쉬울 테니까.
-          </p>
-          <p class="screenshots-note">
-            개발 중인 앱의 실제 화면입니다. 출시 버전에서는 달라질 수 있습니다.
-          </p>
-          <div class="games-grid">
-            <article class="game">
-              <a
-                class="game-screenshot"
-                href="assets/screenshots/caught-you.png"
-                target="_blank"
-                rel="noopener"
-                aria-label="딱 걸렸어 스크린샷 크게 보기 (새 탭)"
-              >
-                <img
-                  src="assets/screenshots/caught-you.png"
-                  width="390"
-                  height="844"
-                  loading="lazy"
-                  decoding="async"
-                  alt="질문은 직접, 표정은 카메라라는 안내가 있는 게임 시작 화면"
-                />
-                <span
-                  >스크린샷 크게 보기 <span aria-hidden="true">↗</span></span
-                >
-              </a>
-              <h3>딱 걸렸어</h3>
-              <p>질문 하나에 흔들리는 표정. 친구의 반응이 게임이 되는 순간.</p>
-              <p class="game-note">
-                과학적 거짓말 탐지가 아닌 오락용 게임입니다.
-              </p>
-            </article>
-            <article class="game">
-              <a
-                class="game-screenshot"
-                href="assets/screenshots/last-kick.png"
-                target="_blank"
-                rel="noopener"
-                aria-label="라스트 킥 스크린샷 크게 보기 (새 탭)"
-              >
-                <img
-                  src="assets/screenshots/last-kick.png"
-                  width="390"
-                  height="844"
-                  loading="lazy"
-                  decoding="async"
-                  alt="페널티킥 경기의 키커 승리 결과 화면"
-                />
-                <span
-                  >스크린샷 크게 보기 <span aria-hidden="true">↗</span></span
-                >
-              </a>
-              <h3>라스트 킥</h3>
-              <p>마지막까지 방심 금지. 친구와 벌이는 짧고 짜릿한 한 판.</p>
-            </article>
-            <article class="game">
-              <a
-                class="game-screenshot"
-                href="assets/screenshots/who-more.png"
-                target="_blank"
-                rel="noopener"
-                aria-label="누가 더? 스크린샷 크게 보기 (새 탭)"
-              >
-                <img
-                  src="assets/screenshots/who-more.png"
-                  width="390"
-                  height="844"
-                  loading="lazy"
-                  decoding="async"
-                  alt="거리 배경과 오늘의 나, 누구의 취향일까라는 게임 안내 화면"
-                />
-                <span
-                  >스크린샷 크게 보기 <span aria-hidden="true">↗</span></span
-                >
-              </a>
-              <h3>누가 더?</h3>
-              <p>이번 NPC의 취향은 누구 쪽? 매 게임 달라지는 엉뚱한 선택.</p>
-              <p class="game-note">
-                가상의 취향이며 객관적인 외모 평가가 아닙니다.
-              </p>
-            </article>
-            <article class="game">
-              <a
-                class="game-screenshot"
-                href="assets/screenshots/punch-king.png"
-                target="_blank"
-                rel="noopener"
-                aria-label="펀치 킹 스크린샷 크게 보기 (새 탭)"
-              >
-                <img
-                  src="assets/screenshots/punch-king.png"
-                  width="390"
-                  height="844"
-                  loading="lazy"
-                  decoding="async"
-                  alt="벽과 펀치 게이지가 보이는 READY 화면"
-                />
-                <span
-                  >스크린샷 크게 보기 <span aria-hidden="true">↗</span></span
-                >
-              </a>
-              <h3>펀치 킹</h3>
-              <p>한 번의 도전에 웃음 한 방. 친구들과 가볍게 즐기는 승부.</p>
-            </article>
+      </section>
+
+      <section class="scene game-scene scene-caught" id="caught" data-scene aria-labelledby="caught-title">
+        <div class="wrap game-scene-grid">
+          <div class="game-scene-copy">
+            <p class="scene-label"><span>01</span> REACTION GAME</p>
+            <h2 id="caught-title">딱 걸렸어</h2>
+            <p class="scene-tagline">질문은 직접.<br />표정은 카메라가.</p>
+            <p class="scene-description">질문 하나에 흔들리는 표정. 친구의 반응이 그대로 게임이 되는 순간.</p>
+            <p class="game-note">오락용 게임이며 과학적 거짓말 탐지기가 아닙니다.</p>
           </div>
-          <p class="play-note">
-            함께 웃기 위한 게임이에요. 서로 동의한 만큼만 즐기고, 불편한
-            질문이나 벌칙은 언제든 건너뛰세요.
-          </p>
-        </section>
-        <section class="privacy-band" aria-labelledby="privacy-title">
+          <a class="game-screenshot scene-device" href="assets/screenshots/caught-you.png" target="_blank" rel="noopener" aria-label="딱 걸렸어 스크린샷 크게 보기 (새 탭)">
+            <img src="assets/screenshots/caught-you.png" width="390" height="844" loading="lazy" decoding="async" alt="질문은 직접, 표정은 카메라라는 안내가 있는 게임 시작 화면" />
+            <span>실제 앱 화면 <span aria-hidden="true">↗</span></span>
+          </a>
+          <div class="scene-word" aria-hidden="true">CAUGHT</div>
+          <div class="scene-counter" aria-hidden="true"><span>01</span><b>06</b></div>
+        </div>
+      </section>
+
+      <section class="scene game-scene scene-kick" id="last-kick" data-scene aria-labelledby="kick-title">
+        <div class="wrap game-scene-grid scene-grid-reverse">
+          <div class="game-scene-copy">
+            <p class="scene-label"><span>02</span> NEARBY BATTLE</p>
+            <h2 id="kick-title">라스트 킥</h2>
+            <p class="scene-tagline">마지막 한 발까지<br />아무도 모른다.</p>
+            <p class="scene-description">친구와 바로 연결하고, 짧게 겨루고, 결과 한 장으로 오래 놀리는 승부.</p>
+          </div>
+          <a class="game-screenshot scene-device" href="assets/screenshots/last-kick.png" target="_blank" rel="noopener" aria-label="라스트 킥 스크린샷 크게 보기 (새 탭)">
+            <img src="assets/screenshots/last-kick.png" width="390" height="844" loading="lazy" decoding="async" alt="페널티킥 경기의 키커 승리 결과 화면" />
+            <span>실제 앱 화면 <span aria-hidden="true">↗</span></span>
+          </a>
+          <div class="scene-word" aria-hidden="true">LAST KICK</div>
+          <div class="scene-counter" aria-hidden="true"><span>02</span><b>06</b></div>
+        </div>
+      </section>
+
+      <section class="scene game-scene scene-who" id="who-more" data-scene aria-labelledby="who-title">
+        <div class="wrap game-scene-grid">
+          <div class="game-scene-copy">
+            <p class="scene-label"><span>03</span> RANDOM CHOICE</p>
+            <h2 id="who-title">누가 더?</h2>
+            <p class="scene-tagline">오늘의 나는,<br />누구의 취향일까?</p>
+            <p class="scene-description">매 판 달라지는 가상의 NPC 취향. 진지할 이유가 없어서 더 재밌는 선택.</p>
+            <p class="game-note">가상의 취향이며 객관적인 외모 평가가 아닙니다.</p>
+          </div>
+          <a class="game-screenshot scene-device" href="assets/screenshots/who-more.png" target="_blank" rel="noopener" aria-label="누가 더? 스크린샷 크게 보기 (새 탭)">
+            <img src="assets/screenshots/who-more.png" width="390" height="844" loading="lazy" decoding="async" alt="거리 배경과 오늘의 나, 누구의 취향일까라는 게임 안내 화면" />
+            <span>실제 앱 화면 <span aria-hidden="true">↗</span></span>
+          </a>
+          <div class="scene-word" aria-hidden="true">WHO MORE</div>
+          <div class="scene-counter" aria-hidden="true"><span>03</span><b>06</b></div>
+        </div>
+      </section>
+
+      <section class="scene game-scene scene-punch" id="punch-king" data-scene aria-labelledby="punch-title">
+        <div class="wrap game-scene-grid scene-grid-reverse">
+          <div class="game-scene-copy">
+            <p class="scene-label"><span>04</span> QUICK CHALLENGE</p>
+            <h2 id="punch-title">펀치 킹</h2>
+            <p class="scene-tagline">한 번의 도전.<br />웃음 한 방.</p>
+            <p class="scene-description">친구들이 지켜보는 가운데 가볍게 도전하고, 가장 요란하게 웃는 짧은 승부.</p>
+          </div>
+          <a class="game-screenshot scene-device" href="assets/screenshots/punch-king.png" target="_blank" rel="noopener" aria-label="펀치 킹 스크린샷 크게 보기 (새 탭)">
+            <img src="assets/screenshots/punch-king.png" width="390" height="844" loading="lazy" decoding="async" alt="벽과 펀치 게이지가 보이는 READY 화면" />
+            <span>실제 앱 화면 <span aria-hidden="true">↗</span></span>
+          </a>
+          <div class="scene-word" aria-hidden="true">PUNCH</div>
+          <div class="scene-counter" aria-hidden="true"><span>04</span><b>06</b></div>
+        </div>
+      </section>
+
+      <section class="scene privacy-scene" id="privacy" data-scene aria-labelledby="privacy-title">
+        <div class="wrap privacy-scene-grid">
           <div>
-            <div class="privacy-label">YOUR CAMERA. YOUR DEVICE.</div>
-            <h2 id="privacy-title">
-              웃음은 친구들과.<br />카메라 데이터는 기기 안에.
-            </h2>
+            <p class="scene-label"><span>05</span> YOUR CAMERA. YOUR DEVICE.</p>
+            <h2 id="privacy-title">웃음은 친구들과.<br />카메라 데이터는<br />기기 안에.</h2>
           </div>
-          <div>
-            <p>
-              얼굴 반응 효과와 게임 진행에 쓰이는 영상·사진은 기기 안에서
-              처리합니다. 원본을 서버로 업로드하거나 영구 저장하지 않습니다.
-              임시 얼굴 분석 데이터는 라운드가 끝나거나 게임을 종료하면
-              폐기하도록 설계했습니다.
-            </p>
-            <a class="text-link" href="privacy/"
-              >개인정보처리방침 자세히 보기
-              <span aria-hidden="true">↗</span></a
-            >
+          <div class="privacy-scene-copy">
+            <p>얼굴 반응 효과와 게임 진행에 쓰이는 영상·사진은 기기 안에서 처리합니다. 원본을 서버로 업로드하거나 영구 저장하지 않습니다.</p>
+            <p>임시 얼굴 분석 데이터는 라운드가 끝나거나 게임을 종료하면 폐기하도록 설계했습니다.</p>
+            <a class="button button-outline" href="privacy/">개인정보처리방침 <span aria-hidden="true">↗</span></a>
           </div>
-        </section>
-      </div>
+          <div class="privacy-orbit" aria-hidden="true"><span>ON DEVICE</span><i></i><b>LOCAL</b></div>
+          <div class="scene-counter" aria-hidden="true"><span>05</span><b>06</b></div>
+        </div>
+      </section>
+
+      <section class="scene release-scene" id="release" data-scene aria-labelledby="release-title">
+        <div class="wrap release-scene-inner">
+          <p class="scene-label"><span>06</span> COMING SOON</p>
+          <h2 id="release-title">다음 모임에<br />YOU IN?</h2>
+          <p>iOS와 Android에서 만날 준비 중입니다.</p>
+          <div class="release-actions"><span>iOS / 출시 예정</span><span>Android / 출시 예정</span></div>
+          <nav class="release-links" aria-label="하단 메뉴"><a href="privacy/">개인정보처리방침</a><a href="support/">사용자 지원</a></nav>
+          <footer class="scene-footer"><strong>YOU IN?</strong><span>© 2026 YouIN</span></footer>
+          <div class="scene-counter" aria-hidden="true"><span>06</span><b>06</b></div>
+        </div>
+      </section>
     </main>
-    <footer class="footer wrap">
-      <div class="footer-brand">
-        <strong>YOU IN?</strong><span>© 2026 YouIN</span>
-      </div>
-      <nav class="footer-links" aria-label="하단 메뉴">
-        <a href="privacy/">개인정보처리방침</a
-        ><a href="support/">사용자 지원</a>
-      </nav>
-    </footer>
   </body>
 </html>

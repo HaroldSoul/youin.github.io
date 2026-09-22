@@ -36,4 +36,33 @@
         : `문의: ${email}. 얼굴 사진이나 민감한 개인정보는 보내지 마세요.`;
     });
   }
+
+  const scenes = Array.from(document.querySelectorAll("[data-scene]"));
+  const sceneLinks = Array.from(document.querySelectorAll("[data-scene-link]"));
+  if (scenes.length && "IntersectionObserver" in window) {
+    const ratios = new Map(scenes.map((scene) => [scene.id, 0]));
+    const setActiveScene = (id) => {
+      scenes.forEach((scene) => scene.classList.toggle("is-active", scene.id === id));
+      sceneLinks.forEach((link) => {
+        if (link.dataset.sceneLink === id) {
+          link.setAttribute("aria-current", "true");
+        } else {
+          link.removeAttribute("aria-current");
+        }
+      });
+    };
+    setActiveScene(scenes[0].id);
+    document.body.classList.add("scene-observed");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => ratios.set(entry.target.id, entry.intersectionRatio));
+        const active = scenes.reduce((best, scene) =>
+          ratios.get(scene.id) > ratios.get(best.id) ? scene : best,
+        );
+        setActiveScene(active.id);
+      },
+      { threshold: [0.2, 0.4, 0.6, 0.8] },
+    );
+    scenes.forEach((scene) => observer.observe(scene));
+  }
 })();
