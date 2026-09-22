@@ -34,7 +34,7 @@
     <meta property="og:locale:alternate" content="en_US" />
     <meta
       property="og:image"
-      content="https://haroldsoul.github.io/youin.github.io/assets/og-card.png"
+      content="https://haroldsoul.github.io/youin.github.io/assets/og-card.png?v=20260922-screenshots"
     />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -55,7 +55,7 @@
       sizes="180x180"
       href="assets/apple-touch-icon.png"
     />
-    <link rel="stylesheet" href="assets/styles.css" />
+    <link rel="stylesheet" href="assets/styles.css?v=20260922-screenshots" />
     <script src="assets/language.js"></script>
     <script src="assets/config.js" defer></script>
     <script src="assets/site.js" defer></script>
@@ -111,21 +111,24 @@
               ></a
             >
           </div>
-          <div class="portal" aria-hidden="true">
-            <div class="portal-frame"></div>
-            <div class="portal-word">YOU<span>IN?</span></div>
-            <div class="question-chip">?</div>
-            <div class="play-card">
-              <small>PASS IT TO YOUR FRIEND</small
-              ><strong>너 지금<br />쟤 생각했지?</strong>
-              <div class="card-bottom">
-                <span>YOUR TURN.</span><span>↗</span>
-              </div>
+          <figure class="app-preview">
+            <div class="preview-screens">
+              <img
+                src="assets/screenshots/home.png"
+                width="390"
+                height="844"
+                fetchpriority="high"
+                alt="네 가지 게임이 있는 YouIN 앱 홈 화면"
+              />
+              <img
+                src="assets/screenshots/last-kick.png"
+                width="390"
+                height="844"
+                alt="라스트 킥의 페널티킥 결과 화면"
+              />
             </div>
-            <span class="portal-caption"
-              >GOOD FRIENDS. QUESTIONABLE ANSWERS.</span
-            >
-          </div>
+            <figcaption>YOU IN? 실제 앱 화면</figcaption>
+          </figure>
         </section>
         <div class="release-strip">
           <p>우리의 다음 모임을 위해, 준비 중.</p>
@@ -143,15 +146,30 @@
           <p class="section-lead">
             분위기에 맞게 골라요. 한 판만 하기엔 아쉬울 테니까.
           </p>
+          <p class="screenshots-note">
+            개발 중인 앱의 실제 화면입니다. 출시 버전에서는 달라질 수 있습니다.
+          </p>
           <div class="games-grid">
             <article class="game">
-              <div class="game-art art-caught" aria-hidden="true">
-                <div class="game-index">
-                  <span>01</span><span>CAUGHT YOU</span>
-                </div>
-                <strong><span>TRUE</span>FALSE</strong
-                ><span class="art-foot">JUST FOR FUN</span>
-              </div>
+              <a
+                class="game-screenshot"
+                href="assets/screenshots/caught-you.png"
+                target="_blank"
+                rel="noopener"
+                aria-label="딱 걸렸어 스크린샷 크게 보기 (새 탭)"
+              >
+                <img
+                  src="assets/screenshots/caught-you.png"
+                  width="390"
+                  height="844"
+                  loading="lazy"
+                  decoding="async"
+                  alt="질문은 직접, 표정은 카메라라는 안내가 있는 게임 시작 화면"
+                />
+                <span
+                  >스크린샷 크게 보기 <span aria-hidden="true">↗</span></span
+                >
+              </a>
               <h3>딱 걸렸어</h3>
               <p>질문 하나에 흔들리는 표정. 친구의 반응이 게임이 되는 순간.</p>
               <p class="game-note">
@@ -159,23 +177,48 @@
               </p>
             </article>
             <article class="game">
-              <div class="game-art art-kick" aria-hidden="true">
-                <div class="game-index">
-                  <span>02</span><span>LAST KICK</span>
-                </div>
-                <strong>01</strong><span class="art-foot">NEXT ROUND?</span>
-              </div>
+              <a
+                class="game-screenshot"
+                href="assets/screenshots/last-kick.png"
+                target="_blank"
+                rel="noopener"
+                aria-label="라스트 킥 스크린샷 크게 보기 (새 탭)"
+              >
+                <img
+                  src="assets/screenshots/last-kick.png"
+                  width="390"
+                  height="844"
+                  loading="lazy"
+                  decoding="async"
+                  alt="페널티킥 경기의 키커 승리 결과 화면"
+                />
+                <span
+                  >스크린샷 크게 보기 <span aria-hidden="true">↗</span></span
+                >
+              </a>
               <h3>라스트 킥</h3>
               <p>마지막까지 방심 금지. 친구와 벌이는 짧고 짜릿한 한 판.</p>
             </article>
             <article class="game">
-              <div class="game-art art-who" aria-hidden="true">
-                <div class="game-index">
-                  <span>03</span><span>WHO MORE</span>
-                </div>
-                <strong>A<span>/</span>B</strong
-                ><span class="art-foot">WHO WILL IT BE?</span>
-              </div>
+              <a
+                class="game-screenshot"
+                href="assets/screenshots/who-more.png"
+                target="_blank"
+                rel="noopener"
+                aria-label="누가 더? 스크린샷 크게 보기 (새 탭)"
+              >
+                <img
+                  src="assets/screenshots/who-more.png"
+                  width="390"
+                  height="844"
+                  loading="lazy"
+                  decoding="async"
+                  alt="거리 배경과 오늘의 나, 누구의 취향일까라는 게임 안내 화면"
+                />
+                <span
+                  >스크린샷 크게 보기 <span aria-hidden="true">↗</span></span
+                >
+              </a>
               <h3>누가 더?</h3>
               <p>이번 NPC의 취향은 누구 쪽? 매 게임 달라지는 엉뚱한 선택.</p>
               <p class="game-note">
@@ -183,12 +226,25 @@
               </p>
             </article>
             <article class="game">
-              <div class="game-art art-punch" aria-hidden="true">
-                <div class="game-index">
-                  <span>04</span><span>PUNCH KING</span>
-                </div>
-                <strong>POW!</strong><span class="art-foot">YOUR TURN</span>
-              </div>
+              <a
+                class="game-screenshot"
+                href="assets/screenshots/punch-king.png"
+                target="_blank"
+                rel="noopener"
+                aria-label="펀치 킹 스크린샷 크게 보기 (새 탭)"
+              >
+                <img
+                  src="assets/screenshots/punch-king.png"
+                  width="390"
+                  height="844"
+                  loading="lazy"
+                  decoding="async"
+                  alt="벽과 펀치 게이지가 보이는 READY 화면"
+                />
+                <span
+                  >스크린샷 크게 보기 <span aria-hidden="true">↗</span></span
+                >
+              </a>
               <h3>펀치 킹</h3>
               <p>한 번의 도전에 웃음 한 방. 친구들과 가볍게 즐기는 승부.</p>
             </article>

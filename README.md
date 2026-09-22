@@ -26,7 +26,8 @@
 | **`assets/config.js`** | **승인된 지원 이메일을 설정하는 유일한 곳** |
 | `assets/app-icon.svg`, `.png` | 사용자가 공개 사용을 승인한 앱 아이콘 |
 | `assets/favicon-32.png`, `apple-touch-icon.png` | 앱 아이콘에서 크기 변환한 사이트 아이콘 |
-| `assets/og-card.png` | 타이포그래피와 앱 아이콘으로 구성한 1200 × 630 공유 이미지 |
+| `assets/screenshots/` | 사용자가 제공한 실제 앱 화면 5장 (원본 비율 유지) |
+| `assets/og-card.png` | 타이포그래피와 제공된 앱 스크린샷으로 구성한 1200 × 630 공유 이미지 |
 | `sitemap.xml`, `robots.txt` | 공개 페이지 목록 및 크롤링 안내 |
 | `.github/workflows/pages.yml` | `main` 푸시 시 GitHub Pages 배포 |
 
@@ -111,6 +112,6 @@ GitHub Pages의 Custom domain과 DNS를 설정한 뒤 HTTPS를 활성화합니�
 
 ## 자산 및 저장소 경계
 
-비공개 앱 저장소는 수정하지 않습니다. 공개 사용이 승인된 `app-icon.svg`와 `app-icon.png`만 복사했습니다. 인물·얼굴 사진, fixture, 개발 파일 및 앱 Git 기록은 포함하지 않습니다. 게임 카드는 실제 앱 스크린샷이 아니라 HTML/CSS 타이포그래피로 만든 소개 그래픽입니다.
+비공개 앱 저장소는 수정하지 않습니다. 공개 사용이 승인된 앱 아이콘과 사용자가 후속 요청에서 홈페이지 사용을 지시한 스크린샷 5장을 사용합니다. 다운로드 폴더의 `ui-screenshots-2026-09-21-8664300`에서 홈, 딱 걸렸어 진입, 라스트 킥 결과, 누가 더? 안내, 펀치 킹 준비 화면을 원본 그대로 복사했습니다. 사진 선택 테스트용 fixture 화면, 개발 파일 및 앱 Git 기록은 포함하지 않습니다. 사용자가 제공한 화면에 포함된 게임 비주얼 외에 별도 인물·얼굴 사진을 추가하지 않습니다. 기존 추상 카드와 문 그래픽은 제거했습니다. `assets/screenshots/`의 PNG는 390 × 844 원본이며 클릭하면 새 탭에서 크게 볼 수 있습니다.
 
 화면 캡처는 로컬 `output/playwright/`에 저장하며 Git에서는 제외합니다. 검증 기록은 `docs/verification.md`에 정리합니다.

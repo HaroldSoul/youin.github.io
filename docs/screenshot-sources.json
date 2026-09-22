@@ -1,0 +1,31 @@
+{
+  "source_collection": "ui-screenshots-2026-09-21-8664300",
+  "purpose": "User-provided app screenshots approved for the official website",
+  "images": [
+    {
+      "file": "assets/screenshots/home.png",
+      "provided_source": "01-platform/02-home.png",
+      "sha256": "d6cb297db66a7665aba2ef7e965160d6b85dbbf227d46be81559c46594b01c67"
+    },
+    {
+      "file": "assets/screenshots/caught-you.png",
+      "provided_source": "02-lie-detector/01-entry.png",
+      "sha256": "b42a32bde576cf820052a50cd28e0db091af97d0f1d3c68af1b96f330f8d1c46"
+    },
+    {
+      "file": "assets/screenshots/last-kick.png",
+      "provided_source": "04-last-kick/390x844/10-result.png",
+      "sha256": "a295efc931eb2ced737e9d7c4f7073f7f80595ec1d62cab26b65c128f87e2610"
+    },
+    {
+      "file": "assets/screenshots/who-more.png",
+      "provided_source": "03-who-more/01-instructions.png",
+      "sha256": "b0753bc18e0a54d965dec4f18f1623a99c3d5fdb67c84fff6172cb0f61695d3d"
+    },
+    {
+      "file": "assets/screenshots/punch-king.png",
+      "provided_source": "05-punch-king/04-ready.png",
+      "sha256": "2d635d1e2421dbae18d79d9475336b9fe7d25df361e9b2af4247cf3c9fd08ccb"
+    }
+  ]
+}

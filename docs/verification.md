@@ -25,3 +25,11 @@ Resolved during verification: explicit keyboard focus target for skip links and 
 Use the local-preview commands in README. Open all six language routes and an unknown nested URL after deployment. Inspect console/network errors, switch languages, use Tab/Enter/Space, expand FAQs, and test at desktop and narrow mobile widths. If changing contact settings, verify the policy and support pages in both languages. Keep screenshots and temporary testing packages out of Git.
 
 The initial commit records local verification. Deployment status and the live URL are available in the repository’s GitHub Actions and Pages environments; live verification is reported separately after publication.
+
+## Screenshot replacement — 2026-09-22
+
+The owner supplied app screenshots in Downloads and requested replacement of the abstract graphics. The home preview, four game graphics and social image now use those supplied screens. The source mapping and original SHA-256 values are recorded in `screenshot-sources.json`; all five PNG copies match the originals byte for byte. The photo-selection fixture screens were excluded.
+
+After the replacement, Chromium checks passed on all six language pages at 320, 390 and 1440 pixels: no horizontal overflow, JavaScript errors or missing images. All 24 internal URLs returned 200. Language switching, keyboard navigation, FAQ, reduced motion, no-JavaScript pages and nested 404 checks passed. The screenshot links open the original PNGs in a new tab; root-domain paths also passed in both languages.
+
+axe-core returned zero WCAG A/AA rule violations across the seven documents at desktop and mobile widths. Desktop, mobile hero and mobile game captures were visually inspected. Stylesheet and Open Graph URL query versions were updated so returning visitors can fetch the replacement artwork. Deployment is verified separately after pushing this revision.

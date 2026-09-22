@@ -34,7 +34,7 @@
     <meta property="og:locale:alternate" content="ko_KR" />
     <meta
       property="og:image"
-      content="https://haroldsoul.github.io/youin.github.io/assets/og-card.png"
+      content="https://haroldsoul.github.io/youin.github.io/assets/og-card.png?v=20260922-screenshots"
     />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -55,7 +55,7 @@
       sizes="180x180"
       href="../assets/apple-touch-icon.png"
     />
-    <link rel="stylesheet" href="../assets/styles.css" />
+    <link rel="stylesheet" href="../assets/styles.css?v=20260922-screenshots" />
     <script src="../assets/language.js"></script>
     <script src="../assets/config.js" defer></script>
     <script src="../assets/site.js" defer></script>
@@ -109,21 +109,24 @@
               >Meet the games<span class="arrow" aria-hidden="true">↗</span></a
             >
           </div>
-          <div class="portal" aria-hidden="true">
-            <div class="portal-frame"></div>
-            <div class="portal-word">YOU<span>IN?</span></div>
-            <div class="question-chip">?</div>
-            <div class="play-card">
-              <small>PASS IT TO YOUR FRIEND</small
-              ><strong>You know<br />who it is.</strong>
-              <div class="card-bottom">
-                <span>YOUR TURN.</span><span>↗</span>
-              </div>
+          <figure class="app-preview">
+            <div class="preview-screens">
+              <img
+                src="../assets/screenshots/home.png"
+                width="390"
+                height="844"
+                fetchpriority="high"
+                alt="YouIN app home screen with four games (Korean UI)"
+              />
+              <img
+                src="../assets/screenshots/last-kick.png"
+                width="390"
+                height="844"
+                alt="Last Kick penalty shootout result screen (Korean UI)"
+              />
             </div>
-            <span class="portal-caption"
-              >GOOD FRIENDS. QUESTIONABLE ANSWERS.</span
-            >
-          </div>
+            <figcaption>A look inside YOU IN? · Korean app screens</figcaption>
+          </figure>
         </section>
         <div class="release-strip">
           <p>Your next game night is on its way.</p>
@@ -141,15 +144,28 @@
           <p class="section-lead">
             Four ways to turn “one more round” into a plan.
           </p>
+          <p class="screenshots-note">
+            Screens from the app in development. Final release screens may vary.
+          </p>
           <div class="games-grid">
             <article class="game">
-              <div class="game-art art-caught" aria-hidden="true">
-                <div class="game-index">
-                  <span>01</span><span>CAUGHT YOU</span>
-                </div>
-                <strong><span>TRUE</span>FALSE</strong
-                ><span class="art-foot">JUST FOR FUN</span>
-              </div>
+              <a
+                class="game-screenshot"
+                href="../assets/screenshots/caught-you.png"
+                target="_blank"
+                rel="noopener"
+                aria-label="Caught You — view full screenshot in a new tab"
+              >
+                <img
+                  src="../assets/screenshots/caught-you.png"
+                  width="390"
+                  height="844"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Game entry screen explaining spoken questions and camera reactions (Korean UI)"
+                />
+                <span>View screenshot <span aria-hidden="true">↗</span></span>
+              </a>
               <h3>Caught You</h3>
               <p>
                 A question, a reaction, and a very suspicious friend. Put each
@@ -160,12 +176,23 @@
               </p>
             </article>
             <article class="game">
-              <div class="game-art art-kick" aria-hidden="true">
-                <div class="game-index">
-                  <span>02</span><span>LAST KICK</span>
-                </div>
-                <strong>01</strong><span class="art-foot">NEXT ROUND?</span>
-              </div>
+              <a
+                class="game-screenshot"
+                href="../assets/screenshots/last-kick.png"
+                target="_blank"
+                rel="noopener"
+                aria-label="Last Kick — view full screenshot in a new tab"
+              >
+                <img
+                  src="../assets/screenshots/last-kick.png"
+                  width="390"
+                  height="844"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Penalty shootout showing the kicker win result (Korean UI)"
+                />
+                <span>View screenshot <span aria-hidden="true">↗</span></span>
+              </a>
               <h3>Last Kick</h3>
               <p>
                 A little rivalry, one last challenge. Bring your friends into
@@ -173,13 +200,23 @@
               </p>
             </article>
             <article class="game">
-              <div class="game-art art-who" aria-hidden="true">
-                <div class="game-index">
-                  <span>03</span><span>WHO MORE</span>
-                </div>
-                <strong>A<span>/</span>B</strong
-                ><span class="art-foot">WHO WILL IT BE?</span>
-              </div>
+              <a
+                class="game-screenshot"
+                href="../assets/screenshots/who-more.png"
+                target="_blank"
+                rel="noopener"
+                aria-label="Who More? — view full screenshot in a new tab"
+              >
+                <img
+                  src="../assets/screenshots/who-more.png"
+                  width="390"
+                  height="844"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Game introduction asking whose taste matches you today (Korean UI)"
+                />
+                <span>View screenshot <span aria-hidden="true">↗</span></span>
+              </a>
               <h3>Who More?</h3>
               <p>
                 Who will the fictional NPC pick? A different taste in every
@@ -190,12 +227,23 @@
               </p>
             </article>
             <article class="game">
-              <div class="game-art art-punch" aria-hidden="true">
-                <div class="game-index">
-                  <span>04</span><span>PUNCH KING</span>
-                </div>
-                <strong>POW!</strong><span class="art-foot">YOUR TURN</span>
-              </div>
+              <a
+                class="game-screenshot"
+                href="../assets/screenshots/punch-king.png"
+                target="_blank"
+                rel="noopener"
+                aria-label="Punch King — view full screenshot in a new tab"
+              >
+                <img
+                  src="../assets/screenshots/punch-king.png"
+                  width="390"
+                  height="844"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Ready screen with a wall and punch gauge (Korean UI)"
+                />
+                <span>View screenshot <span aria-hidden="true">↗</span></span>
+              </a>
               <h3>Punch King</h3>
               <p>
                 Step up for a playful challenge. See who gets the last laugh.
