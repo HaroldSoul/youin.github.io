@@ -1181,11 +1181,12 @@ p {
 .scene-device {
   position: relative;
   z-index: 2;
-  width: min(100%, 360px);
+  width: min(100%, 360px, calc((100svh - 195px) * 390 / 844));
   margin: 0;
   justify-self: end;
 }
-.scene-device > img {
+.scene-device > img,
+.scene-device-frame > img {
   width: 100%;
   height: auto;
   max-height: calc(100svh - 195px);
@@ -1199,28 +1200,18 @@ p {
   font: 10px/1.4 monospace;
   letter-spacing: 0.05em;
 }
-.punch-device:before {
-  content: "";
+.scene-device-frame {
+  position: relative;
+  display: block;
+  margin-top: 0 !important;
+}
+.punch-back-icon {
   position: absolute;
   top: 2.37%;
   left: 5.13%;
   z-index: 3;
   width: 12.31%;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: #1b1814;
-}
-.punch-device:after {
-  content: "";
-  position: absolute;
-  top: 4.55%;
-  left: 9.45%;
-  z-index: 4;
-  width: 3.2%;
-  aspect-ratio: 1;
-  border-bottom: 2px solid #f2efe7;
-  border-left: 2px solid #f2efe7;
-  transform: rotate(45deg);
+  height: auto;
 }
 .scene-word {
   position: absolute;
@@ -1562,7 +1553,8 @@ p {
     align-self: center;
     justify-self: auto;
   }
-  .scene-device > img {
+  .scene-device > img,
+  .scene-device-frame > img {
     max-height: none;
     border-radius: 17px;
   }
