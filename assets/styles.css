@@ -1199,6 +1199,29 @@ p {
   font: 10px/1.4 monospace;
   letter-spacing: 0.05em;
 }
+.punch-device:before {
+  content: "";
+  position: absolute;
+  top: 2.37%;
+  left: 5.13%;
+  z-index: 3;
+  width: 12.31%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #1b1814;
+}
+.punch-device:after {
+  content: "";
+  position: absolute;
+  top: 4.55%;
+  left: 9.45%;
+  z-index: 4;
+  width: 3.2%;
+  aspect-ratio: 1;
+  border-bottom: 2px solid #f2efe7;
+  border-left: 2px solid #f2efe7;
+  transform: rotate(45deg);
+}
 .scene-word {
   position: absolute;
   left: -0.04em;
