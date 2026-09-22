@@ -1,0 +1,64 @@
+name: "게임 제안 / Game idea"
+description: "YouIN에서 함께 플레이하고 싶은 게임을 제안해 주세요. / Suggest a game you want to play in YouIN."
+title: "[게임 제안] "
+labels:
+  - "game idea"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        다음 YouIN 게임의 시작이 될 아이디어를 들려주세요.
+        Tell us the idea that could become the next YouIN game.
+
+        이 제안은 누구나 볼 수 있습니다. 이름, 연락처, 사진 등 개인정보를 적지 마세요.
+        This suggestion is public. Do not include names, contact details, photos, or other personal information.
+
+  - type: textarea
+    id: idea
+    attributes:
+      label: "어떤 게임인가요? / What is the game?"
+      description: "한두 문장만으로도 충분합니다. / One or two sentences is enough."
+      placeholder: "예: 친구들이 동시에 선택하고, 혼자 다른 답을 고른 사람이 짧은 벌칙을 받는 게임"
+    validations:
+      required: true
+
+  - type: textarea
+    id: players
+    attributes:
+      label: "누구와 플레이하나요? / Who plays?"
+      description: "추천 인원과 함께 노는 상황을 알려주세요. / Tell us the group size and setting."
+      placeholder: "예: 친한 친구 3~6명, 모임이 막 시작됐을 때"
+    validations:
+      required: true
+
+  - type: textarea
+    id: fun
+    attributes:
+      label: "어떤 순간이 가장 재미있나요? / What makes it fun?"
+      description: "사람들이 웃거나 반응하게 되는 핵심 순간을 알려주세요. / Describe the moment that gets the biggest reaction."
+    validations:
+      required: true
+
+  - type: textarea
+    id: avoid
+    attributes:
+      label: "피하고 싶은 요소 / Anything to avoid?"
+      description: "불편하거나 빼고 싶은 규칙이 있다면 적어주세요. / Tell us what should stay out of the game."
+    validations:
+      required: false
+
+  - type: textarea
+    id: reference
+    attributes:
+      label: "참고할 만한 게임이나 장면 / References"
+      description: "비슷한 게임, 영상 또는 실제로 놀았던 경험이 있다면 알려주세요. / Share a similar game, video, or real-life moment if useful."
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: public
+    attributes:
+      label: "공개 제안 확인 / Public submission"
+      options:
+        - label: "이 제안이 공개되며 개인정보를 포함하지 않았음을 확인합니다. / I understand this is public and have not included personal information."
+          required: true
