@@ -25,7 +25,7 @@
     <link rel="icon" type="image/svg+xml" href="../assets/app-icon.svg" />
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png" />
-    <link rel="stylesheet" href="../assets/styles.css?v=20260922-centered-icon-v2" />
+    <link rel="stylesheet" href="../assets/styles.css?v=20260922-next-game" />
     <script src="../assets/language.js"></script>
     <script src="../assets/config.js" defer></script>
     <script src="../assets/site.js" defer></script>
@@ -54,8 +54,9 @@
       <a href="#last-kick" data-scene-link="last-kick" aria-label="Last Kick"><span>02</span><i>KICK</i></a>
       <a href="#who-more" data-scene-link="who-more" aria-label="Who More?"><span>03</span><i>WHO</i></a>
       <a href="#punch-king" data-scene-link="punch-king" aria-label="Punch King"><span>04</span><i>PUNCH</i></a>
-      <a href="#privacy" data-scene-link="privacy" aria-label="Privacy principle"><span>05</span><i>DEVICE</i></a>
-      <a href="#release" data-scene-link="release" aria-label="Release information"><span>06</span><i>READY</i></a>
+      <a href="#next-game" data-scene-link="next-game" aria-label="Suggest a game"><span>05</span><i>NEXT</i></a>
+      <a href="#privacy" data-scene-link="privacy" aria-label="Privacy principle"><span>06</span><i>DEVICE</i></a>
+      <a href="#release" data-scene-link="release" aria-label="Release information"><span>07</span><i>READY</i></a>
     </nav>
 
     <main id="main" class="home-main" tabindex="-1">
@@ -76,7 +77,7 @@
             </div>
             <figcaption>ACTUAL APP SCREENS / DEVELOPMENT BUILD</figcaption>
           </figure>
-          <div class="scene-counter" aria-hidden="true"><span>00</span><b>06</b></div>
+          <div class="scene-counter" aria-hidden="true"><span>00</span><b>07</b></div>
         </div>
       </section>
 
@@ -94,7 +95,7 @@
             <span>Actual app screen <span aria-hidden="true">↗</span></span>
           </a>
           <div class="scene-word" aria-hidden="true">CAUGHT</div>
-          <div class="scene-counter" aria-hidden="true"><span>01</span><b>06</b></div>
+          <div class="scene-counter" aria-hidden="true"><span>01</span><b>07</b></div>
         </div>
       </section>
 
@@ -111,7 +112,7 @@
             <span>Actual app screen <span aria-hidden="true">↗</span></span>
           </a>
           <div class="scene-word" aria-hidden="true">LAST KICK</div>
-          <div class="scene-counter" aria-hidden="true"><span>02</span><b>06</b></div>
+          <div class="scene-counter" aria-hidden="true"><span>02</span><b>07</b></div>
         </div>
       </section>
 
@@ -129,7 +130,7 @@
             <span>Actual app screen <span aria-hidden="true">↗</span></span>
           </a>
           <div class="scene-word" aria-hidden="true">WHO MORE</div>
-          <div class="scene-counter" aria-hidden="true"><span>03</span><b>06</b></div>
+          <div class="scene-counter" aria-hidden="true"><span>03</span><b>07</b></div>
         </div>
       </section>
 
@@ -152,14 +153,33 @@
             <span>Actual app screen <span aria-hidden="true">↗</span></span>
           </a>
           <div class="scene-word" aria-hidden="true">PUNCH</div>
-          <div class="scene-counter" aria-hidden="true"><span>04</span><b>06</b></div>
+          <div class="scene-counter" aria-hidden="true"><span>04</span><b>07</b></div>
+        </div>
+      </section>
+
+      <section class="scene next-game-scene" id="next-game" data-scene aria-labelledby="next-game-title">
+        <div class="wrap next-game-grid">
+          <div class="next-game-copy">
+            <p class="scene-label"><span>05</span> YOUR TURN</p>
+            <h2 id="next-game-title">NEXT<br />GAME?</h2>
+            <p class="scene-tagline">The next game<br />is still unwritten.</p>
+            <p class="scene-description">Tell us which moment with friends should become a game. A great idea could be the start of the next YouIN.</p>
+            <a class="button next-game-button" href="https://github.com/HaroldSoul/youin.github.io/issues/new?template=game-request.yml" target="_blank" rel="noopener">Pitch this game! <span aria-hidden="true">↗</span></a>
+            <p class="idea-note">Your suggestion will be public on GitHub Issues. Please do not include personal information.</p>
+          </div>
+          <div class="idea-deck" aria-hidden="true">
+            <div class="idea-card idea-card-back"><span>WHO?</span></div>
+            <div class="idea-card idea-card-middle"><span>WHERE?</span></div>
+            <div class="idea-card idea-card-front"><small>NEXT GAME / 001</small><strong>YOUR<br />IDEA</strong><span>WHAT HAPPENS?</span></div>
+          </div>
+          <div class="scene-counter" aria-hidden="true"><span>05</span><b>07</b></div>
         </div>
       </section>
 
       <section class="scene privacy-scene" id="privacy" data-scene aria-labelledby="privacy-title">
         <div class="wrap privacy-scene-grid">
           <div>
-            <p class="scene-label"><span>05</span> YOUR CAMERA. YOUR DEVICE.</p>
+            <p class="scene-label"><span>06</span> YOUR CAMERA. YOUR DEVICE.</p>
             <h2 id="privacy-title">The fun stays with friends.<br />Camera data stays<br />on your device.</h2>
           </div>
           <div class="privacy-scene-copy">
@@ -168,19 +188,19 @@
             <a class="button button-outline" href="privacy/">Privacy policy <span aria-hidden="true">↗</span></a>
           </div>
           <div class="privacy-orbit" aria-hidden="true"><span>ON DEVICE</span><i></i><b>LOCAL</b></div>
-          <div class="scene-counter" aria-hidden="true"><span>05</span><b>06</b></div>
+          <div class="scene-counter" aria-hidden="true"><span>06</span><b>07</b></div>
         </div>
       </section>
 
       <section class="scene release-scene" id="release" data-scene aria-labelledby="release-title">
         <div class="wrap release-scene-inner">
-          <p class="scene-label"><span>06</span> COMING SOON</p>
+          <p class="scene-label"><span>07</span> COMING SOON</p>
           <h2 id="release-title">Next game night.<br />YOU IN?</h2>
           <p>Getting ready for iOS and Android.</p>
           <div class="release-actions"><span>iOS / COMING SOON</span><span>Android / COMING SOON</span></div>
           <nav class="release-links" aria-label="Footer"><a href="privacy/">Privacy policy</a><a href="support/">Support</a></nav>
           <footer class="scene-footer"><strong>YOU IN?</strong><span>© 2026 YouIN</span></footer>
-          <div class="scene-counter" aria-hidden="true"><span>06</span><b>06</b></div>
+          <div class="scene-counter" aria-hidden="true"><span>07</span><b>07</b></div>
         </div>
       </section>
     </main>

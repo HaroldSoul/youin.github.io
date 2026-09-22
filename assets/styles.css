@@ -1244,6 +1244,112 @@ p {
     radial-gradient(circle at 20% 54%, rgb(153 88 42 / 0.17), transparent 34%),
     #151210;
 }
+.next-game-scene {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 78% 42%, rgb(124 81 169 / 0.22), transparent 30%),
+    radial-gradient(circle at 19% 80%, rgb(205 92 64 / 0.11), transparent 32%),
+    #121016;
+}
+.next-game-scene:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.2;
+  background-image:
+    linear-gradient(rgb(242 239 231 / 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(242 239 231 / 0.05) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: linear-gradient(to right, transparent 0, #000 55%, #000 100%);
+  pointer-events: none;
+}
+.next-game-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(330px, 0.82fr);
+  align-items: center;
+  gap: clamp(65px, 9vw, 140px);
+  padding-block: 105px 60px;
+}
+.next-game-copy {
+  position: relative;
+  z-index: 3;
+  max-width: 660px;
+}
+.next-game-copy h2 {
+  font-size: clamp(72px, 10vw, 148px);
+  line-height: 0.78;
+  letter-spacing: -0.085em;
+}
+.next-game-copy .scene-tagline {
+  margin-top: 38px;
+}
+.next-game-button {
+  margin-top: 34px;
+  background: #f2efe7;
+  color: #17151b;
+}
+.next-game-button:hover {
+  background: #fff;
+}
+.idea-note {
+  max-width: 460px;
+  margin-top: 14px;
+  color: #95919c;
+  font-size: 11px;
+  line-height: 1.6;
+}
+.idea-deck {
+  position: relative;
+  width: min(34vw, 430px);
+  aspect-ratio: 0.78;
+  justify-self: end;
+}
+.idea-card {
+  position: absolute;
+  inset: 7% 4% 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: clamp(22px, 2.5vw, 38px);
+  border: 1px solid rgb(242 239 231 / 0.2);
+  border-radius: 7px;
+  box-shadow: 0 30px 80px rgb(0 0 0 / 0.32);
+  font-family: monospace;
+  letter-spacing: 0.06em;
+}
+.idea-card-back {
+  color: #17151b;
+  background: #d7785d;
+  transform: translate(-16%, 2%) rotate(-8deg);
+}
+.idea-card-middle {
+  color: #17151b;
+  background: #a992bd;
+  transform: translate(13%, -1%) rotate(6deg);
+}
+.idea-card-front {
+  background:
+    linear-gradient(140deg, rgb(255 255 255 / 0.06), transparent 45%),
+    #1b1820;
+  transform: rotate(-1.5deg);
+}
+.idea-card small,
+.idea-card span {
+  font-size: clamp(10px, 0.9vw, 13px);
+}
+.idea-card-back span,
+.idea-card-middle span {
+  align-self: flex-end;
+}
+.idea-card-front strong {
+  font: 900 clamp(48px, 5.7vw, 84px) / 0.82 Arial, sans-serif;
+  letter-spacing: -0.08em;
+}
+.idea-card-front span {
+  color: #b8b2c0;
+}
 .privacy-scene {
   color: #171817;
   background:
@@ -1417,6 +1523,7 @@ p {
 .home-page.scene-observed .scene-hero-copy,
 .home-page.scene-observed .game-scene-copy,
 .home-page.scene-observed .scene-device,
+.home-page.scene-observed .next-game-grid > :not(.scene-counter),
 .home-page.scene-observed .privacy-scene-grid > div:not(.scene-counter),
 .home-page.scene-observed .release-scene-inner > :not(.scene-counter):not(.scene-footer) {
   opacity: 0.38;
@@ -1428,6 +1535,7 @@ p {
 .home-page.scene-observed .scene.is-active .scene-hero-copy,
 .home-page.scene-observed .scene.is-active .game-scene-copy,
 .home-page.scene-observed .scene.is-active .scene-device,
+.home-page.scene-observed .scene.is-active .next-game-grid > :not(.scene-counter),
 .home-page.scene-observed .scene.is-active .privacy-scene-grid > div:not(.scene-counter),
 .home-page.scene-observed .scene.is-active .release-scene-inner > :not(.scene-counter):not(.scene-footer) {
   opacity: 1;
@@ -1483,6 +1591,13 @@ p {
   .privacy-scene-grid {
     grid-template-columns: 1fr 0.85fr;
     gap: 55px;
+  }
+  .next-game-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(290px, 0.72fr);
+    gap: 55px;
+  }
+  .idea-deck {
+    width: min(38vw, 380px);
   }
 }
 
@@ -1565,6 +1680,28 @@ p {
     transform: rotate(-90deg) translateX(-50%);
     transform-origin: left top;
   }
+  .next-game-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 60px;
+    padding-block: 112px 90px;
+  }
+  .next-game-copy h2 {
+    font-size: clamp(74px, 23vw, 112px);
+  }
+  .next-game-copy .scene-tagline {
+    margin-top: 34px;
+  }
+  .next-game-button {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .idea-deck {
+    width: min(82vw, 355px);
+    align-self: center;
+    justify-self: auto;
+  }
   .privacy-scene-grid {
     display: flex;
     flex-direction: column;
@@ -1603,6 +1740,7 @@ p {
   .home-page.scene-observed .scene-hero-copy,
   .home-page.scene-observed .game-scene-copy,
   .home-page.scene-observed .scene-device,
+  .home-page.scene-observed .next-game-grid > :not(.scene-counter),
   .home-page.scene-observed .privacy-scene-grid > div:not(.scene-counter),
   .home-page.scene-observed .release-scene-inner > :not(.scene-counter):not(.scene-footer) {
     opacity: 1;
