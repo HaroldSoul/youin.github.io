@@ -27,7 +27,6 @@ jobs:
           mkdir _site
           cp index.html 404.html robots.txt sitemap.xml .nojekyll _site/
           cp -R assets privacy support en _site/
-          if [ -f app-ads.txt ]; then cp app-ads.txt _site/; fi
           if [ -f CNAME ]; then cp CNAME _site/; fi
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
