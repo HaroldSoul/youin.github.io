@@ -1,5 +1,5 @@
-name: "게임 제안 / Game idea"
-description: "YouIN에서 함께 플레이하고 싶은 게임을 제안해 주세요. / Suggest a game you want to play in YouIN."
+name: "게임 제안"
+description: "친구들과 함께하고 싶은 다음 YouIN 게임을 제안해 주세요."
 title: "[게임 제안] "
 labels:
   - "game idea"
@@ -7,58 +7,84 @@ body:
   - type: markdown
     attributes:
       value: |
-        다음 YouIN 게임의 시작이 될 아이디어를 들려주세요.
-        Tell us the idea that could become the next YouIN game.
+        친구들과 어떤 순간을 게임으로 만들고 싶은지 들려주세요. 완성된 기획서가 아니어도 괜찮습니다.
 
-        이 제안은 누구나 볼 수 있습니다. 이름, 연락처, 사진 등 개인정보를 적지 마세요.
-        This suggestion is public. Do not include names, contact details, photos, or other personal information.
+        이 제안은 공개 GitHub Issue로 등록됩니다. 실명, 연락처, 얼굴 사진, 대화 캡처 등 개인정보는 적거나 첨부하지 마세요.
 
-  - type: textarea
-    id: idea
+  - type: input
+    id: game_name
     attributes:
-      label: "어떤 게임인가요? / What is the game?"
-      description: "한두 문장만으로도 충분합니다. / One or two sentences is enough."
-      placeholder: "예: 친구들이 동시에 선택하고, 혼자 다른 답을 고른 사람이 짧은 벌칙을 받는 게임"
+      label: "게임 이름 또는 한 줄 아이디어"
+      description: "아직 이름이 없다면 게임을 한 문장으로 설명해 주세요."
+      placeholder: "예: 모두 같은 답을 고르려다 한 명만 틀리면 지는 게임"
     validations:
       required: true
 
   - type: textarea
+    id: moment
+    attributes:
+      label: "어떤 순간을 게임으로 만들고 싶나요?"
+      description: "친구들과 실제로 웃겼던 상황이나 게임이 시작되는 장면을 알려주세요."
+      placeholder: "예: 모임에서 서로 눈치만 보다가 동시에 한 사람을 지목하는 순간"
+    validations:
+      required: true
+
+  - type: input
     id: players
     attributes:
-      label: "누구와 플레이하나요? / Who plays?"
-      description: "추천 인원과 함께 노는 상황을 알려주세요. / Tell us the group size and setting."
-      placeholder: "예: 친한 친구 3~6명, 모임이 막 시작됐을 때"
+      label: "추천 인원과 플레이 장소"
+      description: "몇 명이 어디에서 하면 재미있는지 적어주세요."
+      placeholder: "예: 친구 3~6명, 집이나 술자리에서 5분 정도"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: play_mode
+    attributes:
+      label: "어떤 방식으로 플레이하면 좋을까요?"
+      options:
+        - "한 기기에서 함께 또는 번갈아 플레이"
+        - "각자 기기로 근거리 연결"
+        - "두 방식 모두 가능"
+        - "잘 모르겠어요"
     validations:
       required: true
 
   - type: textarea
-    id: fun
+    id: rules
     attributes:
-      label: "어떤 순간이 가장 재미있나요? / What makes it fun?"
-      description: "사람들이 웃거나 반응하게 되는 핵심 순간을 알려주세요. / Describe the moment that gets the biggest reaction."
+      label: "게임 진행 방식"
+      description: "시작, 플레이어가 하는 행동, 승패나 벌칙을 순서대로 적어주세요."
+      placeholder: |
+        1. 모두 질문을 하나 고른다.
+        2. 동시에 한 사람을 지목한다.
+        3. 혼자 다른 사람을 고른 플레이어가 짧은 벌칙을 받는다.
     validations:
       required: true
 
   - type: textarea
-    id: avoid
+    id: fun_point
     attributes:
-      label: "피하고 싶은 요소 / Anything to avoid?"
-      description: "불편하거나 빼고 싶은 규칙이 있다면 적어주세요. / Tell us what should stay out of the game."
+      label: "가장 재미있는 포인트"
+      description: "친구들이 웃거나 놀라게 되는 핵심 순간을 알려주세요."
+      placeholder: "예: 모두 같은 사람을 지목했을 때 당사자의 반응이 가장 재미있어요."
     validations:
-      required: false
-
-  - type: textarea
-    id: reference
-    attributes:
-      label: "참고할 만한 게임이나 장면 / References"
-      description: "비슷한 게임, 영상 또는 실제로 놀았던 경험이 있다면 알려주세요. / Share a similar game, video, or real-life moment if useful."
-    validations:
-      required: false
+      required: true
 
   - type: checkboxes
-    id: public
+    id: safety
     attributes:
-      label: "공개 제안 확인 / Public submission"
+      label: "안전한 게임 제안"
       options:
-        - label: "이 제안이 공개되며 개인정보를 포함하지 않았음을 확인합니다. / I understand this is public and have not included personal information."
+        - label: "괴롭힘, 관계 감시 또는 취업·법률·의료·금융 등 중요한 판단에 사용하는 아이디어가 아닙니다."
+          required: true
+        - label: "다른 사람의 실명, 연락처, 얼굴 사진이나 대화 캡처를 포함하지 않았습니다."
+          required: true
+
+  - type: checkboxes
+    id: public_submission
+    attributes:
+      label: "공개 제안 확인"
+      options:
+        - label: "이 제안과 답변이 공개 GitHub Issue에 표시되는 것을 확인했습니다."
           required: true
