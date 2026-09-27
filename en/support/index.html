@@ -52,10 +52,10 @@
       sizes="180x180"
       href="../../assets/apple-touch-icon.png"
     />
-    <link rel="stylesheet" href="../../assets/styles.css?v=1cd8cad-20260927" />
+    <link rel="stylesheet" href="../../assets/styles.css?v=20260928-bug-report" />
     <script src="../../assets/language.js"></script>
-    <script src="../../assets/config.js" defer></script>
-    <script src="../../assets/site.js" defer></script>
+    <script src="../../assets/config.js?v=20260928-bug-report" defer></script>
+    <script src="../../assets/site.js?v=20260928-bug-report" defer></script>
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
@@ -251,21 +251,32 @@
             </div>
           </details>
           <section class="contact" id="contact">
-            <h2>Still need help?</h2>
+            <h2>Found a bug?</h2>
             <p>
-              Tell us your device model, OS and app versions, and what happened.
-              Remove personal information from any screenshots before sharing.
+              Briefly tell us where it happened and what went wrong. Device
+              information and a contact email are optional.
             </p>
-            <a
-              class="button"
-              data-support-link
-              href="https://github.com/HaroldSoul/youin.github.io/issues"
-              >Open a support issue</a
-            >
-            <p class="contact-note" data-contact-note>
-              Our temporary support channel is GitHub Issues. Posts are public
-              and a GitHub account is needed to submit. Do not include face
-              photos, personal contact details, or other sensitive information.
+            <div class="contact-actions">
+              <a
+                class="button"
+                data-bug-report-link
+                href="https://docs.google.com/forms/d/e/1FAIpQLSe5g-jqgGmhtS8-kup5UUY0C_aBH4s0x6z0LxxeFGW7hBg7zw/viewform?usp=publish-editor"
+                target="_blank"
+                rel="noopener"
+                >Report a bug <span aria-hidden="true">↗</span></a
+              >
+              <a
+                class="contact-secondary-link"
+                data-support-link
+                data-support-kind="general"
+                href="https://github.com/HaroldSoul/youin.github.io/issues"
+                >Privacy or other inquiry</a
+              >
+            </div>
+            <p class="contact-note">
+              Bug reports are collected through Google Forms. Do not send face
+              photos, camera footage, passwords, or other sensitive information.
+              GitHub Issues used for privacy or other inquiries are public.
             </p>
           </section>
         </div>

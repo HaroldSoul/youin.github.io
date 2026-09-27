@@ -52,10 +52,10 @@
       sizes="180x180"
       href="../assets/apple-touch-icon.png"
     />
-    <link rel="stylesheet" href="../assets/styles.css?v=1cd8cad-20260927" />
+    <link rel="stylesheet" href="../assets/styles.css?v=20260928-bug-report" />
     <script src="../assets/language.js"></script>
-    <script src="../assets/config.js" defer></script>
-    <script src="../assets/site.js" defer></script>
+    <script src="../assets/config.js?v=20260928-bug-report" defer></script>
+    <script src="../assets/site.js?v=20260928-bug-report" defer></script>
   </head>
   <body>
     <a class="skip" href="#main">본문 바로가기</a>
@@ -244,21 +244,32 @@
             </div>
           </details>
           <section class="contact" id="contact">
-            <h2>아직 해결되지 않았나요?</h2>
+            <h2>버그를 발견했나요?</h2>
             <p>
-              기기 모델, 운영체제·앱 버전, 문제가 생긴 순서를 알려 주세요.
-              스크린샷을 첨부한다면 개인정보를 먼저 가려 주세요.
+              어디에서 어떤 문제가 있었는지만 짧게 알려 주세요. 기기 정보와
+              답변받을 이메일은 선택 사항입니다.
             </p>
-            <a
-              class="button"
-              data-support-link
-              href="https://github.com/HaroldSoul/youin.github.io/issues"
-              >문의 남기기</a
-            >
-            <p class="contact-note" data-contact-note>
-              현재 임시 문의 창구는 GitHub Issues입니다. 작성 시 GitHub 계정이
-              필요하며 게시 내용은 공개됩니다. 얼굴 사진, 개인 연락처 등 민감한
-              정보는 올리지 마세요.
+            <div class="contact-actions">
+              <a
+                class="button"
+                data-bug-report-link
+                href="https://docs.google.com/forms/d/e/1FAIpQLSe5g-jqgGmhtS8-kup5UUY0C_aBH4s0x6z0LxxeFGW7hBg7zw/viewform?usp=publish-editor"
+                target="_blank"
+                rel="noopener"
+                >버그 신고하기 <span aria-hidden="true">↗</span></a
+              >
+              <a
+                class="contact-secondary-link"
+                data-support-link
+                data-support-kind="general"
+                href="https://github.com/HaroldSoul/youin.github.io/issues"
+                >개인정보·기타 문의</a
+              >
+            </div>
+            <p class="contact-note">
+              버그 신고는 Google Form으로 접수합니다. 얼굴 사진, 카메라 영상,
+              비밀번호 등 민감한 정보는 보내지 마세요. 개인정보·기타 문의에
+              GitHub Issues를 사용하면 작성 내용이 공개됩니다.
             </p>
           </section>
         </div>
