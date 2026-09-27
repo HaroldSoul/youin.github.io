@@ -1,34 +1,38 @@
 {
-  "source_collections": [
-    "output/ui-screenshots-2026-09-27/homepage-picks",
-    "output/homepage-motion-2026-09-27"
-  ],
+  "source_package": "homepage-current-2026-09-27-1cd8cad/homepage-ready.zip",
+  "source_commit": "1cd8cad88aa6798aaa46dd02c1758b2ba16bbb78",
+  "remote_develop_verified": true,
   "purpose": "Current app screens and verified motion posters approved for the official website",
   "images": [
     {
       "file": "assets/screenshots/home.png",
-      "provided_source": "output/ui-screenshots-2026-09-27/homepage-picks/01-home-first-fold.png",
-      "sha256": "bb1d43b131f323883b54af84b0060bc5304ab1227fa53c86c67f7172a22dc326"
+      "capture_source": "screenshots/01-platform/01-home.png",
+      "sha256": "febaa6912e658f38c5f33fc6dc7e7eaebde7def1bfef3c653c181b75b463e51b"
     },
     {
       "file": "assets/screenshots/caught-you.png",
-      "provided_source": "output/homepage-motion-2026-09-27/caught-you-poster.png",
-      "sha256": "01c9d2f7e3a6bf8985e7230d1fd5338f9c559b6865b9be1ebf4c9d7547440e27"
+      "capture_source": "caught-you.mp4 final decoded frame",
+      "sha256": "437ec0efcb14c19f937795507b7018b49879789afc31f51f4afc8b035ebc09e1"
     },
     {
       "file": "assets/screenshots/last-kick.png",
-      "provided_source": "output/ui-screenshots-2026-09-27/homepage-picks/07-last-kick-result.png",
-      "sha256": "6aabbcbd6475ed5c87ab79e2607c4b5ad6287d53655f6cbce7f043bcdc903473"
+      "capture_source": "screenshots/04-last-kick/11-real-result.png",
+      "sha256": "1bc4b5bdf737a70f92318b3457cb272c1c6e7e21dcd5c9628bcf78e6b2b86ef9"
     },
     {
       "file": "assets/screenshots/who-more.png",
-      "provided_source": "output/homepage-motion-2026-09-27/who-more-poster.png",
-      "sha256": "a4caf825a3703595cf953cbf0a6576ae87ea2f05e0739cab7c35dfdcef211369"
+      "capture_source": "who-more.mp4 final decoded frame",
+      "sha256": "88de651a04986884dce41273f1a48c14c16c1f8f5ff3a83c80816d875e41c759"
+    },
+    {
+      "file": "assets/screenshots/punch-king.png",
+      "capture_source": "punch-king.mp4 final decoded frame",
+      "sha256": "46b930d00c3c57279d8316fb91556f32e827a9e5b570a38650bfa9d2f6f905a8"
     },
     {
       "file": "assets/screenshots/overflow.png",
-      "provided_source": "output/homepage-motion-2026-09-27/overflow-poster.png",
-      "sha256": "c22fa1256e300625078722f9e53d50829caa385284a97f96415726ea3e967a89"
+      "capture_source": "overflow.mp4 final decoded frame",
+      "sha256": "323a88e328ca91a741f3e858530d6a7297fa7d0b846892794c9f5c82be6be932"
     }
   ]
 }

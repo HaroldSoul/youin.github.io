@@ -1,17 +1,16 @@
 # Homepage game motion assets
 
-These muted H.264 clips were exported from the current YouIN Godot workspace for the official homepage on 2026-09-27. They play once when their homepage scene becomes active and hold on the final frame. The matching PNG in `assets/screenshots/` is both the video poster and the no-motion fallback.
+These muted clips were exported from the YouIN app at remote `develop` commit `1cd8cad88aa6798aaa46dd02c1758b2ba16bbb78` for the official homepage on 2026-09-27. The verified source package is `homepage-current-2026-09-27-1cd8cad/homepage-ready.zip`; it supersedes the earlier `ui-screenshots-2026-09-27` and `homepage-motion-2026-09-27` packages.
 
-Source package: `/Users/leekangho/Documents/YouIN/output/homepage-motion-2026-09-27/`
-
-Source app commit recorded by the package: `ea5c60198c0a768a4fec7296747dabd57c32008c` (captured from a dirty app worktree without changing it from this website repository).
+Each clip plays once when its homepage scene becomes active and holds on the final frame. The matching PNG in `assets/screenshots/` is both the video poster and the no-motion fallback. Each poster is pixel-identical to the last decoded video frame.
 
 | Game | File | Duration | SHA-256 |
 | --- | --- | ---: | --- |
-| Caught You | `caught-you.mp4` | 5.0 s | `27d8d1837d735b8e3c344a0974786c38a8830341ec07a851235846e545ff7cee` |
-| Who More? | `who-more.mp4` | 5.0 s | `46333824072dd8da08bc7806e18bcf3e016e6acb3d8179ace909115f5fe07f1d` |
-| Overflow | `overflow.mp4` | 5.2 s | `af5111568008caf3d2e52c190d821222f64a7bd74044d92e7e8db89eb396c829` |
+| Caught You | `caught-you.mp4` | 5.0 s | `2d157fec4383746b299549cd7d80eca920adb5cb99330e444b9aeb8c4172e6a5` |
+| Who More? | `who-more.mp4` | 7.5 s | `38f75ac591eac1313bd2904e0ceb70a2ac42ded31d552a6519d36c4872c33c99` |
+| Punch King | `punch-king.mp4` | 8.0 s | `a1bffa7f73a28118895d13d2a56fae95aa0e6c4897091514e2caa1ad17019922` |
+| Overflow | `overflow.mp4` | 6.67 s | `57e55abc89c2425add393db6fdda8590b82c74605eca2672d8c3ebfe68798481` |
 
-All three files are 390 × 844, 30 fps, H.264 High Profile, `yuv420p`, fast-start MP4 files without audio.
+All four files are 390 × 844, 30 fps, H.264 High Profile, `yuv420p`, fast-start MP4 files without audio.
 
-Last Kick was deliberately excluded because the source package marked its clip `blocked`: the ball begins moving while a visible gap remains between the boot and ball. It retains its verified static screenshot. Punch King has no implemented gameplay scene or current public capture, so the homepage shows an explicit coming-soon panel instead of the older screen.
+Last Kick remains a verified static screenshot. The current result catalog has no approved result clip, so its fallback video is excluded from the public website. Punch King uses the implemented current game screen and motion; the captured simulator result accurately retains the in-app notice that device verification was unavailable and the record was not saved.

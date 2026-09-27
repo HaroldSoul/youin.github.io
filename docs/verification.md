@@ -1,5 +1,7 @@
 # Website verification — 2026-09-22
 
+> Current media baseline: app `develop` commit `1cd8cad88aa6798aaa46dd02c1758b2ba16bbb78`. The final section in this document supersedes the earlier September 27 asset notes, which remain as deployment history.
+
 ## Local pre-deployment checks
 
 Verified the static site with a loopback-only server serving this public repository. Both a domain root and the `/youin.github.io/` project prefix were exercised.
@@ -57,3 +59,15 @@ The motion behavior test was observed failing before implementation with zero mo
 ## Game request Google Form — 2026-09-27
 
 The Korean and English homepage buttons open the same bilingual Google Form. The destination uses the published responder URL, opens in a new tab, and does not expose submissions as public GitHub Issues. The obsolete Korean and English game request Issue Forms were removed. Blank GitHub Issues remain available for general support requests.
+
+## Current app media correction — 2026-09-27
+
+The public media was replaced from `homepage-current-2026-09-27-1cd8cad/homepage-ready.zip`, captured from a clean worktree at verified remote `develop` commit `1cd8cad88aa6798aaa46dd02c1758b2ba16bbb78`. This package supersedes the earlier `ui-screenshots-2026-09-27` and `homepage-motion-2026-09-27` outputs. The ZIP inventory was restricted to its handoff, README, manifest, six PNG files and four MP4 files. Every copied file matches the byte count and SHA-256 recorded in `capture-manifest.json`.
+
+The Korean and English home pages now show all six approved current images: the app home plus Caught You, Last Kick, Who More?, Punch King and Overflow. Punch King is implemented in the current app, so its temporary coming-soon panel was removed and replaced with its verified result motion. Last Kick remains a current static result because the package contains no approved result clip for public use.
+
+The four public MP4 files are 390 × 844 H.264 High Profile, `yuv420p`, 30 fps, muted and fast-start. Full frame counts are 150, 225, 240 and 200 for Caught You, Who More?, Punch King and Overflow respectively. Independent decoding confirmed that each final frame is pixel-identical to its PNG poster. Browser checks confirmed that only the active scene plays, Punch King reaches and holds its final frame, inactive scenes reset, and reduced-motion mode leaves videos on their posters.
+
+Website actions now use the current app control geometry: 52 px controls use a 26 px radius and the compact language control uses a 24 px radius. The obsolete arrow divider and the 4 px privacy CTA override were removed. Cards and media keep their separate 10 px and 22 px radii. Overflow's in-app 25 px primary and 10 px secondary controls remain unchanged inside the approved capture.
+
+Local Chrome checks passed across all six Korean and English routes at 1440, 390 and 320 pixels. Twenty-six internal URLs returned 200; language switching, keyboard controls, nested 404 behavior, JavaScript-disabled reading, reduced motion and 200%-zoom-equivalent reflow passed without console errors, missing assets or horizontal overflow. Axe-core reported zero WCAG A/AA violations across all seven documents at desktop and mobile widths. The desktop hero and desktop/mobile Punch King motion were visually inspected.
