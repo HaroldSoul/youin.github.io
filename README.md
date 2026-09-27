@@ -30,7 +30,7 @@
 | `assets/motion/` | 활성 게임 섹션에서 한 번 재생되는 검증된 무음 MP4 |
 | `assets/og-card.png` | 타이포그래피와 제공된 앱 스크린샷으로 구성한 1200 × 630 공유 이미지 |
 | `sitemap.xml`, `robots.txt` | 공개 페이지 목록 및 크롤링 안내 |
-| `.github/ISSUE_TEMPLATE/` | 한·영 게임 제안 폼과 Issue 선택 화면 설정 |
+| `.github/ISSUE_TEMPLATE/` | 일반 지원용 Issue 선택 화면 설정 |
 | `.github/workflows/pages.yml` | `main` 푸시 시 GitHub Pages 배포 |
 
 본문은 JavaScript 없이도 읽을 수 있습니다. KO/EN은 같은 페이지의 다른 언어로 이동합니다. 첫 방문은 영어 시스템 언어에 영어, 그 밖에는 한국어를 사용하며, 명시적으로 선택한 언어가 우선합니다. `?lang=ko` / `?lang=en`으로 링크의 언어를 고정할 수도 있습니다. 저장소 접근이 차단돼도 언어 링크는 작동합니다.
@@ -45,7 +45,7 @@
 
 ## 게임 제안 폼
 
-홈페이지의 `이 게임 만들어주세요!`와 `Pitch this game!` 버튼은 각각 `.github/ISSUE_TEMPLATE/game-request.yml`과 `game-request-en.yml`을 엽니다. 두 폼은 게임의 핵심 순간, 추천 인원과 장소, 플레이 방식, 규칙, 재미 포인트를 받고 공개 게시와 개인정보 제외를 필수로 확인합니다. `game idea` 라벨을 유지해야 자동 분류됩니다. 일반 지원 문의를 막지 않도록 Issue 선택 화면의 빈 이슈 작성도 계속 허용합니다.
+홈페이지의 `이 게임 만들어주세요!`와 `Pitch this game!` 버튼은 같은 한·영 Google Form을 엽니다. 응답은 공개 GitHub Issue로 게시되지 않으며, Google Forms 응답 관리 화면에서 확인합니다. 폼 주소를 바꿀 때는 한국어와 영어 홈페이지의 `next-game-button` 링크를 함께 갱신합니다. 일반 지원 문의용 GitHub Issue는 계속 사용할 수 있습니다.
 
 ## 로컬 확인
 
