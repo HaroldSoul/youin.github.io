@@ -36,9 +36,9 @@ axe-core returned zero WCAG A/AA rule violations across the seven documents at d
 
 ## Overflow game and latest app screens — 2026-09-27
 
-The owner supplied the app's `output/ui-screenshots-2026-09-27/homepage-picks/` review page and approved its latest in-game screens for the public site. The home, Caught You, Who More? and Last Kick images were replaced with those picks, and the new Overflow (`간당간당`) screen was added as a fifth game. Punch King continues to use its previously approved screen because the latest review set does not contain a replacement. The private app repository was read only and was not modified.
+The owner supplied the app's `output/ui-screenshots-2026-09-27/homepage-picks/` review page and approved its latest in-game screens for the public site. The home and Last Kick images use those picks; Caught You, Who More? and Overflow (`간당간당`) use the exact final-frame posters from the verified motion package. Punch King has no implemented gameplay scene or current capture, so the older screenshot was removed and the section now states that it is in development. The private app repository was read only and was not modified.
 
-The Korean and English home pages now contain nine full-page scenes and five linked game screenshots. The privacy policy was updated for Overflow's optional on-device microphone level processing and nearby play, with a September 27, 2026 revision date.
+The Korean and English home pages now contain nine full-page scenes, five verified app images, and a non-interactive Punch King coming-soon panel. The privacy policy was updated for Overflow's optional on-device microphone level processing and nearby play, with a September 27, 2026 revision date.
 
 Chromium checks passed for all six Korean/English home, privacy and support pages at 1440, 390 and 320 pixels. All 26 internal page and asset URLs returned 200; direct and nested 404 behavior, language switching, keyboard controls, reduced motion, blocked storage, no-JavaScript reading and 200% zoom-equivalent reflow passed. No JavaScript errors, missing images, horizontal overflow or axe-core WCAG A/AA violations were reported. Desktop and mobile captures of the first scene, updated game scenes, Overflow and privacy pages were visually inspected. Live deployment is verified separately after merging to `main`.
 
@@ -46,7 +46,11 @@ Chromium checks passed for all six Korean/English home, privacy and support page
 
 The owner supplied a verified motion package from the current Godot workspace. Caught You, Who More? and Overflow now use 390 × 844 muted H.264 clips that play once when their scene becomes active and hold on the final frame. Their exact final-frame PNGs replace the earlier posters. Inactive clips pause and reset, only the active scene plays, and `prefers-reduced-motion: reduce` keeps all clips on their static posters.
 
-Last Kick remains static because the supplied package marked its clip blocked: the ball begins moving before visible boot contact. Punch King remains static because the current app workspace has no implemented gameplay scene. Neither excluded clip was copied into the public repository.
+Last Kick remains static because the supplied package marked its clip blocked: the ball begins moving before visible boot contact. Punch King has no current gameplay scene, so its older screenshot was removed and replaced by the coming-soon panel. Neither excluded clip was copied into the public repository.
+
+## App shape alignment — 2026-09-27
+
+The website now maps the app's current control scale directly: 6 px for small controls, 10 px for cards and mode controls, 12 px for primary controls and panels, and 23 px for popup-style pills. Primary website actions use the app's left-label/right-arrow composition. The old Punch King capture was removed because it is absent from the current app workspace; the section is clearly labeled as in development.
 
 The motion behavior test was observed failing before implementation with zero motion videos, then passing after the change in Korean and English. Chromium and WebKit both played the active muted inline clip without page errors. All three MP4 copies match their source bytes, decode fully, contain no audio tracks and use H.264 High Profile, `yuv420p`, 30 fps. Local Chromium checks passed for all six language pages at 1440, 390 and 320 pixels, 27 internal URLs, language and keyboard flows, nested 404 behavior, no-JavaScript reading, reduced motion and 200% zoom-equivalent reflow. Axe-core reported zero WCAG A/AA violations at desktop and mobile widths. Mid-motion mobile captures for Caught You and Who More? and a desktop Overflow capture were visually inspected.
 

@@ -25,7 +25,7 @@
     <link rel="icon" type="image/svg+xml" href="assets/app-icon.svg" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
-    <link rel="stylesheet" href="assets/styles.css?v=20260927-motion" />
+    <link rel="stylesheet" href="assets/styles.css?v=20260927-app-shapes" />
     <script src="assets/language.js"></script>
     <script src="assets/config.js" defer></script>
     <script src="assets/site.js?v=20260927-motion" defer></script>
@@ -143,16 +143,14 @@
             <p class="scene-tagline">한 번의 도전.<br />웃음 한 방.</p>
             <p class="scene-description">친구들이 지켜보는 가운데 가볍게 도전하고, 가장 요란하게 웃는 짧은 승부.</p>
           </div>
-          <a class="game-screenshot scene-device punch-device" href="assets/screenshots/punch-king.png" target="_blank" rel="noopener" aria-label="펀치 킹 스크린샷 크게 보기 (새 탭)">
-            <span class="scene-device-frame">
-              <img src="assets/screenshots/punch-king.png" width="390" height="844" loading="lazy" decoding="async" alt="벽과 펀치 게이지가 보이는 READY 화면" />
-              <svg class="punch-back-icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
-                <circle cx="24" cy="24" r="24" fill="#1b1814" />
-                <path d="M28.5 15 L19.5 24 L28.5 33" fill="none" stroke="#f2efe7" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </span>
-            <span>실제 앱 화면 <span aria-hidden="true">↗</span></span>
-          </a>
+          <div class="game-screenshot scene-device punch-device" aria-label="펀치 킹은 현재 준비 중입니다">
+            <div class="scene-device-frame punch-placeholder" aria-hidden="true">
+              <span class="punch-placeholder-label">QUICK CHALLENGE / 004</span>
+              <strong>PUNCH<br />KING</strong>
+              <span class="punch-placeholder-status">COMING SOON</span>
+            </div>
+            <span>현재 준비 중</span>
+          </div>
           <div class="scene-word" aria-hidden="true">PUNCH</div>
           <div class="scene-counter" aria-hidden="true"><span>04</span><b>08</b></div>
         </div>

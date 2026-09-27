@@ -14,4 +14,4 @@ Source app commit recorded by the package: `ea5c60198c0a768a4fec7296747dabd57c32
 
 All three files are 390 × 844, 30 fps, H.264 High Profile, `yuv420p`, fast-start MP4 files without audio.
 
-Last Kick was deliberately excluded because the source package marked its clip `blocked`: the ball begins moving while a visible gap remains between the boot and ball. Punch King was excluded because the current app workspace has no implemented gameplay scene to capture. Both sections retain their approved static screenshots.
+Last Kick was deliberately excluded because the source package marked its clip `blocked`: the ball begins moving while a visible gap remains between the boot and ball. It retains its verified static screenshot. Punch King has no implemented gameplay scene or current public capture, so the homepage shows an explicit coming-soon panel instead of the older screen.
