@@ -11,9 +11,11 @@
   --focus: #d8d4ca;
   --radius-small: 6px;
   --radius-card: 10px;
-  --radius-control-primary: 12px;
+  --radius-control-primary: 26px;
+  --radius-control-secondary: 24px;
+  --radius-media: 22px;
   --radius-popup: 23px;
-  --radius: var(--radius-control-primary);
+  --radius: var(--radius-card);
   --max: 1200px;
   font-family:
     -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR",
@@ -145,7 +147,7 @@ p {
   display: flex;
   gap: 2px;
   border: 1px solid #50514f;
-  border-radius: var(--radius-card);
+  border-radius: var(--radius-control-secondary);
   padding: 3px;
 }
 .languages a {
@@ -156,7 +158,7 @@ p {
   font-size: 12px;
   font-weight: 800;
   text-decoration: none;
-  border-radius: var(--radius-small);
+  border-radius: var(--radius-control-secondary);
 }
 .languages a[aria-current="true"] {
   background: var(--text);
@@ -229,15 +231,6 @@ p {
 .button .arrow {
   font-size: 22px;
   line-height: 1;
-}
-.button > span[aria-hidden="true"] {
-  align-self: stretch;
-  display: inline-flex;
-  min-width: 34px;
-  align-items: center;
-  justify-content: flex-end;
-  padding-left: 13px;
-  border-left: 1px solid rgb(16 17 19 / 0.16);
 }
 .hero .button {
   margin-top: 32px;
@@ -855,7 +848,7 @@ p {
   width: 100%;
   height: auto;
   border: 1px solid var(--line);
-  border-radius: var(--radius-control-primary);
+  border-radius: var(--radius-media);
   background: #101112;
 }
 .preview-screens img:nth-child(2) {
@@ -878,7 +871,7 @@ p {
   height: auto;
   aspect-ratio: 390 / 844;
   border: 1px solid var(--line);
-  border-radius: var(--radius-control-primary);
+  border-radius: var(--radius-media);
   background: #101112;
 }
 .game-screenshot > span {
@@ -1224,58 +1217,6 @@ p {
   display: block;
   margin-top: 0 !important;
 }
-.punch-placeholder {
-  position: relative;
-  display: flex;
-  width: 100%;
-  aspect-ratio: 390 / 844;
-  overflow: hidden;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 30px 26px;
-  border: 1px solid rgb(245 244 239 / 0.18);
-  border-radius: var(--radius-control-primary);
-  background:
-    radial-gradient(circle at 72% 34%, rgb(215 255 63 / 0.11), transparent 24%),
-    linear-gradient(150deg, rgb(255 255 255 / 0.035), transparent 48%),
-    #18191d;
-  box-shadow: 0 34px 90px rgb(0 0 0 / 0.43);
-}
-.punch-placeholder:before {
-  content: "";
-  position: absolute;
-  top: 25%;
-  right: -21%;
-  width: 74%;
-  aspect-ratio: 1;
-  border: 1px solid rgb(245 244 239 / 0.13);
-  border-radius: 50%;
-  box-shadow:
-    0 0 0 34px rgb(245 244 239 / 0.025),
-    0 0 0 78px rgb(245 244 239 / 0.018);
-}
-.punch-placeholder-label,
-.punch-placeholder-status {
-  position: relative;
-  z-index: 1;
-  color: var(--muted);
-  font: 10px/1.3 monospace;
-  letter-spacing: 0.11em;
-}
-.punch-placeholder strong {
-  position: relative;
-  z-index: 1;
-  align-self: flex-start;
-  font: 900 clamp(46px, 5vw, 70px) / 0.83 Arial, sans-serif;
-  letter-spacing: -0.075em;
-}
-.punch-placeholder-status {
-  width: fit-content;
-  padding: 9px 12px;
-  border: 1px solid rgb(245 244 239 / 0.25);
-  border-radius: var(--radius-popup);
-  color: var(--text);
-}
 .scene-word {
   position: absolute;
   left: -0.04em;
@@ -1386,7 +1327,7 @@ p {
   justify-content: space-between;
   padding: clamp(22px, 2.5vw, 38px);
   border: 1px solid rgb(242 239 231 / 0.2);
-  border-radius: var(--radius-control-primary);
+  border-radius: var(--radius-card);
   box-shadow: 0 30px 80px rgb(0 0 0 / 0.32);
   font-family: monospace;
   letter-spacing: 0.06em;
@@ -1467,10 +1408,7 @@ p {
   border: 1px solid #171817;
   background: transparent;
   color: #171817;
-  border-radius: 4px;
-}
-.privacy-scene .button-outline > span[aria-hidden="true"] {
-  border-left-color: currentColor;
+  border-radius: var(--radius-control-primary);
 }
 .privacy-scene .button-outline:hover {
   background: #171817;

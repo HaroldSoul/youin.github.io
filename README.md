@@ -26,8 +26,8 @@
 | **`assets/config.js`** | **승인된 지원 이메일을 설정하는 유일한 곳** |
 | `assets/app-icon.svg`, `.png` | 사용자가 공개 사용을 승인한 앱 아이콘 |
 | `assets/favicon-32.png`, `apple-touch-icon.png` | 앱 아이콘에서 크기 변환한 사이트 아이콘 |
-| `assets/screenshots/` | 현재 앱에서 검증한 실제 화면·모션 포스터 5장 (원본 비율 유지) |
-| `assets/motion/` | 활성 게임 섹션에서 한 번 재생되는 검증된 무음 MP4 |
+| `assets/screenshots/` | `develop` `1cd8cad` 앱에서 검증한 실제 화면·모션 포스터 6장 (원본 비율 유지) |
+| `assets/motion/` | 활성 게임 섹션에서 한 번 재생되는 검증된 무음 MP4 4개 |
 | `assets/og-card.png` | 타이포그래피와 제공된 앱 스크린샷으로 구성한 1200 × 630 공유 이미지 |
 | `sitemap.xml`, `robots.txt` | 공개 페이지 목록 및 크롤링 안내 |
 | `.github/ISSUE_TEMPLATE/` | 일반 지원용 Issue 선택 화면 설정 |
@@ -113,6 +113,6 @@ GitHub Pages의 Custom domain과 DNS를 설정한 뒤 HTTPS를 활성화합니�
 
 ## 자산 및 저장소 경계
 
-비공개 앱 저장소는 수정하지 않습니다. 공개 사용이 승인된 앱 아이콘과 현재 앱에서 검증한 이미지 5장을 사용합니다. 최신 홈과 라스트 킥 결과 화면은 앱 저장소의 `output/ui-screenshots-2026-09-27/homepage-picks/`에서 가져왔습니다. 딱 걸렸어, 누가 더?, 간당간당은 `output/homepage-motion-2026-09-27/`에서 검증된 무음 MP4와 정확히 일치하는 최종-frame poster를 사용합니다. 별도 개발 파일과 앱 Git 기록은 포함하지 않습니다. 사용자가 제공한 화면에 포함된 게임 비주얼 외에 별도 인물·얼굴 사진을 추가하지 않습니다. `assets/screenshots/`의 PNG와 `assets/motion/`의 MP4는 390 × 844이며, 영상은 활성 섹션에서 한 번 재생되고 모션 감소 설정에서는 poster로 유지됩니다. 라스트 킥 영상은 발-공 접촉 결함 때문에 공개하지 않습니다. 펀치 킹은 현재 플레이 구현과 최신 공개 화면이 없어 `준비 중` 패널로 표시합니다.
+비공개 앱 저장소는 수정하지 않습니다. 공개 사용이 승인된 앱 아이콘과 원격 `develop` 커밋 `1cd8cad88aa6798aaa46dd02c1758b2ba16bbb78`에서 다시 캡처한 이미지 6장을 사용합니다. 홈과 라스트 킥은 최신 결과 정지 화면이며, 딱 걸렸어·누가 더?·펀치 킹·간당간당은 `homepage-current-2026-09-27-1cd8cad/homepage-ready.zip`에서 검증된 무음 MP4와 정확히 일치하는 최종 프레임 poster를 사용합니다. 이전 `ui-screenshots-2026-09-27` 및 `homepage-motion-2026-09-27` 산출물은 사용하지 않습니다. 별도 개발 파일과 앱 Git 기록은 포함하지 않습니다. 승인된 앱 화면 외에 개발용 사진이나 fixture를 추가하지 않습니다. 공개 PNG와 MP4는 390 × 844이며, 영상은 활성 섹션에서 한 번 재생되고 모션 감소 설정에서는 poster로 유지됩니다. 최신 런타임에 승인된 결과 클립이 없는 라스트 킥은 정지 화면만 제공합니다.
 
 화면 캡처는 로컬 `output/playwright/`에 저장하며 Git에서는 제외합니다. 검증 기록은 `docs/verification.md`에 정리합니다.
