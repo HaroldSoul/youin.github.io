@@ -525,8 +525,23 @@ p {
   color: var(--muted);
   max-width: 650px;
 }
-.contact .button {
+.contact-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px 18px;
   margin-block: 24px 17px;
+}
+.contact-actions .button {
+  margin: 0;
+}
+.contact-secondary-link {
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 700;
+}
+.contact-secondary-link:hover {
+  color: var(--text);
 }
 .contact .contact-note {
   font-size: 13px;

@@ -14,15 +14,19 @@
   });
   const config = window.YOUIN_CONFIG || {};
   const email = (config.supportEmail || "").trim();
+  const bugReportForm = (config.bugReportForm || "").trim();
+  document.querySelectorAll("[data-bug-report-link]").forEach((link) => {
+    link.href = bugReportForm || link.href;
+  });
   document.querySelectorAll("[data-support-link]").forEach((link) => {
     link.href = email ? `mailto:${email}` : config.supportIssues || link.href;
-    link.textContent = email
-      ? en
-        ? "Email support"
-        : "이메일로 문의하기"
-      : en
-        ? "Open a support issue"
-        : "문의 남기기";
+    if (email) {
+      link.textContent = en ? "Email support" : "이메일로 문의하기";
+    } else if (link.dataset.supportKind === "general") {
+      link.textContent = en ? "Privacy or other inquiry" : "개인정보·기타 문의";
+    } else {
+      link.textContent = en ? "Open a support issue" : "문의 남기기";
+    }
   });
   if (email) {
     document.querySelectorAll("[data-contact-intro]").forEach((intro) => {
