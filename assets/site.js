@@ -39,9 +39,37 @@
 
   const scenes = Array.from(document.querySelectorAll("[data-scene]"));
   const sceneLinks = Array.from(document.querySelectorAll("[data-scene-link]"));
+  const motionVideos = Array.from(document.querySelectorAll("[data-game-motion]"));
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   if (scenes.length && "IntersectionObserver" in window) {
     const ratios = new Map(scenes.map((scene) => [scene.id, 0]));
+    let activeSceneId = "";
+    const resetVideo = (video) => {
+      video.pause();
+      if (video.currentTime !== 0) {
+        try {
+          video.currentTime = 0;
+        } catch (_) {
+          /* The poster remains available if the media cannot seek yet. */
+        }
+      }
+    };
+    const syncSceneMotion = (id) => {
+      motionVideos.forEach((video) => {
+        const isActive = video.closest("[data-scene]")?.id === id;
+        if (!isActive || reducedMotion.matches) {
+          resetVideo(video);
+          return;
+        }
+        video.currentTime = 0;
+        video.play().catch(() => {
+          /* Muted autoplay can still be blocked; the poster is the fallback. */
+        });
+      });
+    };
     const setActiveScene = (id) => {
+      if (activeSceneId === id) return;
+      activeSceneId = id;
       scenes.forEach((scene) => scene.classList.toggle("is-active", scene.id === id));
       sceneLinks.forEach((link) => {
         if (link.dataset.sceneLink === id) {
@@ -50,6 +78,7 @@
           link.removeAttribute("aria-current");
         }
       });
+      syncSceneMotion(id);
     };
     setActiveScene(scenes[0].id);
     document.body.classList.add("scene-observed");
@@ -64,5 +93,23 @@
       { threshold: [0.2, 0.4, 0.6, 0.8] },
     );
     scenes.forEach((scene) => observer.observe(scene));
+    const handleMotionPreference = () => syncSceneMotion(activeSceneId);
+    if (typeof reducedMotion.addEventListener === "function") {
+      reducedMotion.addEventListener("change", handleMotionPreference);
+    } else {
+      reducedMotion.addListener(handleMotionPreference);
+    }
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) {
+        motionVideos.forEach((video) => video.pause());
+        return;
+      }
+      const activeVideo = motionVideos.find(
+        (video) => video.closest("[data-scene]")?.id === activeSceneId,
+      );
+      if (activeVideo && !activeVideo.ended && !reducedMotion.matches) {
+        activeVideo.play().catch(() => {});
+      }
+    });
   }
 })();

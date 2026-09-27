@@ -857,7 +857,9 @@ p {
   display: block;
   text-decoration: none;
 }
-.game-screenshot > img {
+.game-screenshot > img,
+.game-screenshot > video {
+  display: block;
   width: 100%;
   height: auto;
   aspect-ratio: 390 / 844;
@@ -900,7 +902,8 @@ p {
     font-size: 11px;
     text-align: left;
   }
-  .game-screenshot > img {
+  .game-screenshot > img,
+  .game-screenshot > video {
     border-radius: 10px;
   }
   .game-screenshot > span {
@@ -1186,7 +1189,9 @@ p {
   justify-self: end;
 }
 .scene-device > img,
+.scene-device > video,
 .scene-device-frame > img {
+  display: block;
   width: 100%;
   height: auto;
   max-height: calc(100svh - 195px);
@@ -1678,6 +1683,7 @@ p {
     justify-self: auto;
   }
   .scene-device > img,
+  .scene-device > video,
   .scene-device-frame > img {
     max-height: none;
     border-radius: 17px;
