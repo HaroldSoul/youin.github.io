@@ -1,0 +1,90 @@
+name: "Game idea"
+description: "Suggest the next game you want to play with friends in YouIN."
+title: "[Game idea] "
+labels:
+  - "game idea"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Tell us which moment with friends should become a game. A polished design document is not required.
+
+        This suggestion becomes a public GitHub Issue. Do not include real names, contact details, face photos, chat captures, or other personal information.
+
+  - type: input
+    id: game_name
+    attributes:
+      label: "Game name or one-line idea"
+      description: "If it has no name yet, describe the game in one sentence."
+      placeholder: "Example: Everyone tries to match answers, and the odd one out loses."
+    validations:
+      required: true
+
+  - type: textarea
+    id: moment
+    attributes:
+      label: "Which moment should become a game?"
+      description: "Describe the situation with friends or the moment that starts the game."
+      placeholder: "Example: Everyone silently points to one person at the same time."
+    validations:
+      required: true
+
+  - type: input
+    id: players
+    attributes:
+      label: "Suggested group size and setting"
+      description: "Tell us how many people play, where, and roughly how long it takes."
+      placeholder: "Example: 3–6 friends, at home or a party, around five minutes."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: play_mode
+    attributes:
+      label: "How should people play?"
+      options:
+        - "Together or taking turns on one device"
+        - "Nearby connection between individual devices"
+        - "Either mode could work"
+        - "Not sure yet"
+    validations:
+      required: true
+
+  - type: textarea
+    id: rules
+    attributes:
+      label: "How the game works"
+      description: "Describe the start, player actions, and the win, loss, or playful penalty."
+      placeholder: |
+        1. Everyone picks a question.
+        2. Everyone points to one person at the same time.
+        3. The odd choice gets a short playful penalty.
+    validations:
+      required: true
+
+  - type: textarea
+    id: fun_point
+    attributes:
+      label: "The funniest moment"
+      description: "Tell us what creates the biggest laugh or reaction."
+      placeholder: "Example: The best moment is the reaction when everyone points to the same friend."
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: "A safe game idea"
+      options:
+        - label: "This idea is not for harassment, relationship surveillance, or important employment, legal, medical, or financial decisions."
+          required: true
+        - label: "I have not included anyone's real name, contact details, face photos, or chat captures."
+          required: true
+
+  - type: checkboxes
+    id: public_submission
+    attributes:
+      label: "Public submission"
+      options:
+        - label: "I understand that this suggestion and its replies will be visible in a public GitHub Issue."
+          required: true

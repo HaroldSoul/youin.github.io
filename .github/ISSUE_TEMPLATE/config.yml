@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: "사용자 지원 / User support"
+    url: "https://haroldsoul.github.io/youin.github.io/support/"
+    about: "앱 사용 문제와 자주 묻는 질문을 확인하세요. / Get help with the app and common issues."
+  - name: "개인정보처리방침 / Privacy policy"
+    url: "https://haroldsoul.github.io/youin.github.io/privacy/"
+    about: "YouIN의 정보 처리 원칙을 확인하세요. / Read how YouIN handles information."

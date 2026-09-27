@@ -26,9 +26,11 @@
 | **`assets/config.js`** | **승인된 지원 이메일을 설정하는 유일한 곳** |
 | `assets/app-icon.svg`, `.png` | 사용자가 공개 사용을 승인한 앱 아이콘 |
 | `assets/favicon-32.png`, `apple-touch-icon.png` | 앱 아이콘에서 크기 변환한 사이트 아이콘 |
-| `assets/screenshots/` | 사용자가 제공한 실제 앱 화면 5장 (원본 비율 유지) |
+| `assets/screenshots/` | 사용자가 제공한 실제 앱 화면 6장 (원본 비율 유지) |
+| `assets/motion/` | 활성 게임 섹션에서 한 번 재생되는 검증된 무음 MP4 |
 | `assets/og-card.png` | 타이포그래피와 제공된 앱 스크린샷으로 구성한 1200 × 630 공유 이미지 |
 | `sitemap.xml`, `robots.txt` | 공개 페이지 목록 및 크롤링 안내 |
+| `.github/ISSUE_TEMPLATE/` | 한·영 게임 제안 폼과 Issue 선택 화면 설정 |
 | `.github/workflows/pages.yml` | `main` 푸시 시 GitHub Pages 배포 |
 
 본문은 JavaScript 없이도 읽을 수 있습니다. KO/EN은 같은 페이지의 다른 언어로 이동합니다. 첫 방문은 영어 시스템 언어에 영어, 그 밖에는 한국어를 사용하며, 명시적으로 선택한 언어가 우선합니다. `?lang=ko` / `?lang=en`으로 링크의 언어를 고정할 수도 있습니다. 저장소 접근이 차단돼도 언어 링크는 작동합니다.
@@ -40,6 +42,10 @@
 `assets/config.js`의 `supportEmail: ''`에 **승인된 공개 지원 이메일**만 입력합니다. 모든 문의 버튼과 문의 안내가 이메일로 전환됩니다. 현재 값은 비어 있고 임시 창구는 공개 GitHub Issues입니다. JavaScript가 꺼진 환경에는 공개 이슈 링크를 계속 대체 창구로 제공합니다. 개인 이메일은 포함하지 않았습니다. 이메일 주소를 바꾸는 데 다른 HTML 파일 수정은 필요하지 않습니다.
 
 문의는 공개될 수 있다는 점과 얼굴 사진·민감정보를 올리지 말라는 안내를 유지하세요. 이슈 작성에는 GitHub 계정이 필요합니다.
+
+## 게임 제안 폼
+
+홈페이지의 `이 게임 만들어주세요!`와 `Pitch this game!` 버튼은 각각 `.github/ISSUE_TEMPLATE/game-request.yml`과 `game-request-en.yml`을 엽니다. 두 폼은 게임의 핵심 순간, 추천 인원과 장소, 플레이 방식, 규칙, 재미 포인트를 받고 공개 게시와 개인정보 제외를 필수로 확인합니다. `game idea` 라벨을 유지해야 자동 분류됩니다. 일반 지원 문의를 막지 않도록 Issue 선택 화면의 빈 이슈 작성도 계속 허용합니다.
 
 ## 로컬 확인
 
