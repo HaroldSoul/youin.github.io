@@ -1244,6 +1244,15 @@ p {
     radial-gradient(circle at 20% 54%, rgb(153 88 42 / 0.17), transparent 34%),
     #151210;
 }
+.scene-overflow {
+  background:
+    radial-gradient(circle at 78% 48%, rgb(202 178 126 / 0.14), transparent 33%),
+    radial-gradient(circle at 18% 76%, rgb(87 112 126 / 0.11), transparent 30%),
+    #101315;
+}
+.scene-overflow .scene-word {
+  color: rgb(242 239 231 / 0.045);
+}
 .next-game-scene {
   overflow: hidden;
   background:
