@@ -1,31 +1,34 @@
 {
-  "source_collection": "ui-screenshots-2026-09-21-8664300",
-  "purpose": "User-provided app screenshots approved for the official website",
+  "source_collections": [
+    "output/ui-screenshots-2026-09-27/homepage-picks",
+    "output/homepage-motion-2026-09-27"
+  ],
+  "purpose": "Current app screens and verified motion posters approved for the official website",
   "images": [
     {
       "file": "assets/screenshots/home.png",
-      "provided_source": "01-platform/02-home.png",
-      "sha256": "d6cb297db66a7665aba2ef7e965160d6b85dbbf227d46be81559c46594b01c67"
+      "provided_source": "output/ui-screenshots-2026-09-27/homepage-picks/01-home-first-fold.png",
+      "sha256": "bb1d43b131f323883b54af84b0060bc5304ab1227fa53c86c67f7172a22dc326"
     },
     {
       "file": "assets/screenshots/caught-you.png",
-      "provided_source": "02-lie-detector/01-entry.png",
-      "sha256": "b42a32bde576cf820052a50cd28e0db091af97d0f1d3c68af1b96f330f8d1c46"
+      "provided_source": "output/homepage-motion-2026-09-27/caught-you-poster.png",
+      "sha256": "01c9d2f7e3a6bf8985e7230d1fd5338f9c559b6865b9be1ebf4c9d7547440e27"
     },
     {
       "file": "assets/screenshots/last-kick.png",
-      "provided_source": "04-last-kick/390x844/10-result.png",
-      "sha256": "a295efc931eb2ced737e9d7c4f7073f7f80595ec1d62cab26b65c128f87e2610"
+      "provided_source": "output/ui-screenshots-2026-09-27/homepage-picks/07-last-kick-result.png",
+      "sha256": "6aabbcbd6475ed5c87ab79e2607c4b5ad6287d53655f6cbce7f043bcdc903473"
     },
     {
       "file": "assets/screenshots/who-more.png",
-      "provided_source": "03-who-more/01-instructions.png",
-      "sha256": "b0753bc18e0a54d965dec4f18f1623a99c3d5fdb67c84fff6172cb0f61695d3d"
+      "provided_source": "output/homepage-motion-2026-09-27/who-more-poster.png",
+      "sha256": "a4caf825a3703595cf953cbf0a6576ae87ea2f05e0739cab7c35dfdcef211369"
     },
     {
-      "file": "assets/screenshots/punch-king.png",
-      "provided_source": "05-punch-king/04-ready.png",
-      "sha256": "2d635d1e2421dbae18d79d9475336b9fe7d25df361e9b2af4247cf3c9fd08ccb"
+      "file": "assets/screenshots/overflow.png",
+      "provided_source": "output/homepage-motion-2026-09-27/overflow-poster.png",
+      "sha256": "c22fa1256e300625078722f9e53d50829caa385284a97f96415726ea3e967a89"
     }
   ]
 }
