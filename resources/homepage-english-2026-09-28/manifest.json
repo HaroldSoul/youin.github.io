@@ -1,0 +1,456 @@
+{
+  "name": "YouIN homepage English resources",
+  "source_commit": "1cd8cad88aa6798aaa46dd02c1758b2ba16bbb78",
+  "source_note": "English locale recapture of the approved 2026-09-27 homepage resource set; production app files were not edited.",
+  "capture_only_translation": [
+    "The pinned Overflow screen does not apply its locale property to visible UI text. Capture-only scene code translates its labels and buttons without changing game state or motion.",
+    "The pinned Last Kick result fallback leaves two labels in Korean. Capture-only scene code translates those labels after the real result is calculated.",
+    "Platform history QA fixtures use English example text; no public homepage asset uses history fixtures.",
+    "Platform incoming-challenge QA fixture uses English names and example copy, with capture-only translation for hardcoded labels."
+  ],
+  "locale": "en",
+  "capture_date": "2026-09-28",
+  "logical_viewport": [
+    390,
+    844
+  ],
+  "render_viewport": [
+    780,
+    1688
+  ],
+  "engine": "Godot 4.7.1 stable",
+  "qa_screenshots": 69,
+  "qa_screenshot_files": [
+    {
+      "path": "screenshots/01-platform/01-home.png",
+      "sha256": "1b3a971d1a0ff24551902ee377e27c4403465734da8eebf3ba58ec6c207550fd"
+    },
+    {
+      "path": "screenshots/01-platform/02-games.png",
+      "sha256": "51ae206598c605a18c98a7d6740ccc5280732b7672f4fbe7d9dd8107e9a86fe4"
+    },
+    {
+      "path": "screenshots/01-platform/03-my.png",
+      "sha256": "ef5803b20d046c5fc66695ba13467d4be3df18bf5028e6e1eb6201f4f22fa1f2"
+    },
+    {
+      "path": "screenshots/01-platform/04-settings.png",
+      "sha256": "398555bf48a5429e27029937f38db227a150afc5ac541ded132f982971f0931e"
+    },
+    {
+      "path": "screenshots/01-platform/05-settings-repeat.png",
+      "sha256": "398555bf48a5429e27029937f38db227a150afc5ac541ded132f982971f0931e"
+    },
+    {
+      "path": "screenshots/01-platform/06-home-reentry.png",
+      "sha256": "c20d4eef9d4da6e11d6aad4742af5bd231a8cd6b76e036b93a23ee51f6ba0ded"
+    },
+    {
+      "path": "screenshots/01-platform/07-history-empty.png",
+      "sha256": "fe99112300d978c4c07a589abb080f152faea8439c80753c260315e433ade1ef"
+    },
+    {
+      "path": "screenshots/01-platform/08-history.png",
+      "sha256": "3ab25465f64f4eb6a3fcbe96d1eaeb4d8a01bf0666a335d9962598c94d942a30"
+    },
+    {
+      "path": "screenshots/01-platform/09-history-filter.png",
+      "sha256": "ab02844b2fddc3b5ac435c6baf3df2529546bf61bdfedf920e59566083656bdf"
+    },
+    {
+      "path": "screenshots/01-platform/10-history-detail.png",
+      "sha256": "d7278f6585eb13ceff037f7100a7e931ef07013b8f733a8a83790f04fbed6164"
+    },
+    {
+      "path": "screenshots/01-platform/11-history-summary.png",
+      "sha256": "b8378190011dfc57dc6f97a9444af07811eafb957023e560568ec2cf9f1e645d"
+    },
+    {
+      "path": "screenshots/01-platform/12-challenge.png",
+      "sha256": "acd29e3743c5eba91213bbafc40e4cde95994bbb9e55d3d2ad051171481ee190"
+    },
+    {
+      "path": "screenshots/02-caught-you/01-explanation.png",
+      "sha256": "0fdf22036e26c9ded766ad8ffd4b57da7543ddbbb3857f727500ee53d9ab8f30"
+    },
+    {
+      "path": "screenshots/02-caught-you/02-question-example.png",
+      "sha256": "30563b6e7fb489445a0556649b8ef2b38d0f22bb5fc529573186a4d65ce94eb9"
+    },
+    {
+      "path": "screenshots/02-caught-you/03-camera-calibration.png",
+      "sha256": "6f577e0af3a3dc5be3d95462f6fb675f1c091d33d6a625b327cbe706660e7f68"
+    },
+    {
+      "path": "screenshots/02-caught-you/04-manual-question-start.png",
+      "sha256": "7b945500aedd8b21e7b2922c79fc000c0817f5fd58c8ee35a309ea2b44132dfc"
+    },
+    {
+      "path": "screenshots/02-caught-you/05-answer-capture.png",
+      "sha256": "15468cb3c70763b0d443ef9c6f2d27c729a14bca25bf9ec7b18b1026fc97db84"
+    },
+    {
+      "path": "screenshots/02-caught-you/06-analysis.png",
+      "sha256": "47a7997d447d3720cd4cc922802e9dc0d0e4d2a87ad6156734fc837b6a5c9e97"
+    },
+    {
+      "path": "screenshots/02-caught-you/07-verdict-share-actions.png",
+      "sha256": "398707207d54ff6e278e70d46cb6c475d67c51c6e0011c281ad19f3f8e7d5a83"
+    },
+    {
+      "path": "screenshots/02-caught-you/08-rematch-question.png",
+      "sha256": "18377c1c416462e620834e1a0258e4630fa6fa2edb3e9f2f69e12ea1675248ad"
+    },
+    {
+      "path": "screenshots/02-caught-you/09-explanation-reentry.png",
+      "sha256": "0fdf22036e26c9ded766ad8ffd4b57da7543ddbbb3857f727500ee53d9ab8f30"
+    },
+    {
+      "path": "screenshots/02-caught-you/10-rematch-ready.png",
+      "sha256": "7b945500aedd8b21e7b2922c79fc000c0817f5fd58c8ee35a309ea2b44132dfc"
+    },
+    {
+      "path": "screenshots/03-who-more/01-explanation.png",
+      "sha256": "cf5cffcd417f7ca72581d3e2538d0138c1e1fd991c3a565b645d2ad3b69cd436"
+    },
+    {
+      "path": "screenshots/03-who-more/02-question-selection.png",
+      "sha256": "89e21fe96d0df90bab3d8ebfd240ee655ac400f823f320cabecf41d980ed054b"
+    },
+    {
+      "path": "screenshots/03-who-more/03-photo-a-source.png",
+      "sha256": "b7c58711cc48fe1889a4a39e5d61448b2af9628c762fa5d210c20692d9303221"
+    },
+    {
+      "path": "screenshots/03-who-more/04-photo-a-review.png",
+      "sha256": "470c374666f3689a6196771ee48eab24062a1cad90e81e3051158307b7623ce7"
+    },
+    {
+      "path": "screenshots/03-who-more/05-photo-b-source.png",
+      "sha256": "fe31d37fbce503a293164172f271f9ece3e75bb73fabf7209309861840814cd9"
+    },
+    {
+      "path": "screenshots/03-who-more/06-photo-error-modal.png",
+      "sha256": "8b1c988e49b1371e31958d4244d6f852418ab9776a0ef763787f80cdf93fe8b8"
+    },
+    {
+      "path": "screenshots/03-who-more/07-discovery.png",
+      "sha256": "4642fbcc022ca08c43fd8e30f3fca4b4bf164056fb5a7c05b811ed2540a66b47"
+    },
+    {
+      "path": "screenshots/03-who-more/08-interview.png",
+      "sha256": "68bfcfd489587f91d60701de7b4b2f5a011940d8a5f54c632e085cfba3f4419c"
+    },
+    {
+      "path": "screenshots/03-who-more/09-thinking.png",
+      "sha256": "47209d310928639b6eaec990ad92f8baa96ada39164cbbbe99711ecb7d37e545"
+    },
+    {
+      "path": "screenshots/03-who-more/10-result-share-actions.png",
+      "sha256": "d2e831ff2fcae4051d0764e65a3376fb91bd26b8db792518889f72fde624e72f"
+    },
+    {
+      "path": "screenshots/03-who-more/11-ask-another.png",
+      "sha256": "7612f2b94e40e138acc666e6ce64c8981f4e78931144af742f6531846a380400"
+    },
+    {
+      "path": "screenshots/03-who-more/12-retake-photos.png",
+      "sha256": "b7c58711cc48fe1889a4a39e5d61448b2af9628c762fa5d210c20692d9303221"
+    },
+    {
+      "path": "screenshots/04-last-kick/01-lobby.png",
+      "sha256": "acbd8ba68d9e9739542e11e429045ab0486f779c00ca9a8ba8802744852426aa"
+    },
+    {
+      "path": "screenshots/04-last-kick/02-room-created.png",
+      "sha256": "a71e48c7f0b12010274b073a1212d5b70f5e02e491a51369fdaeae8884798157"
+    },
+    {
+      "path": "screenshots/04-last-kick/03-verification.png",
+      "sha256": "fb47fbd9d8a66ea52cc697ce7c28d120ab34fc191088cf77fc208ea0890bb1f3"
+    },
+    {
+      "path": "screenshots/04-last-kick/04-connected-ready.png",
+      "sha256": "4d96e173bff110085bfd5528095fb8cb5d15858b76c1930a11084968fa170d3b"
+    },
+    {
+      "path": "screenshots/04-last-kick/05-ready-wait.png",
+      "sha256": "72806f42c3ae8d662f07a8691d76bff51cd44e10873483ec38f8f4adab6d377f"
+    },
+    {
+      "path": "screenshots/04-last-kick/06-role.png",
+      "sha256": "751c6e245547b150548a4d87960fbde9166ed95e75eb3badc6c8b3ded5793515"
+    },
+    {
+      "path": "screenshots/04-last-kick/07-environment.png",
+      "sha256": "21fab66f394c2912b3831bff0441c540452cd82b9193431140cc35ba2bc51d0b"
+    },
+    {
+      "path": "screenshots/04-last-kick/08-countdown.png",
+      "sha256": "a8af44236182cbdf78299dfb28fa950adc2db265c68fb1ca5f3ee834d5acc413"
+    },
+    {
+      "path": "screenshots/04-last-kick/09-input-ready.png",
+      "sha256": "523d938a0d7ba3e93db9f118e17113cdde967d0a8f400828d8cf6fb8c85be7e8"
+    },
+    {
+      "path": "screenshots/04-last-kick/10-aiming.png",
+      "sha256": "6887dc818143d2b2fe0221bf0ca479ce2cd85239c37d7e6139a6c66dced90c2b"
+    },
+    {
+      "path": "screenshots/04-last-kick/11-real-result.png",
+      "sha256": "11cf3d844f8dfb780f3dc2fe8fe2a183cadd8500dd892cfb452172aaf9d673bf"
+    },
+    {
+      "path": "screenshots/04-last-kick/12-reentry-lobby.png",
+      "sha256": "acbd8ba68d9e9739542e11e429045ab0486f779c00ca9a8ba8802744852426aa"
+    },
+    {
+      "path": "screenshots/05-punch-king/01-entry.png",
+      "sha256": "696fde3e276c193ae751a9761700b4ceefaf72d8f208de71d63d45d7fc671ec6"
+    },
+    {
+      "path": "screenshots/05-punch-king/02-device-selection.png",
+      "sha256": "074fd11ba15924c01418912559e3b025c2f0e8d29933932beae4feeb7dfb10dc"
+    },
+    {
+      "path": "screenshots/05-punch-king/03-phone-instructions.png",
+      "sha256": "64238b136d2858204efe0d98b3e89fe0d17bc955b6eddeb63e5b281166895bad"
+    },
+    {
+      "path": "screenshots/05-punch-king/04-tutorial-gauge.png",
+      "sha256": "1ff4067fa2f29c29c18cb90d31cbd52c54adce1d69ccfcd84f9269941e35c872"
+    },
+    {
+      "path": "screenshots/05-punch-king/05-player-ready.png",
+      "sha256": "bd6070d6cf1e7d108814b024e1e76663c80b9b6239b656dbb417741459484257"
+    },
+    {
+      "path": "screenshots/05-punch-king/06-countdown.png",
+      "sha256": "03461a6735562c1561a028662a1ac9b81179049d722aafe79aa24092bf76e292"
+    },
+    {
+      "path": "screenshots/05-punch-king/07-input-ready.png",
+      "sha256": "03461a6735562c1561a028662a1ac9b81179049d722aafe79aa24092bf76e292"
+    },
+    {
+      "path": "screenshots/05-punch-king/08-measured-input.png",
+      "sha256": "b70b2b494def5298de96527ab5d932d43868033a2a1d35046bfd405808648d68"
+    },
+    {
+      "path": "screenshots/05-punch-king/09-punch-contact.png",
+      "sha256": "33a1f12fa8c0c81100686871f0c6ad9685785d884301c1b19820cad771518e16"
+    },
+    {
+      "path": "screenshots/05-punch-king/10-wall-chain.png",
+      "sha256": "024ca79eb91fe1f6f846296800d18332df6379ff510e379211a8330cd7334d9c"
+    },
+    {
+      "path": "screenshots/05-punch-king/11-measured-result.png",
+      "sha256": "d4cf355f5ad43feda32021ac6bb2aa9ddc5a219bd80c875a54e0fcafa03a502a"
+    },
+    {
+      "path": "screenshots/05-punch-king/12-retry-ready.png",
+      "sha256": "bd6070d6cf1e7d108814b024e1e76663c80b9b6239b656dbb417741459484257"
+    },
+    {
+      "path": "screenshots/06-overflow/01-setup.png",
+      "sha256": "7bf9dff4fd6fae90f978a21aadffbf564f012342bf7f18c3a686fbc360cb0a3e"
+    },
+    {
+      "path": "screenshots/06-overflow/02-cup-size-modal.png",
+      "sha256": "14c2ca6a3d0e4d5e4bd9dd6bcaa0edb1ae33177e77121acfe5e410716d95b710"
+    },
+    {
+      "path": "screenshots/06-overflow/03-cup-shape-modal.png",
+      "sha256": "7cd0fb52e524623c4dd5117013ad4904d03098255089d7b6cfda3d8e4660122a"
+    },
+    {
+      "path": "screenshots/06-overflow/04-player-names-modal.png",
+      "sha256": "5a2402af34f2e75e2b751a8b37396c36b0e050d4eab0c29f04557ff47cf63b54"
+    },
+    {
+      "path": "screenshots/06-overflow/05-solo-ready.png",
+      "sha256": "a724b116ea71985079357bf7e09831972b5943c2da1c1ddc0360d52ce8c62447"
+    },
+    {
+      "path": "screenshots/06-overflow/06-pouring.png",
+      "sha256": "75a3265294afd8d15f08f884479cf115aa5430135be57a39d60987e4aebbea96"
+    },
+    {
+      "path": "screenshots/06-overflow/07-rim-release.png",
+      "sha256": "ce79634c6800f24e5998d4915ffbc79db5ee8f5ff6c733711280a17dda7409ca"
+    },
+    {
+      "path": "screenshots/06-overflow/08-overflow.png",
+      "sha256": "69f0ccdb9a86316582335a5ef7c0c0598717f387f4730f972adac8afa603f6c6"
+    },
+    {
+      "path": "screenshots/06-overflow/09-result.png",
+      "sha256": "7fb81423b15336bea44ae5c160ed5b1fe4a3f559eced32974007d5574bbf2582"
+    },
+    {
+      "path": "screenshots/06-overflow/10-rematch.png",
+      "sha256": "a724b116ea71985079357bf7e09831972b5943c2da1c1ddc0360d52ce8c62447"
+    },
+    {
+      "path": "screenshots/06-overflow/11-cup-modal-reentry.png",
+      "sha256": "3e2c7d05d57536fb9bfa35bce4931b0b783bf5dd4d538281e2d63c4ae387344e"
+    }
+  ],
+  "public_assets": [
+    {
+      "path": "assets/motion/caught-you-en.mp4",
+      "sha256": "f24903dcd117be0072a9995533250971d1e2d76159256056d72cfb7ea72bad67",
+      "bytes": 178625
+    },
+    {
+      "path": "assets/motion/overflow-en.mp4",
+      "sha256": "57997df7e97bd42bd4793e06e2e9a4c5f9662663919f77b5753d1b953d7816da",
+      "bytes": 207450
+    },
+    {
+      "path": "assets/motion/punch-king-en.mp4",
+      "sha256": "ee516310cbbc2818a69deb12c3ef1348f189cd721a4df3084b5bf44699dff8ec",
+      "bytes": 1388693
+    },
+    {
+      "path": "assets/motion/who-more-en.mp4",
+      "sha256": "3d50cb67091479be07f660561f669cd8ef8d7e6b91ec8474371ec58c6b0780db",
+      "bytes": 404208
+    },
+    {
+      "path": "assets/screenshots/caught-you-en.png",
+      "sha256": "2817699983bada42c2fe4b0bcdaba6a8a546e641b7fb53cc8264380715e654e5",
+      "bytes": 177489
+    },
+    {
+      "path": "assets/screenshots/home-en.png",
+      "sha256": "1b3a971d1a0ff24551902ee377e27c4403465734da8eebf3ba58ec6c207550fd",
+      "bytes": 362827
+    },
+    {
+      "path": "assets/screenshots/last-kick-en.png",
+      "sha256": "11cf3d844f8dfb780f3dc2fe8fe2a183cadd8500dd892cfb452172aaf9d673bf",
+      "bytes": 602341
+    },
+    {
+      "path": "assets/screenshots/overflow-en.png",
+      "sha256": "ea7a273113710069c8dbf0d82b868f764f175f4d18ed4ad838b1f7be29c2a2f7",
+      "bytes": 209237
+    },
+    {
+      "path": "assets/screenshots/punch-king-en.png",
+      "sha256": "cbe0587fe91e7f2687c3194fca7a4fff1f67ff6d7b392553a0a97e2927121cbc",
+      "bytes": 254009
+    },
+    {
+      "path": "assets/screenshots/who-more-en.png",
+      "sha256": "9a6efe91a2559573b52a998a82da9faf1ab06267f40588620eb6a1b99b02844e",
+      "bytes": 280582
+    }
+  ],
+  "motion": [
+    {
+      "game": "caught-you",
+      "width": 390,
+      "height": 844,
+      "fps": "30/1",
+      "duration_seconds": 5.0,
+      "codec": "h264",
+      "profile": "High",
+      "pixel_format": "yuv420p",
+      "has_audio": false,
+      "bytes": 178625,
+      "sha256": "f24903dcd117be0072a9995533250971d1e2d76159256056d72cfb7ea72bad67",
+      "poster_sha256": "2817699983bada42c2fe4b0bcdaba6a8a546e641b7fb53cc8264380715e654e5",
+      "last_frame_index": 149,
+      "poster_pixel_equal": true,
+      "master_frames": 450,
+      "capture_start_frame": 150,
+      "selected_source_frames": 300,
+      "master_size": [
+        780,
+        1688
+      ],
+      "full_decode": true
+    },
+    {
+      "game": "who-more",
+      "width": 390,
+      "height": 844,
+      "fps": "30/1",
+      "duration_seconds": 7.5,
+      "codec": "h264",
+      "profile": "High",
+      "pixel_format": "yuv420p",
+      "has_audio": false,
+      "bytes": 404208,
+      "sha256": "3d50cb67091479be07f660561f669cd8ef8d7e6b91ec8474371ec58c6b0780db",
+      "poster_sha256": "9a6efe91a2559573b52a998a82da9faf1ab06267f40588620eb6a1b99b02844e",
+      "last_frame_index": 224,
+      "poster_pixel_equal": true,
+      "master_frames": 450,
+      "capture_start_frame": 0,
+      "selected_source_frames": 450,
+      "master_size": [
+        780,
+        1688
+      ],
+      "full_decode": true
+    },
+    {
+      "game": "punch-king",
+      "width": 390,
+      "height": 844,
+      "fps": "30/1",
+      "duration_seconds": 8.0,
+      "codec": "h264",
+      "profile": "High",
+      "pixel_format": "yuv420p",
+      "has_audio": false,
+      "bytes": 1388693,
+      "sha256": "ee516310cbbc2818a69deb12c3ef1348f189cd721a4df3084b5bf44699dff8ec",
+      "poster_sha256": "cbe0587fe91e7f2687c3194fca7a4fff1f67ff6d7b392553a0a97e2927121cbc",
+      "last_frame_index": 239,
+      "poster_pixel_equal": true,
+      "master_frames": 480,
+      "capture_start_frame": 0,
+      "selected_source_frames": 480,
+      "master_size": [
+        780,
+        1688
+      ],
+      "full_decode": true
+    },
+    {
+      "game": "overflow",
+      "width": 390,
+      "height": 844,
+      "fps": "30/1",
+      "duration_seconds": 6.666667,
+      "codec": "h264",
+      "profile": "High",
+      "pixel_format": "yuv420p",
+      "has_audio": false,
+      "bytes": 207450,
+      "sha256": "57997df7e97bd42bd4793e06e2e9a4c5f9662663919f77b5753d1b953d7816da",
+      "poster_sha256": "ea7a273113710069c8dbf0d82b868f764f175f4d18ed4ad838b1f7be29c2a2f7",
+      "last_frame_index": 199,
+      "poster_pixel_equal": true,
+      "master_frames": 399,
+      "capture_start_frame": 0,
+      "selected_source_frames": 399,
+      "master_size": [
+        780,
+        1688
+      ],
+      "full_decode": true
+    }
+  ],
+  "limitations": [
+    "Camera, photo library, sensors and Nearby inputs use local capture fixtures; no physical device capture.",
+    "Last Kick is static on the homepage because the pinned runtime has no approved result clip.",
+    "The English package matches the previously published source commit, not any later app changes."
+  ]
+}
