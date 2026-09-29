@@ -1551,7 +1551,6 @@ p {
 }
 .home-page.scene-observed .scene-hero-copy,
 .home-page.scene-observed .game-scene-copy,
-.home-page.scene-observed .scene-device,
 .home-page.scene-observed .next-game-grid > :not(.scene-counter),
 .home-page.scene-observed .privacy-scene-grid > div:not(.scene-counter),
 .home-page.scene-observed .release-scene-inner > :not(.scene-counter):not(.scene-footer) {
@@ -1563,7 +1562,6 @@ p {
 }
 .home-page.scene-observed .scene.is-active .scene-hero-copy,
 .home-page.scene-observed .scene.is-active .game-scene-copy,
-.home-page.scene-observed .scene.is-active .scene-device,
 .home-page.scene-observed .scene.is-active .next-game-grid > :not(.scene-counter),
 .home-page.scene-observed .scene.is-active .privacy-scene-grid > div:not(.scene-counter),
 .home-page.scene-observed .scene.is-active .release-scene-inner > :not(.scene-counter):not(.scene-footer) {
@@ -1769,7 +1767,6 @@ p {
 @media (prefers-reduced-motion: reduce) {
   .home-page.scene-observed .scene-hero-copy,
   .home-page.scene-observed .game-scene-copy,
-  .home-page.scene-observed .scene-device,
   .home-page.scene-observed .next-game-grid > :not(.scene-counter),
   .home-page.scene-observed .privacy-scene-grid > div:not(.scene-counter),
   .home-page.scene-observed .release-scene-inner > :not(.scene-counter):not(.scene-footer) {
