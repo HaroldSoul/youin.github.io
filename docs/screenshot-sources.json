@@ -21,8 +21,8 @@
     },
     {
       "file": "assets/screenshots/who-more.png",
-      "capture_source": "who-more.mp4 final decoded frame",
-      "sha256": "88de651a04986884dce41273f1a48c14c16c1f8f5ff3a83c80816d875e41c759"
+      "capture_source": "who-more.mp4 final decoded frame; Doyun recapture 2026-09-29",
+      "sha256": "691173ed5f113326470995d49f227308f4f2196167e432ea398d3132e24372ce"
     },
     {
       "file": "assets/screenshots/punch-king.png",
@@ -33,6 +33,74 @@
       "file": "assets/screenshots/overflow.png",
       "capture_source": "overflow.mp4 final decoded frame",
       "sha256": "323a88e328ca91a741f3e858530d6a7297fa7d0b846892794c9f5c82be6be932"
+    },
+    {
+      "file": "assets/screenshots/who-more-en.png",
+      "capture_source": "who-more-en.mp4 final decoded frame; Doyun recapture 2026-09-29",
+      "sha256": "8874b6bff52827585c7152090faeffc9de2e58da38780b135883f5ff4fb4ea58"
+    },
+    {
+      "file": "assets/screenshots/who-more-en-start.webp",
+      "capture_source": "who-more-en.mp4 first decoded frame; Doyun recapture 2026-09-29",
+      "sha256": "116c3cba0a3a8d130575a7436b5ae6c6f74a8f73cde576b8bc1d448f723b86ea"
+    }
+  ],
+  "recaptures": [
+    {
+      "game": "who-more",
+      "date": "2026-09-29",
+      "source_commit": "1cd8cad88aa6798aaa46dd02c1758b2ba16bbb78",
+      "selected_npc": {
+        "id": "doyun",
+        "ko": "도윤",
+        "en": "Doyun"
+      },
+      "question_id": "pretty",
+      "question_labels": {
+        "ko": "누가 더 예뻐?",
+        "en": "Who is prettier?"
+      },
+      "capture": "Godot 4.7.1; 780 × 1688 render at 60 fps; selected 450 frames and encoded 390 × 844 at 30 fps",
+      "assets": [
+        {
+          "file": "assets/motion/who-more.mp4",
+          "sha256": "e9587caae06547dda3ce0e2c5a76f5fcd920138fcbd342a2209bb156bdc9b70e"
+        },
+        {
+          "file": "assets/screenshots/who-more.png",
+          "sha256": "691173ed5f113326470995d49f227308f4f2196167e432ea398d3132e24372ce",
+          "capture_source": "final decoded frame"
+        },
+        {
+          "file": "assets/motion/who-more-en.mp4",
+          "sha256": "9ae29f4a444b769862648afcbd35f8fa1f9deb7a5321d51f68bd9b93d07a10cd"
+        },
+        {
+          "file": "assets/screenshots/who-more-en.png",
+          "sha256": "8874b6bff52827585c7152090faeffc9de2e58da38780b135883f5ff4fb4ea58",
+          "capture_source": "final decoded frame"
+        },
+        {
+          "file": "assets/screenshots/who-more-en-start.webp",
+          "sha256": "116c3cba0a3a8d130575a7436b5ae6c6f74a8f73cde576b8bc1d448f723b86ea",
+          "capture_source": "first decoded frame, WebP poster"
+        }
+      ],
+      "video_qa": {
+        "dimensions": [
+          390,
+          844
+        ],
+        "fps": "30/1",
+        "frame_count": 225,
+        "duration_seconds": 7.5,
+        "codec": "h264",
+        "profile": "High",
+        "pixel_format": "yuv420p",
+        "has_audio": false,
+        "full_decode": true,
+        "final_png_pixel_equal": true
+      }
     }
   ]
 }
