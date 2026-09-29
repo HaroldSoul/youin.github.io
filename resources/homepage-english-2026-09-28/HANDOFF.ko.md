@@ -1,6 +1,6 @@
 # YouIN 홈페이지 영문 리소스 전달
 
-이 폴더의 `homepage-ready.zip`은 2026-09-27에 재정리한 홈페이지 리소스의 영문 대응본입니다. 앱 원본은 `1cd8cad88aa6798aaa46dd02c1758b2ba16bbb78`로 고정했습니다.
+이 폴더의 `homepage-ready.zip`은 2026-09-27에 재정리한 홈페이지 리소스의 영문 대응본입니다. 앱 원본은 `1cd8cad88aa6798aaa46dd02c1758b2ba16bbb78`로 고정했습니다. 2026-09-29에 `Who More?`의 영문 영상과 포스터를 도윤 선택 예시로 다시 캡처했으며, `Who is prettier?` 질문은 유지했습니다.
 
 - 홈페이지 대표 이미지 6장: `assets/screenshots/*-en.png`
 - 무음 MP4 영상 4개: `assets/motion/*-en.mp4`

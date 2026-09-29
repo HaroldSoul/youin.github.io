@@ -1,7 +1,7 @@
 {
   "name": "YouIN homepage English resources",
   "source_commit": "1cd8cad88aa6798aaa46dd02c1758b2ba16bbb78",
-  "source_note": "English locale recapture of the approved 2026-09-27 homepage resource set; production app files were not edited.",
+  "source_note": "English homepage assets captured from app commit 1cd8cad88aa6798aaa46dd02c1758b2ba16bbb78; Who More? public media recaptured 2026-09-29 with Doyun selected and the pretty question retained.",
   "capture_only_translation": [
     "The pinned Overflow screen does not apply its locale property to visible UI text. Capture-only scene code translates its labels and buttons without changing game state or motion.",
     "The pinned Last Kick result fallback leaves two labels in Korean. Capture-only scene code translates those labels after the real result is calculated.",
@@ -316,8 +316,8 @@
     },
     {
       "path": "assets/motion/who-more-en.mp4",
-      "sha256": "3d50cb67091479be07f660561f669cd8ef8d7e6b91ec8474371ec58c6b0780db",
-      "bytes": 404208
+      "sha256": "9ae29f4a444b769862648afcbd35f8fa1f9deb7a5321d51f68bd9b93d07a10cd",
+      "bytes": 425913
     },
     {
       "path": "assets/screenshots/caught-you-en.png",
@@ -346,8 +346,8 @@
     },
     {
       "path": "assets/screenshots/who-more-en.png",
-      "sha256": "9a6efe91a2559573b52a998a82da9faf1ab06267f40588620eb6a1b99b02844e",
-      "bytes": 280582
+      "sha256": "8874b6bff52827585c7152090faeffc9de2e58da38780b135883f5ff4fb4ea58",
+      "bytes": 283545
     }
   ],
   "motion": [
@@ -385,9 +385,9 @@
       "profile": "High",
       "pixel_format": "yuv420p",
       "has_audio": false,
-      "bytes": 404208,
-      "sha256": "3d50cb67091479be07f660561f669cd8ef8d7e6b91ec8474371ec58c6b0780db",
-      "poster_sha256": "9a6efe91a2559573b52a998a82da9faf1ab06267f40588620eb6a1b99b02844e",
+      "bytes": 425913,
+      "sha256": "9ae29f4a444b769862648afcbd35f8fa1f9deb7a5321d51f68bd9b93d07a10cd",
+      "poster_sha256": "8874b6bff52827585c7152090faeffc9de2e58da38780b135883f5ff4fb4ea58",
       "last_frame_index": 224,
       "poster_pixel_equal": true,
       "master_frames": 450,
@@ -452,5 +452,49 @@
     "Camera, photo library, sensors and Nearby inputs use local capture fixtures; no physical device capture.",
     "Last Kick is static on the homepage because the pinned runtime has no approved result clip.",
     "The English package matches the previously published source commit, not any later app changes."
-  ]
+  ],
+  "last_updated": "2026-09-29",
+  "recaptures": [
+    {
+      "game": "who-more",
+      "date": "2026-09-29",
+      "source_commit": "1cd8cad88aa6798aaa46dd02c1758b2ba16bbb78",
+      "selected_npc": {
+        "id": "doyun",
+        "name": "Doyun"
+      },
+      "question_id": "pretty",
+      "question_label": "Who is prettier?",
+      "public_assets": [
+        {
+          "path": "assets/motion/who-more-en.mp4",
+          "sha256": "9ae29f4a444b769862648afcbd35f8fa1f9deb7a5321d51f68bd9b93d07a10cd"
+        },
+        {
+          "path": "assets/screenshots/who-more-en.png",
+          "sha256": "8874b6bff52827585c7152090faeffc9de2e58da38780b135883f5ff4fb4ea58"
+        },
+        {
+          "path": "assets/screenshots/who-more-en-start.webp",
+          "sha256": "116c3cba0a3a8d130575a7436b5ae6c6f74a8f73cde576b8bc1d448f723b86ea",
+          "note": "Website first-frame poster; kept alongside the site assets."
+        }
+      ],
+      "video_qa": {
+        "width": 390,
+        "height": 844,
+        "fps": "30/1",
+        "frame_count": 225,
+        "duration_seconds": 7.5,
+        "codec": "h264",
+        "profile": "High",
+        "pixel_format": "yuv420p",
+        "has_audio": false,
+        "full_decode": true,
+        "poster_pixel_equal": true
+      }
+    }
+  ],
+  "qa_screenshot_capture_date": "2026-09-28",
+  "qa_screenshot_note": "qa_screenshot_files records the original broad English QA capture set. The public Who More? media entry above was separately recaptured on 2026-09-29."
 }
