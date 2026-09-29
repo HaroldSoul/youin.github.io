@@ -13,4 +13,13 @@ Each clip plays once when its homepage scene becomes active and holds on the fin
 
 All four files are 390 × 844, 30 fps, H.264 High Profile, `yuv420p`, fast-start MP4 files without audio.
 
+## English Overflow correction
+
+The English resource pack at `resources/homepage-english-2026-09-28/homepage-ready.zip` contained one Korean UI frame in `overflow-en.mp4` (decoded frame 13, about 0.4 s). The website copy replaces that frame with the following English frame and re-encodes the clip. The duration, 390 × 844 size, 30 fps, H.264 High profile, and silent audio state are preserved. `assets/screenshots/overflow-en.png` is re-extracted from the corrected clip's final frame so it remains pixel-identical to the poster.
+
+| File | SHA-256 |
+| --- | --- |
+| `assets/motion/overflow-en.mp4` | `1840a865eea980afe229aec2194add4484e288d7f5f869c16942ff1a6a903ea3` |
+| `assets/screenshots/overflow-en.png` | `a9e2ce3bbf85fb3d0080935898aba12567eb0329f95e6e6c8fafe635f947c858` |
+
 Last Kick remains a verified static screenshot. The current result catalog has no approved result clip, so its fallback video is excluded from the public website. Punch King uses the implemented current game screen and motion; the captured simulator result accurately retains the in-app notice that device verification was unavailable and the record was not saved.
