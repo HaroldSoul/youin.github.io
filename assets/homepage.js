@@ -7,18 +7,33 @@
   const tabs = [...document.querySelectorAll("[data-game]")];
   const panels = new Map([...document.querySelectorAll(".game-panel")].map((panel) => [panel.id, panel]));
   const visibleVideos = new Map();
+  const playbackIntent = new WeakMap();
+  const managedPlays = new WeakSet();
+  const managedPauses = new WeakSet();
   const gsap = window.gsap;
   const ScrollTrigger = window.ScrollTrigger;
   let activeGame = null;
+
+  const pauseVideo = (video) => {
+    if (video.paused) return;
+    if (video.controls) managedPauses.add(video);
+    video.pause();
+  };
 
   const syncVideos = () => {
     videos.forEach((video) => {
       const panel = video.closest(".game-panel");
       const visible = visibleVideos.get(video) && (!panel || !panel.hidden);
-      if (!visible || reducedMotion.matches || document.hidden) {
-        video.pause();
-      } else if (video.paused) {
-        video.play().catch(() => { /* A blocked autoplay keeps the native poster. */ });
+      const intent = playbackIntent.get(video);
+      if (!visible || (reducedMotion.matches && intent !== "playing") || document.hidden) {
+        pauseVideo(video);
+      } else if (video.paused && intent !== "paused") {
+        if (video.controls) managedPlays.add(video);
+        video.play().catch((error) => {
+          // An interrupted play still dispatches its queued play event.
+          if (error.name !== "AbortError") managedPlays.delete(video);
+          // Native controls remain available when autoplay is blocked.
+        });
       }
     });
   };
@@ -26,6 +41,15 @@
   // The main hero screen loops the reaction portion of the original clip.
   // Gallery videos retain their complete playback sequence.
   videos.forEach((video) => {
+    if (video.controls) {
+      // Visibility changes must not overwrite a choice made with native controls.
+      video.addEventListener("play", () => {
+        if (!managedPlays.delete(video)) playbackIntent.set(video, "playing");
+      });
+      video.addEventListener("pause", () => {
+        if (!managedPauses.delete(video)) playbackIntent.set(video, "paused");
+      });
+    }
     const start = Number(video.dataset.motionStart);
     if (!Number.isFinite(start) || start <= 0) return;
     const seekToStart = () => {
@@ -113,12 +137,15 @@
   }
   const onMotionPreference = () => {
     clearPanelMotion();
+    videos.forEach((video) => {
+      if (playbackIntent.get(video) === "playing") playbackIntent.delete(video);
+    });
     syncVideos();
   };
   if (typeof reducedMotion.addEventListener === "function") reducedMotion.addEventListener("change", onMotionPreference);
   else reducedMotion.addListener(onMotionPreference);
   document.addEventListener("visibilitychange", syncVideos);
-  window.addEventListener("pagehide", () => videos.forEach((video) => video.pause()));
+  window.addEventListener("pagehide", () => videos.forEach(pauseVideo));
   window.addEventListener("pageshow", syncVideos);
 
   if (gsap && ScrollTrigger) {
