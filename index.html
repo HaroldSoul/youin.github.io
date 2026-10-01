@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="ko" class="home-scroll">
+<html lang="ko">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#faf9f6" />
+    <meta name="theme-color" content="#ffffff" />
     <title>YOU IN? - 떠오르는 친구가 있다면, 지목해.</title>
     <meta name="description" content="친구 사이의 질문, 반응, 벌칙을 짧고 웃긴 도전으로. 딱 걸렸어, 라스트 킥, 누가 더?, 펀치 킹, 간당간당. iOS · Android 출시 예정." />
     <link rel="canonical" href="https://haroldsoul.github.io/youin.github.io/" />
@@ -25,151 +25,135 @@
     <link rel="icon" type="image/svg+xml" href="assets/app-icon.svg" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
-    <link rel="stylesheet" href="assets/styles.css?v=20261001-neutral-home-r1" />
+    <link rel="stylesheet" href="assets/homepage.css?v=20261002-product-home-r1" />
     <script src="assets/language.js"></script>
     <script src="assets/config.js?v=20260928-bug-report" defer></script>
-    <script src="assets/site.js?v=20261001-neutral-home-r1" defer></script>
+    <script src="assets/site.js?v=20261002-product-home-r1" defer></script>
+    <script src="assets/vendor/gsap.min.js?v=3.15.0" defer></script>
+    <script src="assets/vendor/ScrollTrigger.min.js?v=3.15.0" defer></script>
+    <script src="assets/homepage.js?v=20261002-product-home-r1" defer></script>
+    <noscript><style>
+      .game-picker { display: none; }
+      .game-panel[hidden] { display: grid !important; }
+      @media (max-width: 767px) { .game-panel[hidden] { display: flex !important; } }
+    </style></noscript>
   </head>
   <body class="home-page">
     <a class="skip" href="#main">본문 바로가기</a>
-    <header class="header wrap">
-      <a class="brand" href="#intro" aria-label="YOU IN? 홈">
-        <img src="assets/app-icon.svg" width="35" height="35" alt="" />
-        <span>YOU IN<i>?</i></span>
+    <header class="local-nav">
+      <a class="brand" href="#intro" aria-label="YOU IN?">
+        <img src="assets/app-icon.png" width="27" height="27" alt="" />
+        <span>YOU IN?</span>
       </a>
-      <nav class="navigation" aria-label="주 메뉴">
-        <a class="nav-games" href="#intro">게임 소개</a>
-        <a class="nav-privacy" href="privacy/">개인정보</a>
-        <a class="nav-support" href="support/">사용자 지원</a>
-        <div class="languages" role="group" aria-label="언어 선택">
+      <nav aria-label="주 메뉴">
+        <a href="#intro">게임 소개</a>
+        <a class="nav-idea" href="#next-game">아이디어 제안</a>
+        <div class="language-picker" role="group" aria-label="언어 선택">
           <a href="./?lang=ko" data-language="ko" lang="ko" hreflang="ko" aria-label="한국어" aria-current="true">KO</a>
           <a href="en/?lang=en" data-language="en" lang="en" hreflang="en" aria-label="English">EN</a>
         </div>
       </nav>
     </header>
 
-    <main id="main" class="home-main" tabindex="-1">
-      <section class="scene scene-hero" id="intro" data-scene aria-labelledby="hero-title">
-        <div class="wrap scene-hero-grid">
-          <div class="scene-hero-copy">
-            <h1 id="hero-title">떠오르는 친구가<br />있다면, 지목해.</h1>
-            <p>질문도, 반응도, 벌칙도 놀이가 되는 곳.<br />친구와 함께하는 소셜 파티 게임.</p>
-            <a class="button" href="#caught">게임 고르기 <span class="arrow" aria-hidden="true">↓</span></a>
-            <nav class="game-index" aria-label="게임 바로가기">
-              <a href="#caught" data-scene-link="caught">딱 걸렸어</a>
-              <a href="#last-kick" data-scene-link="last-kick">라스트 킥</a>
-              <a href="#who-more" data-scene-link="who-more">누가 더?</a>
-              <a href="#punch-king" data-scene-link="punch-king">펀치 킹</a>
-              <a href="#overflow" data-scene-link="overflow">간당간당</a>
-            </nav>
+    <main id="main" tabindex="-1">
+      <section class="hero-track" id="intro" aria-labelledby="hero-title">
+        <div class="hero-stage">
+          <div class="hero-copy">
+            <h1 id="hero-title">YOU IN?</h1>
+            <p class="hero-tagline">떠오르는 친구가 있다면, 지목해.</p>
+            <p class="hero-description">질문도, 반응도, 벌칙도 놀이가 되는 곳.</p>
+            <a class="action" href="#games">게임 고르기 <span aria-hidden="true">→</span></a>
           </div>
-          <figure class="scene-hero-visual">
-            <div class="hero-phone">
-              <img src="assets/screenshots/home.png?v=1cd8cad-20260927" width="390" height="844" fetchpriority="high" alt="다섯 가지 게임이 있는 YouIN 앱 홈 화면" />
-            </div>
-            <figcaption>개발 중인 실제 앱 화면</figcaption>
+          <figure class="hero-lineup" aria-label="YouIN의 다섯 게임 화면">
+            <div class="hero-screen" data-position="-2"><img src="assets/screenshots/caught-you.png" width="390" height="844" alt="딱 걸렸어 앱 화면" /></div>
+            <div class="hero-screen" data-position="-1"><img src="assets/screenshots/last-kick.png" width="390" height="844" alt="라스트 킥 앱 화면" /></div>
+            <div class="hero-screen hero-screen-main" data-position="0"><img src="assets/screenshots/overflow.png" width="390" height="844" fetchpriority="high" alt="간당간당 앱 화면" /></div>
+            <div class="hero-screen" data-position="1"><img src="assets/screenshots/who-more.png" width="390" height="844" alt="누가 더? 앱 화면" /></div>
+            <div class="hero-screen" data-position="2"><img src="assets/screenshots/punch-king.png" width="390" height="844" alt="펀치 킹 앱 화면" /></div>
+          </figure>
+          <div class="hero-focus" aria-hidden="true">
+            <p>간당간당</p>
+            <h2>한 방울만 <br />더.</h2>
+            <p class="focus-description">같은 컵에 돌아가며 물을 붓는<br />2~6인 눈치 게임.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="moment-track" id="overflow-story" aria-labelledby="moment-title">
+        <div class="moment-stage">
+          <div class="moment-copy moment-copy-a">
+            <p class="game-name">간당간당</p>
+            <h2 id="moment-title">넘치면<br />네가 진다.</h2>
+            <p>멈출 타이밍을 놓친 한 사람이<br />마지막 물방울의 주인이 됩니다.</p>
+          </div>
+          <div class="moment-copy moment-copy-b" aria-hidden="true">
+            <p class="game-name">간당간당</p>
+            <h2>한 방울의<br />차이.</h2>
+            <p>멈출 타이밍을 놓친 한 사람이<br />마지막 물방울의 주인이 됩니다.</p>
+          </div>
+          <figure class="moment-visual">
+            <video id="overflow-film" src="assets/motion/overflow.mp4" poster="assets/screenshots/overflow.png" width="390" height="844" muted playsinline loop preload="metadata" aria-label="간당간당 앱 영상"></video>
           </figure>
         </div>
       </section>
 
-      <section class="scene game-scene scene-caught" id="caught" data-scene aria-labelledby="caught-title">
-        <div class="wrap game-scene-grid">
-          <div class="game-scene-copy">
-            <h2 id="caught-title">딱 걸렸어</h2>
-            <p class="scene-tagline">질문은 직접.<br />표정은 카메라가.</p>
-            <p class="scene-description">질문 하나에 흔들리는 표정. 친구의 반응이 그대로 게임이 되는 순간.</p>
-            <p class="game-note">오락용 게임이며 과학적 거짓말 탐지기가 아닙니다.</p>
-          </div>
-          <a class="game-screenshot scene-device" href="assets/screenshots/caught-you.png?v=1cd8cad-20260927" target="_blank" rel="noopener" aria-label="딱 걸렸어 모션의 최종 화면 크게 보기 (새 탭)">
-            <video data-game-motion="caught" src="assets/motion/caught-you.mp4?v=1cd8cad-20260927" poster="assets/screenshots/caught-you.png?v=1cd8cad-20260927" width="390" height="844" muted playsinline preload="none" aria-hidden="true"></video>
-            <span>실제 앱 모션 <span aria-hidden="true">↗</span></span>
-          </a>
+      <section class="games-section content-width" id="games" aria-labelledby="games-title">
+        <div class="gallery-heading">
+          <h2 id="games-title">모임은 하나.<br />게임은 다섯.</h2>
+          <p>친구의 표정부터 마지막 한 발까지.<br />오늘의 게임을 골라보세요.</p>
+        </div>
+        <div class="game-picker" role="tablist" aria-label="게임 선택">
+          <button id="tab-caught" role="tab" aria-selected="true" aria-controls="caught" tabindex="0" data-game="caught">딱 걸렸어</button>
+          <button id="tab-last-kick" role="tab" aria-selected="false" aria-controls="last-kick" tabindex="-1" data-game="last-kick">라스트 킥</button>
+          <button id="tab-who-more" role="tab" aria-selected="false" aria-controls="who-more" tabindex="-1" data-game="who-more">누가 더?</button>
+          <button id="tab-punch-king" role="tab" aria-selected="false" aria-controls="punch-king" tabindex="-1" data-game="punch-king">펀치 킹</button>
+          <button id="tab-overflow" role="tab" aria-selected="false" aria-controls="overflow" tabindex="-1" data-game="overflow">간당간당</button>
+        </div>
+        <div class="gallery-surface">
+          <section class="game-panel" id="caught" role="tabpanel" aria-labelledby="tab-caught" tabindex="0">
+            <figure class="gallery-visual"><video src="assets/motion/caught-you.mp4" poster="assets/screenshots/caught-you.png" width="390" height="844" muted playsinline loop preload="none" aria-label="딱 걸렸어 앱 영상"></video></figure>
+            <div class="gallery-copy"><p class="game-name">딱 걸렸어</p><h3>질문은 직접.<br />표정은 카메라가.</h3><p>질문 하나에 흔들리는 표정. 친구의 반응이 그대로 게임이 되는 순간.</p><p class="game-note">오락용 게임이며 과학적 거짓말 탐지기가 아닙니다.</p></div>
+          </section>
+          <section class="game-panel" id="last-kick" role="tabpanel" aria-labelledby="tab-last-kick" tabindex="0" hidden>
+            <figure class="gallery-visual"><img src="assets/screenshots/last-kick.png" width="390" height="844" loading="lazy" alt="라스트 킥 앱 화면" /></figure>
+            <div class="gallery-copy"><p class="game-name">라스트 킥</p><h3>마지막 한 발까지<br />아무도 모른다.</h3><p>친구와 바로 연결하고, 짧게 겨루고, 결과 한 장으로 오래 놀리는 승부.</p></div>
+          </section>
+          <section class="game-panel" id="who-more" role="tabpanel" aria-labelledby="tab-who-more" tabindex="0" hidden>
+            <figure class="gallery-visual"><video src="assets/motion/who-more.mp4" poster="assets/screenshots/who-more.png" width="390" height="844" muted playsinline loop preload="none" aria-label="누가 더? 앱 영상"></video></figure>
+            <div class="gallery-copy"><p class="game-name">누가 더?</p><h3>오늘의 나는,<br />누구의 취향일까?</h3><p>매 판 달라지는 가상의 NPC 취향. 진지할 이유가 없어서 더 재밌는 선택.</p><p class="game-note">가상의 취향이며 객관적인 외모 평가가 아닙니다.</p></div>
+          </section>
+          <section class="game-panel" id="punch-king" role="tabpanel" aria-labelledby="tab-punch-king" tabindex="0" hidden>
+            <figure class="gallery-visual"><video src="assets/motion/punch-king.mp4" poster="assets/screenshots/punch-king.png" width="390" height="844" muted playsinline loop preload="none" aria-label="펀치 킹 앱 영상"></video></figure>
+            <div class="gallery-copy"><p class="game-name">펀치 킹</p><h3>한 번의 도전.<br />웃음 한 방.</h3><p>친구들이 지켜보는 가운데 가볍게 도전하고, 가장 요란하게 웃는 짧은 승부.</p></div>
+          </section>
+          <section class="game-panel" id="overflow" role="tabpanel" aria-labelledby="tab-overflow" tabindex="0" hidden>
+            <figure class="gallery-visual"><video src="assets/motion/overflow.mp4" poster="assets/screenshots/overflow.png" width="390" height="844" muted playsinline loop preload="none" aria-label="간당간당 앱 영상"></video></figure>
+            <div class="gallery-copy"><p class="game-name">간당간당</p><h3>한 방울만 더.<br />넘치면 네가 진다.</h3><p>같은 컵에 돌아가며 물을 붓는 2~6인 눈치 게임. 멈출 타이밍을 놓친 한 사람이 마지막 물방울의 주인이 됩니다.</p></div>
+          </section>
         </div>
       </section>
 
-      <section class="scene game-scene scene-kick" id="last-kick" data-scene aria-labelledby="kick-title">
-        <div class="wrap game-scene-grid scene-grid-reverse">
-          <div class="game-scene-copy">
-            <h2 id="kick-title">라스트 킥</h2>
-            <p class="scene-tagline">마지막 한 발까지<br />아무도 모른다.</p>
-            <p class="scene-description">친구와 바로 연결하고, 짧게 겨루고, 결과 한 장으로 오래 놀리는 승부.</p>
-          </div>
-          <a class="game-screenshot scene-device" href="assets/screenshots/last-kick.png?v=1cd8cad-20260927" target="_blank" rel="noopener" aria-label="라스트 킥 스크린샷 크게 보기 (새 탭)">
-            <img src="assets/screenshots/last-kick.png?v=1cd8cad-20260927" width="390" height="844" loading="lazy" decoding="async" alt="페널티킥 경기의 키커 승리 결과 화면" />
-            <span>실제 앱 화면 <span aria-hidden="true">↗</span></span>
-          </a>
+      <section class="privacy-section content-width" id="privacy" aria-labelledby="privacy-title">
+        <h2 id="privacy-title">웃음은 친구들과.<br />카메라 데이터는 기기 안에.</h2>
+        <div class="privacy-body">
+          <p>얼굴 반응 효과와 게임 진행에 쓰이는 영상·사진은 기기 안에서 처리합니다. 원본을 서버로 업로드하거나 영구 저장하지 않습니다.</p>
+          <p>임시 얼굴 분석 데이터는 라운드가 끝나거나 게임을 종료하면 폐기하도록 설계했습니다.</p>
+          <a class="text-link" href="privacy/">개인정보처리방침 <span aria-hidden="true">↗</span></a>
         </div>
       </section>
 
-      <section class="scene game-scene scene-who" id="who-more" data-scene aria-labelledby="who-title">
-        <div class="wrap game-scene-grid">
-          <div class="game-scene-copy">
-            <h2 id="who-title">누가 더?</h2>
-            <p class="scene-tagline">오늘의 나는,<br />누구의 취향일까?</p>
-            <p class="scene-description">매 판 달라지는 가상의 NPC 취향. 진지할 이유가 없어서 더 재밌는 선택.</p>
-            <p class="game-note">가상의 취향이며 객관적인 외모 평가가 아닙니다.</p>
-          </div>
-          <a class="game-screenshot scene-device" href="assets/screenshots/who-more.png?v=who-more-doyun-20260929" target="_blank" rel="noopener" aria-label="누가 더? 모션의 최종 화면 크게 보기 (새 탭)">
-            <video data-game-motion="who-more" src="assets/motion/who-more.mp4?v=who-more-doyun-20260929" poster="assets/screenshots/who-more.png?v=who-more-doyun-20260929" width="390" height="844" muted playsinline preload="none" aria-hidden="true"></video>
-            <span>실제 앱 모션 <span aria-hidden="true">↗</span></span>
-          </a>
-        </div>
-      </section>
-
-      <section class="scene game-scene scene-punch" id="punch-king" data-scene aria-labelledby="punch-title">
-        <div class="wrap game-scene-grid scene-grid-reverse">
-          <div class="game-scene-copy">
-            <h2 id="punch-title">펀치 킹</h2>
-            <p class="scene-tagline">한 번의 도전.<br />웃음 한 방.</p>
-            <p class="scene-description">친구들이 지켜보는 가운데 가볍게 도전하고, 가장 요란하게 웃는 짧은 승부.</p>
-          </div>
-          <a class="game-screenshot scene-device punch-device" href="assets/screenshots/punch-king.png?v=1cd8cad-20260927" target="_blank" rel="noopener" aria-label="펀치 킹 모션의 최종 화면 크게 보기 (새 탭)">
-            <video data-game-motion="punch-king" src="assets/motion/punch-king.mp4?v=1cd8cad-20260927" poster="assets/screenshots/punch-king.png?v=1cd8cad-20260927" width="390" height="844" muted playsinline preload="none" aria-hidden="true"></video>
-            <span>실제 앱 모션 <span aria-hidden="true">↗</span></span>
-          </a>
-        </div>
-      </section>
-
-      <section class="scene game-scene scene-overflow" id="overflow" data-scene aria-labelledby="overflow-title">
-        <div class="wrap game-scene-grid">
-          <div class="game-scene-copy">
-            <h2 id="overflow-title">간당간당</h2>
-            <p class="scene-tagline">한 방울만 더.<br />넘치면 네가 진다.</p>
-            <p class="scene-description">같은 컵에 돌아가며 물을 붓는 2–6인 눈치 게임. 멈출 타이밍을 놓친 한 사람이 마지막 물방울의 주인이 됩니다.</p>
-          </div>
-          <a class="game-screenshot scene-device" href="assets/screenshots/overflow.png?v=1cd8cad-20260927" target="_blank" rel="noopener" aria-label="간당간당 모션의 최종 화면 크게 보기 (새 탭)">
-            <video data-game-motion="overflow" src="assets/motion/overflow.mp4?v=1cd8cad-20260927" poster="assets/screenshots/overflow.png?v=1cd8cad-20260927" width="390" height="844" muted playsinline preload="none" aria-hidden="true"></video>
-            <span>실제 앱 모션 <span aria-hidden="true">↗</span></span>
-          </a>
-        </div>
-      </section>
-
-      <section class="scene details-scene" id="next-game" data-scene aria-labelledby="next-game-title">
-        <div class="wrap details-scene-inner">
-          <div class="details-grid">
-            <section class="next-game-copy" aria-labelledby="next-game-title">
-              <h2 id="next-game-title">다음 게임은<br />아직 비어 있어요.</h2>
-              <p class="scene-description">친구들과 어떤 순간을 게임으로 만들고 싶은지 들려주세요. 좋은 아이디어는 다음 YouIN의 시작이 됩니다.</p>
-              <a class="button next-game-button" href="https://docs.google.com/forms/d/e/1FAIpQLSc1MYcngYG8amJCzjuibhah1JOLcP3KrZ5KxR39UUlbij3KSg/viewform?usp=publish-editor" target="_blank" rel="noopener">이 게임 만들어주세요! <span aria-hidden="true">↗</span></a>
-              <p class="idea-note">Google Form으로 제안이 전달됩니다. 개인정보는 적지 마세요.</p>
-            </section>
-            <section class="privacy-scene-copy" id="privacy" aria-labelledby="privacy-title">
-              <h2 id="privacy-title">카메라 데이터는<br />기기 안에.</h2>
-              <p>얼굴 반응 효과와 게임 진행에 쓰이는 영상·사진은 기기 안에서 처리합니다. 원본을 서버로 업로드하거나 영구 저장하지 않습니다.</p>
-              <p>임시 얼굴 분석 데이터는 라운드가 끝나거나 게임을 종료하면 폐기하도록 설계했습니다.</p>
-              <a class="button button-outline" href="privacy/">개인정보처리방침 <span aria-hidden="true">↗</span></a>
-            </section>
-          </div>
-          <footer class="home-footer" id="release" aria-label="출시 안내">
-            <div class="release-summary">
-              <strong>YOU IN?</strong>
-              <p>iOS와 Android에서 만날 준비 중입니다.</p>
-            </div>
-            <nav class="release-links" aria-label="하단 메뉴"><a href="privacy/">개인정보처리방침</a><a href="support/">사용자 지원</a></nav>
-            <span class="copyright">© 2026 YouIN</span>
-          </footer>
-        </div>
+      <section class="idea-section content-width" id="next-game" aria-labelledby="idea-title">
+        <h2 id="idea-title">다음 게임은<br />아직 비어 있어요.</h2>
+        <p>친구들과 어떤 순간을 게임으로 만들고 싶은지 들려주세요.<br />좋은 아이디어는 다음 YouIN의 시작이 됩니다.</p>
+        <a class="action" href="https://docs.google.com/forms/d/e/1FAIpQLSc1MYcngYG8amJCzjuibhah1JOLcP3KrZ5KxR39UUlbij3KSg/viewform?usp=publish-editor" target="_blank" rel="noopener">이 게임 만들어주세요! <span aria-hidden="true">↗</span></a>
+        <p class="idea-note">Google Form으로 제안이 전달됩니다. 개인정보는 적지 마세요.</p>
       </section>
     </main>
+
+    <footer class="site-footer content-width" id="release">
+      <div class="footer-release"><strong>YOU IN?</strong><p>iOS와 Android에서 만날 준비 중입니다.</p></div>
+      <nav aria-label="하단 메뉴"><a href="privacy/">개인정보처리방침</a><a href="support/">사용자 지원</a></nav>
+      <span>© 2026 YouIN</span>
+    </footer>
   </body>
 </html>
