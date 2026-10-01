@@ -68,10 +68,9 @@ main { padding-top: var(--nav-height); }
 .story-description { margin-top: 28px; color: var(--secondary); font-size: 18px; }
 .story-link { display: inline-flex; align-items: center; gap: 18px; min-height: 44px; margin-top: 25px; font-size: 14px; text-decoration: underline; text-underline-offset: 6px; }
 .story-link:hover { color: var(--secondary); }
-.story-visual { position: absolute; top: 80px; bottom: 80px; left: 73%; width: min(47vw, 640px); transform: translateX(-50%); overflow: hidden; border-radius: 22px; box-shadow: 0 22px 45px rgb(35 34 31 / .12); }
+.story-visual { position: absolute; top: 50%; left: 73%; height: min(75svh, 720px); aspect-ratio: 390 / 844; transform: translate(-50%, -50%); overflow: hidden; border-radius: 22px; box-shadow: 0 22px 45px rgb(35 34 31 / .12); }
 .story-kick .story-visual { left: 27%; }
-.story-visual > img, .story-visual > video { width: 100%; height: 100%; object-fit: cover; object-position: center 68%; }
-.story-kick .story-visual > img { object-position: center 44%; }
+.story-visual > img, .story-visual > video { width: 100%; height: 100%; object-fit: contain; }
 .motion-enabled .story-kick { height: 165svh; }
 .motion-enabled .story-overflow { height: 170svh; }
 .motion-enabled .story-stage { position: sticky; top: var(--nav-height); height: calc(100svh - var(--nav-height)); min-height: 0; }
@@ -115,7 +114,6 @@ main { padding-top: var(--nav-height); }
   .hero-focus h2 { font-size: 68px; }
   .story-copy { top: 20%; }
   .story-copy h2 { font-size: clamp(40px, 5.4vw, 60px); }
-  .story-visual { top: 60px; bottom: 60px; }
 }
 @media (max-width: 1023px) {
   .content-width { width: calc(100% - 64px); }
@@ -135,7 +133,6 @@ main { padding-top: var(--nav-height); }
   .story-copy h2 { font-size: clamp(36px, 4.5vw, 46px); }
   .story-description { margin-top: 22px; font-size: 16px; }
   .story-link { margin-top: 20px; }
-  .story-overflow .story-visual video { object-position: center 62%; }
 }
 @media (max-width: 767px) {
   :root { --nav-height: 54px; }
@@ -170,12 +167,9 @@ main { padding-top: var(--nav-height); }
   .story-copy h2 { margin-top: 18px; font-size: clamp(36px, 10.5vw, 44px); }
   .story-description { margin-top: 20px; font-size: 15px; }
   .story-link { margin-top: 18px; font-size: 13px; }
-  .story-visual, .story-kick .story-visual { position: relative; top: auto; bottom: auto; left: auto; width: 100%; max-width: 520px; height: auto; aspect-ratio: 1.15; transform: none; align-self: center; border-radius: 18px; }
-  .motion-enabled .story-kick { height: 150svh; }
-  .motion-enabled .story-overflow { height: 160svh; }
-  .motion-enabled .story-stage { padding: 0; }
-  .motion-enabled .story-copy, .motion-enabled .story-kick .story-copy { position: absolute; top: 35px; left: 24px; right: 24px; width: auto; }
-  .motion-enabled .story-visual, .motion-enabled .story-kick .story-visual { position: absolute; bottom: 32px; left: 50%; width: calc(100% - 48px); height: min(38svh, 320px); aspect-ratio: auto; transform: translateX(-50%); }
+  .story-visual, .story-kick .story-visual { position: relative; top: auto; left: auto; width: min(70vw, 250px); height: auto; transform: none; align-self: center; border-radius: 18px; }
+  .motion-enabled .story-track { height: auto; }
+  .motion-enabled .story-stage { position: relative; top: auto; height: auto; padding: 64px 24px; }
   .games-section { padding-block: 85px; }
   .gallery-heading h2 { font-size: 42px; }
   .gallery-heading > p { font-size: 16px; }

@@ -165,18 +165,17 @@
         .to({}, {duration: .18}, .83);
 
       document.querySelectorAll(".story-track").forEach((section) => {
-        const kick = section.classList.contains("story-kick");
         const story = gsap.timeline({scrollTrigger: {
-          trigger: section, start: `top ${navHeight}px`, end: "bottom bottom",
+          trigger: section, start: `top ${navHeight}px`, end: mobile ? "top -25%" : "bottom bottom",
           scrub: .32, invalidateOnRefresh: true
         }});
         story.fromTo(section.querySelector(".story-copy"), {y: 28}, {
           y: 0, duration: .3, ease: "none"
         }, 0);
-        story.fromTo(section.querySelector(".story-visual > img, .story-visual > video"), {
-          scale: 1
+        story.fromTo(section.querySelector(".story-visual"), {
+          scale: .96
         }, {
-          scale: kick ? 1.14 : 1.12, duration: 1, ease: "none"
+          scale: 1, duration: 1, ease: "none"
         }, 0);
       });
 
