@@ -107,7 +107,9 @@
     const media = gsap.matchMedia();
     media.add({
       desktop: "(min-width: 768px)", mobile: "(max-width: 767px)",
-      motion: "(prefers-reduced-motion: no-preference)", tall: "(min-height: 561px)"
+      motion: "(prefers-reduced-motion: no-preference)",
+      // Short mobile viewports keep the static stage's minimum height so copy clears the screen fan.
+      tall: "(min-width: 768px) and (min-height: 561px), (max-width: 767px) and (min-height: 800px)"
     }, (context) => {
       if (!context.conditions.motion || !context.conditions.tall) return;
       const mobile = context.conditions.mobile;
