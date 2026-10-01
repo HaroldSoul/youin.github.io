@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#e9e6e0" />
     <title>YOU IN? - 떠오르는 친구가 있다면, 지목해.</title>
     <meta name="description" content="친구 사이의 질문, 반응, 벌칙을 짧고 웃긴 도전으로. 딱 걸렸어, 라스트 킥, 누가 더?, 펀치 킹, 간당간당. iOS · Android 출시 예정." />
     <link rel="canonical" href="https://haroldsoul.github.io/youin.github.io/" />
@@ -25,13 +25,13 @@
     <link rel="icon" type="image/svg+xml" href="assets/app-icon.svg" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
-    <link rel="stylesheet" href="assets/homepage.css?v=20261002-unified-feature-r1" />
+    <link rel="stylesheet" href="assets/homepage.css?v=20261002-game-stories-r1" />
     <script src="assets/language.js"></script>
     <script src="assets/config.js?v=20260928-bug-report" defer></script>
     <script src="assets/site.js?v=20261002-product-home-r1" defer></script>
     <script src="assets/vendor/gsap.min.js?v=3.15.0" defer></script>
     <script src="assets/vendor/ScrollTrigger.min.js?v=3.15.0" defer></script>
-    <script src="assets/homepage.js?v=20261002-unified-feature-r1" defer></script>
+    <script src="assets/homepage.js?v=20261002-game-stories-r1" defer></script>
     <noscript><style>
       .game-picker { display: none; }
       .game-panel[hidden] { display: grid !important; }
@@ -80,26 +80,54 @@
         </div>
       </section>
 
+      <section class="story-track story-kick" id="last-kick-story" aria-labelledby="kick-title">
+        <div class="story-stage">
+          <div class="story-copy">
+            <p class="game-name">라스트 킥</p>
+            <h2 id="kick-title">끝날 때까지,<br />아무도 모른다.</h2>
+            <p class="story-description">친구와 바로 연결해 짧게 겨루고,<br />마지막 한 발로 승부를 가려요.</p>
+            <a class="story-link" href="#last-kick">라스트 킥 살펴보기 <span aria-hidden="true">↗</span></a>
+          </div>
+          <figure class="story-visual">
+            <img src="assets/screenshots/last-kick.png" width="390" height="844" loading="lazy" alt="라스트 킥의 결정적인 슛 장면" />
+          </figure>
+        </div>
+      </section>
+
+      <section class="story-track story-overflow" id="overflow-story" aria-labelledby="overflow-title">
+        <div class="story-stage">
+          <div class="story-copy">
+            <p class="game-name">간당간당</p>
+            <h2 id="overflow-title">멈출까.<br />한 방울 더?</h2>
+            <p class="story-description">같은 컵에 돌아가며 물을 붓는<br />2~6인 눈치 게임. 넘치면 네가 진다.</p>
+            <a class="story-link" href="#overflow">간당간당 살펴보기 <span aria-hidden="true">↗</span></a>
+          </div>
+          <figure class="story-visual">
+            <video src="assets/motion/overflow.mp4" poster="assets/screenshots/overflow.png" width="390" height="844" muted playsinline loop preload="none" aria-label="간당간당의 컵에 물을 붓는 영상"></video>
+          </figure>
+        </div>
+      </section>
+
       <section class="games-section content-width" id="games" aria-labelledby="games-title">
         <div class="gallery-heading">
           <h2 id="games-title">모임은 하나.<br />게임은 다섯.</h2>
           <p>친구의 표정부터 마지막 한 발까지.<br />오늘의 게임을 골라보세요.</p>
         </div>
         <div class="game-picker" role="tablist" aria-label="게임 선택">
-          <button id="tab-last-kick" role="tab" aria-selected="true" aria-controls="last-kick" tabindex="0" data-game="last-kick">라스트 킥</button>
-          <button id="tab-who-more" role="tab" aria-selected="false" aria-controls="who-more" tabindex="-1" data-game="who-more">누가 더?</button>
+          <button id="tab-who-more" role="tab" aria-selected="true" aria-controls="who-more" tabindex="0" data-game="who-more">누가 더?</button>
+          <button id="tab-last-kick" role="tab" aria-selected="false" aria-controls="last-kick" tabindex="-1" data-game="last-kick">라스트 킥</button>
           <button id="tab-punch-king" role="tab" aria-selected="false" aria-controls="punch-king" tabindex="-1" data-game="punch-king">펀치 킹</button>
           <button id="tab-overflow" role="tab" aria-selected="false" aria-controls="overflow" tabindex="-1" data-game="overflow">간당간당</button>
           <button id="tab-caught" role="tab" aria-selected="false" aria-controls="caught" tabindex="-1" data-game="caught">딱 걸렸어</button>
         </div>
         <div class="gallery-surface">
-          <section class="game-panel" id="last-kick" role="tabpanel" aria-labelledby="tab-last-kick" tabindex="0">
-            <figure class="gallery-visual"><img src="assets/screenshots/last-kick.png" width="390" height="844" loading="lazy" alt="라스트 킥 앱 화면" /></figure>
-            <div class="gallery-copy"><p class="game-name">라스트 킥</p><h3>마지막 한 발까지<br />아무도 모른다.</h3><p>친구와 바로 연결하고, 짧게 겨루고, 결과 한 장으로 오래 놀리는 승부.</p></div>
-          </section>
-          <section class="game-panel" id="who-more" role="tabpanel" aria-labelledby="tab-who-more" tabindex="0" hidden>
+          <section class="game-panel" id="who-more" role="tabpanel" aria-labelledby="tab-who-more" tabindex="0">
             <figure class="gallery-visual"><video src="assets/motion/who-more.mp4" poster="assets/screenshots/who-more.png" width="390" height="844" muted playsinline loop preload="none" aria-label="누가 더? 앱 영상"></video></figure>
             <div class="gallery-copy"><p class="game-name">누가 더?</p><h3>오늘의 나는,<br />누구의 취향일까?</h3><p>매 판 달라지는 가상의 NPC 취향. 진지할 이유가 없어서 더 재밌는 선택.</p><p class="game-note">가상의 취향이며 객관적인 외모 평가가 아닙니다.</p></div>
+          </section>
+          <section class="game-panel" id="last-kick" role="tabpanel" aria-labelledby="tab-last-kick" tabindex="0" hidden>
+            <figure class="gallery-visual"><img src="assets/screenshots/last-kick.png" width="390" height="844" loading="lazy" alt="라스트 킥 앱 화면" /></figure>
+            <div class="gallery-copy"><p class="game-name">라스트 킥</p><h3>마지막 한 발까지<br />아무도 모른다.</h3><p>친구와 바로 연결하고, 짧게 겨루고, 결과 한 장으로 오래 놀리는 승부.</p></div>
           </section>
           <section class="game-panel" id="punch-king" role="tabpanel" aria-labelledby="tab-punch-king" tabindex="0" hidden>
             <figure class="gallery-visual"><video src="assets/motion/punch-king.mp4" poster="assets/screenshots/punch-king.png" width="390" height="844" muted playsinline loop preload="none" aria-label="펀치 킹 앱 영상"></video></figure>
