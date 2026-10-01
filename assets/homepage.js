@@ -77,7 +77,6 @@
   const fragmentId = () => {
     try {
       const id = decodeURIComponent(location.hash.slice(1));
-      if (id === "overflow-story") return "overflow";
       return id === "caught-story" ? "intro" : id;
     }
     catch (_) { return ""; }
@@ -164,6 +163,22 @@
       });
       hero.fromTo(".hero-focus", {autoAlpha: 0, y: 25}, {autoAlpha: 1, y: 0, duration: .28, ease: "none"}, .55)
         .to({}, {duration: .18}, .83);
+
+      document.querySelectorAll(".story-track").forEach((section) => {
+        const kick = section.classList.contains("story-kick");
+        const story = gsap.timeline({scrollTrigger: {
+          trigger: section, start: `top ${navHeight}px`, end: "bottom bottom",
+          scrub: .32, invalidateOnRefresh: true
+        }});
+        story.fromTo(section.querySelector(".story-copy"), {y: 28}, {
+          y: 0, duration: .3, ease: "none"
+        }, 0);
+        story.fromTo(section.querySelector(".story-visual > img, .story-visual > video"), {
+          scale: 1
+        }, {
+          scale: kick ? 1.14 : 1.12, duration: 1, ease: "none"
+        }, 0);
+      });
 
       gsap.from(".gallery-surface", {
         y: 35, opacity: .55, duration: .7, ease: "power2.out",
