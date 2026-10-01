@@ -978,6 +978,10 @@ p {
   scroll-snap-type: y mandatory;
   scroll-padding-top: 0;
 }
+.home-scroll.wheel-paging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
 .home-page {
   background: var(--bg);
   overflow-x: clip;

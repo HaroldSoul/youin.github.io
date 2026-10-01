@@ -102,24 +102,24 @@
     let fineInputUntil = 0;
     let wheelTarget = null;
     let wheelDirection = 0;
-    let wheelTimer;
+    let wheelFrame;
     const releaseWheel = () => {
+      cancelAnimationFrame(wheelFrame);
       wheelTarget = null;
       wheelDirection = 0;
-      clearTimeout(wheelTimer);
-    };
-    const cancelWheel = () => {
-      const wasMoving = wheelTarget !== null;
-      releaseWheel();
-      if (wasMoving) window.scrollTo({ top: window.scrollY, behavior: "instant" });
+      document.documentElement.classList.remove("wheel-paging");
     };
     window.addEventListener("wheel", (event) => {
       if (!desktopViewport.matches || reducedMotion.matches || event.defaultPrevented
-        || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey
-        || !event.deltaY || !event.cancelable
-        || Math.abs(event.deltaX) > Math.abs(event.deltaY)) return;
+        || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) {
+        releaseWheel();
+        return;
+      }
       if (event.target instanceof Element
-        && event.target.closest("input, textarea, select, [contenteditable]")) return;
+        && event.target.closest("input, textarea, select, [contenteditable]")) {
+        releaseWheel();
+        return;
+      }
 
       const now = performance.now();
       // Fine, fractional, or diagonal input keeps native trackpad scrolling for the gesture.
@@ -130,7 +130,11 @@
         releaseWheel();
         return;
       }
-      if (now < fineInputUntil) return;
+      if (now < fineInputUntil || !event.deltaY || !event.cancelable
+        || Math.abs(event.deltaX) > Math.abs(event.deltaY)) {
+        releaseWheel();
+        return;
+      }
 
       const direction = Math.sign(event.deltaY);
       if (wheelTarget !== null && direction === wheelDirection) {
@@ -165,19 +169,29 @@
       releaseWheel();
       wheelTarget = target;
       wheelDirection = direction;
-      window.scrollTo({ top: target, behavior: "smooth" });
-      wheelTimer = setTimeout(releaseWheel, 1500);
+      document.documentElement.classList.add("wheel-paging");
+      const started = performance.now();
+      const distance = target - y;
+      const duration = Math.max(300, Math.min(700, Math.abs(distance) * 0.7));
+      const move = (time) => {
+        const progress = Math.max(0, Math.min(1, (time - started) / duration));
+        // Smooth acceleration and deceleration, consistent across browser engines.
+        const eased = progress ** 3 * (progress * (progress * 6 - 15) + 10);
+        window.scrollTo({ top: y + distance * eased, behavior: "instant" });
+        if (progress < 1) {
+          wheelFrame = requestAnimationFrame(move);
+        } else {
+          releaseWheel();
+        }
+      };
+      wheelFrame = requestAnimationFrame(move);
     }, { passive: false });
-    window.addEventListener("scroll", () => {
-      if (wheelTarget !== null && Math.abs(window.scrollY - wheelTarget) < 2) releaseWheel();
-    }, { passive: true });
-    window.addEventListener("scrollend", releaseWheel);
-    window.addEventListener("resize", cancelWheel);
+    window.addEventListener("resize", releaseWheel);
     document.addEventListener("pointerdown", releaseWheel, { passive: true });
     document.addEventListener("keydown", releaseWheel);
 
     const handleMotionPreference = () => {
-      cancelWheel();
+      releaseWheel();
       syncSceneMotion(activeSceneId);
     };
     if (typeof reducedMotion.addEventListener === "function") {
