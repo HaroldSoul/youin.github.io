@@ -105,18 +105,14 @@
           <p>From a suspicious expression to the final kick.<br />Pick your game for today.</p>
         </div>
         <div class="game-picker" role="tablist" aria-label="Choose a game">
-          <button id="tab-caught" role="tab" aria-selected="true" aria-controls="caught" tabindex="0" data-game="caught">Caught You</button>
-          <button id="tab-last-kick" role="tab" aria-selected="false" aria-controls="last-kick" tabindex="-1" data-game="last-kick">Last Kick</button>
+          <button id="tab-last-kick" role="tab" aria-selected="true" aria-controls="last-kick" tabindex="0" data-game="last-kick">Last Kick</button>
           <button id="tab-who-more" role="tab" aria-selected="false" aria-controls="who-more" tabindex="-1" data-game="who-more">Who More?</button>
           <button id="tab-punch-king" role="tab" aria-selected="false" aria-controls="punch-king" tabindex="-1" data-game="punch-king">Punch King</button>
           <button id="tab-overflow" role="tab" aria-selected="false" aria-controls="overflow" tabindex="-1" data-game="overflow">Overflow</button>
+          <button id="tab-caught" role="tab" aria-selected="false" aria-controls="caught" tabindex="-1" data-game="caught">Caught You</button>
         </div>
         <div class="gallery-surface">
-          <section class="game-panel" id="caught" role="tabpanel" aria-labelledby="tab-caught" tabindex="0">
-            <figure class="gallery-visual"><video src="../assets/motion/caught-you-en.mp4" poster="../assets/screenshots/caught-you-en-start.webp" width="390" height="844" muted playsinline loop preload="none" aria-label="Caught You app video"></video></figure>
-            <div class="gallery-copy"><p class="game-name">Caught You</p><h3>Your question.<br />The camera catches<br />the reaction.</h3><p>One question. One suspicious expression. Put a friend on the spot and let their reaction play the round.</p><p class="game-note">For entertainment only. Not a scientific lie detector.</p></div>
-          </section>
-          <section class="game-panel" id="last-kick" role="tabpanel" aria-labelledby="tab-last-kick" tabindex="0" hidden>
+          <section class="game-panel" id="last-kick" role="tabpanel" aria-labelledby="tab-last-kick" tabindex="0">
             <figure class="gallery-visual"><img src="../assets/screenshots/last-kick-en.png" width="390" height="844" loading="lazy" alt="Last Kick app screen" /></figure>
             <div class="gallery-copy"><p class="game-name">Last Kick</p><h3>Nobody knows<br />until the final kick.</h3><p>Connect nearby, play a quick round, and keep teasing the result long after the game is over.</p></div>
           </section>
@@ -131,6 +127,10 @@
           <section class="game-panel" id="overflow" role="tabpanel" aria-labelledby="tab-overflow" tabindex="0" hidden>
             <figure class="gallery-visual"><video src="../assets/motion/overflow-en.mp4" poster="../assets/screenshots/overflow-en-start.webp" width="390" height="844" muted playsinline loop preload="none" aria-label="Overflow app video"></video></figure>
             <div class="gallery-copy"><p class="game-name">Overflow</p><h3>One drop too far.<br />You lose.</h3><p>Take turns pouring into the same cup in a 2 to 6 player game of nerve. Miss the moment to stop, and the final drop is yours.</p></div>
+          </section>
+          <section class="game-panel" id="caught" role="tabpanel" aria-labelledby="tab-caught" tabindex="0" hidden>
+            <figure class="gallery-visual"><video src="../assets/motion/caught-you-en.mp4" poster="../assets/screenshots/caught-you-en-start.webp" width="390" height="844" muted playsinline loop preload="none" aria-label="Caught You app video"></video></figure>
+            <div class="gallery-copy"><p class="game-name">Caught You</p><h3>Your question.<br />The camera catches<br />the reaction.</h3><p>One question. One suspicious expression. Put a friend on the spot and let their reaction play the round.</p><p class="game-note">For entertainment only. Not a scientific lie detector.</p></div>
           </section>
         </div>
       </section>
