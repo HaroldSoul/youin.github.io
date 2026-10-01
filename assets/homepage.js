@@ -101,6 +101,7 @@
   const fragmentId = () => {
     try {
       const id = decodeURIComponent(location.hash.slice(1));
+      if (id === "last-kick-story") return "last-kick";
       return id === "caught-story" ? "intro" : id;
     }
     catch (_) { return ""; }
