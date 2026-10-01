@@ -178,11 +178,11 @@
       document.documentElement.classList.add("wheel-paging");
       const started = performance.now();
       const distance = target - y;
-      const duration = Math.max(300, Math.min(700, Math.abs(distance) * 0.7));
+      const duration = Math.max(260, Math.min(600, Math.abs(distance) * 0.6));
       const move = (time) => {
         const progress = Math.max(0, Math.min(1, (time - started) / duration));
-        // Smooth acceleration and deceleration, consistent across browser engines.
-        const eased = progress ** 3 * (progress * (progress * 6 - 15) + 10);
+        // Respond immediately to the wheel, then ease gently into the next chapter.
+        const eased = 1 - (1 - progress) ** 3;
         window.scrollTo({ top: y + distance * eased, behavior: "instant" });
         if (progress < 1) {
           wheelFrame = requestAnimationFrame(move);
