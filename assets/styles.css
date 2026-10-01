@@ -973,9 +973,14 @@ p {
   }
 }
 
-/* Full-screen homepage chapters with native wheel and trackpad scrolling. */
+/* Full-screen chapters: native trackpad snapping and smooth wheel paging. */
 .home-scroll {
+  scroll-snap-type: y mandatory;
   scroll-padding-top: 0;
+}
+.home-scroll.wheel-paging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
 }
 .home-page {
   background: var(--bg);
@@ -1008,6 +1013,8 @@ p {
 .scene {
   position: relative;
   min-height: 100svh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
   overflow: clip;
   border-bottom: 1px solid rgb(242 239 231 / 0.12);
   isolation: isolate;
@@ -1588,12 +1595,16 @@ p {
 }
 
 @media (max-width: 1023px) {
+  .home-scroll {
+    scroll-snap-type: none;
+  }
   .page-rail {
     display: none;
   }
   .scene,
   .scene > .wrap {
     min-height: auto;
+    scroll-snap-align: none;
   }
   .scene-hero,
   .release-scene,
@@ -1779,6 +1790,9 @@ p {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .home-scroll {
+    scroll-snap-type: none;
+  }
   .home-page.scene-observed .scene-hero-copy,
   .home-page.scene-observed .game-scene-copy,
   .home-page.scene-observed .next-game-grid > :not(.scene-counter),

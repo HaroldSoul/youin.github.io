@@ -97,7 +97,111 @@
       { threshold: [0.2, 0.4, 0.6, 0.8] },
     );
     scenes.forEach((scene) => observer.observe(scene));
-    const handleMotionPreference = () => syncSceneMotion(activeSceneId);
+
+    const desktopViewport = window.matchMedia("(min-width: 1024px)");
+    let fineInputUntil = 0;
+    let wheelTarget = null;
+    let wheelDirection = 0;
+    let wheelFrame;
+    const releaseWheel = () => {
+      cancelAnimationFrame(wheelFrame);
+      wheelTarget = null;
+      wheelDirection = 0;
+      document.documentElement.classList.remove("wheel-paging");
+    };
+    window.addEventListener("wheel", (event) => {
+      if (!desktopViewport.matches || reducedMotion.matches || event.defaultPrevented
+        || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) {
+        releaseWheel();
+        return;
+      }
+      if (event.target instanceof Element
+        && event.target.closest("input, textarea, select, [contenteditable]")) {
+        releaseWheel();
+        return;
+      }
+
+      const now = performance.now();
+      // Fine, fractional, or diagonal input keeps native trackpad scrolling for the gesture.
+      const fineInput = event.deltaMode === 0 && (Math.abs(event.deltaY) < 40
+        || !Number.isInteger(event.deltaY) || event.deltaX !== 0);
+      if (fineInput) {
+        fineInputUntil = now + 240;
+        releaseWheel();
+        return;
+      }
+      if (now < fineInputUntil || !event.deltaY || !event.cancelable
+        || Math.abs(event.deltaX) > Math.abs(event.deltaY)) {
+        releaseWheel();
+        return;
+      }
+
+      const direction = Math.sign(event.deltaY);
+      if (wheelTarget !== null && direction === wheelDirection) {
+        event.preventDefault();
+        return;
+      }
+
+      const y = window.scrollY;
+      let index = 0;
+      scenes.forEach((scene, i) => {
+        if (scene.offsetTop <= y + 2) index = i;
+      });
+      const current = scenes[index];
+      let target;
+      if (direction > 0) {
+        // Taller chapters must remain scrollable before advancing to the next one.
+        if (y >= current.offsetTop + current.offsetHeight - window.innerHeight - 2
+          && index < scenes.length - 1) target = scenes[index + 1].offsetTop;
+      } else if (y > current.offsetTop + 2) {
+        if (current.offsetHeight > window.innerHeight + 2) {
+          const bottom = current.offsetTop + current.offsetHeight - window.innerHeight;
+          // Reversing between chapters returns to the taller chapter's visible bottom.
+          if (y > bottom + 2) target = bottom;
+        } else {
+          target = current.offsetTop;
+        }
+      } else if (index > 0) {
+        const previous = scenes[index - 1];
+        target = Math.max(previous.offsetTop,
+          previous.offsetTop + previous.offsetHeight - window.innerHeight);
+      }
+      if (target === undefined || Math.abs(target - y) < 2) {
+        releaseWheel();
+        return;
+      }
+
+      event.preventDefault();
+      cancelAnimationFrame(wheelFrame);
+      wheelTarget = target;
+      wheelDirection = direction;
+      document.documentElement.classList.add("wheel-paging");
+      const started = performance.now();
+      const distance = target - y;
+      const duration = Math.max(300, Math.min(700, Math.abs(distance) * 0.7));
+      const move = (time) => {
+        const progress = Math.max(0, Math.min(1, (time - started) / duration));
+        // Smooth acceleration and deceleration, consistent across browser engines.
+        const eased = progress ** 3 * (progress * (progress * 6 - 15) + 10);
+        window.scrollTo({ top: y + distance * eased, behavior: "instant" });
+        if (progress < 1) {
+          wheelFrame = requestAnimationFrame(move);
+        } else {
+          releaseWheel();
+        }
+      };
+      wheelFrame = requestAnimationFrame(move);
+    }, { passive: false });
+    window.addEventListener("resize", releaseWheel);
+    window.addEventListener("hashchange", releaseWheel);
+    window.addEventListener("popstate", releaseWheel);
+    document.addEventListener("pointerdown", releaseWheel, { passive: true });
+    document.addEventListener("keydown", releaseWheel);
+
+    const handleMotionPreference = () => {
+      releaseWheel();
+      syncSceneMotion(activeSceneId);
+    };
     if (typeof reducedMotion.addEventListener === "function") {
       reducedMotion.addEventListener("change", handleMotionPreference);
     } else {
