@@ -995,6 +995,9 @@ p {
   background: var(--bg);
   overflow-x: clip;
 }
+.home-page .skip {
+  z-index: 40;
+}
 .home-page .button {
   border: 1px solid var(--text);
 }
