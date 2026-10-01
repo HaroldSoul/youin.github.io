@@ -25,13 +25,13 @@
     <link rel="icon" type="image/svg+xml" href="assets/app-icon.svg" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
-    <link rel="stylesheet" href="assets/homepage.css?v=20261002-five-games-r2" />
+    <link rel="stylesheet" href="assets/homepage.css?v=20261002-caught-feature-r3" />
     <script src="assets/language.js"></script>
     <script src="assets/config.js?v=20260928-bug-report" defer></script>
     <script src="assets/site.js?v=20261002-product-home-r1" defer></script>
     <script src="assets/vendor/gsap.min.js?v=3.15.0" defer></script>
     <script src="assets/vendor/ScrollTrigger.min.js?v=3.15.0" defer></script>
-    <script src="assets/homepage.js?v=20261002-five-games-r2" defer></script>
+    <script src="assets/homepage.js?v=20261002-caught-feature-r3" defer></script>
     <noscript><style>
       .game-picker { display: none; }
       .game-panel[hidden] { display: grid !important; }
@@ -65,18 +65,37 @@
             <a class="action" href="#games">게임 고르기 <span aria-hidden="true">→</span></a>
           </div>
           <figure class="hero-lineup" aria-label="YouIN의 다섯 게임 화면">
-            <div class="hero-screen" data-position="-2"><img src="assets/screenshots/caught-you.png" width="390" height="844" alt="딱 걸렸어 앱 화면" /></div>
-            <div class="hero-screen" data-position="-1"><img src="assets/screenshots/last-kick.png" width="390" height="844" alt="라스트 킥 앱 화면" /></div>
-            <div class="hero-screen" data-position="0"><img src="assets/screenshots/who-more.png" width="390" height="844" alt="누가 더? 앱 화면" /></div>
+            <div class="hero-screen" data-position="-2"><img src="assets/screenshots/last-kick.png" width="390" height="844" alt="라스트 킥 앱 화면" /></div>
+            <div class="hero-screen" data-position="-1"><img src="assets/screenshots/who-more.png" width="390" height="844" alt="누가 더? 앱 화면" /></div>
+            <div class="hero-screen hero-screen-main" data-position="0"><img src="assets/screenshots/caught-you.png" width="390" height="844" fetchpriority="high" alt="딱 걸렸어 앱 화면" /></div>
             <div class="hero-screen" data-position="1"><img src="assets/screenshots/punch-king.png" width="390" height="844" alt="펀치 킹 앱 화면" /></div>
             <div class="hero-screen" data-position="2"><img src="assets/screenshots/overflow.png" width="390" height="844" alt="간당간당 앱 화면" /></div>
-            <div class="hero-brand-screen"><img src="assets/screenshots/home.png" width="390" height="844" fetchpriority="high" alt="다섯 게임을 고르는 YouIN 앱 홈 화면" /></div>
           </figure>
           <div class="hero-focus" aria-hidden="true">
-            <p>YouIN · 다섯 가지 게임</p>
-            <h2>친구가 모이면,<br />게임이 시작됩니다.</h2>
-            <p class="focus-description">질문하고, 겨루고, 웃고.<br />오늘 모임에 맞는 게임을 골라보세요.</p>
+            <p>딱 걸렸어</p>
+            <h2>표정이 <br />들켰다.</h2>
+            <p class="focus-description">친구에게 질문하고,<br />카메라로 반응을 즐기는 게임.</p>
           </div>
+        </div>
+      </section>
+
+      <section class="moment-track" id="caught-story" aria-labelledby="moment-title">
+        <div class="moment-stage">
+          <div class="moment-copy moment-copy-a">
+            <p class="game-name">딱 걸렸어</p>
+            <h2 id="moment-title">질문 하나.<br />표정 한 번.</h2>
+            <p class="moment-description">질문 하나에 흔들리는 표정.<br />친구의 반응이 게임이 됩니다.</p>
+            <p class="moment-note">오락용 게임이며 과학적 거짓말 탐지기가 아닙니다.</p>
+          </div>
+          <div class="moment-copy moment-copy-b" aria-hidden="true">
+            <p class="game-name">딱 걸렸어</p>
+            <h2>친구의 반응이<br />게임이 된다.</h2>
+            <p class="moment-description">질문 하나에 흔들리는 표정.<br />친구의 반응이 게임이 됩니다.</p>
+            <p class="moment-note">오락용 게임이며 과학적 거짓말 탐지기가 아닙니다.</p>
+          </div>
+          <figure class="moment-visual">
+            <video id="caught-film" src="assets/motion/caught-you.mp4" poster="assets/screenshots/caught-you.png" width="390" height="844" data-motion-start="2" muted playsinline preload="metadata" aria-label="딱 걸렸어 앱 영상"></video>
+          </figure>
         </div>
       </section>
 
