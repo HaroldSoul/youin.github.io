@@ -23,7 +23,7 @@
     });
   };
 
-  // The feature loops the reaction portion of the original clip.
+  // The main hero screen loops the reaction portion of the original clip.
   // Gallery videos retain their complete playback sequence.
   videos.forEach((video) => {
     const start = Number(video.dataset.motionStart);
@@ -77,7 +77,8 @@
   const fragmentId = () => {
     try {
       const id = decodeURIComponent(location.hash.slice(1));
-      return id === "overflow-story" ? "overflow" : id;
+      if (id === "overflow-story") return "overflow";
+      return id === "caught-story" ? "intro" : id;
     }
     catch (_) { return ""; }
   };
@@ -164,15 +165,6 @@
       hero.fromTo(".hero-focus", {autoAlpha: 0, y: 25}, {autoAlpha: 1, y: 0, duration: .28, ease: "none"}, .55)
         .to({}, {duration: .18}, .83);
 
-      const moment = gsap.timeline({scrollTrigger: {
-        trigger: ".moment-track", start: `top ${navHeight}px`, end: "bottom bottom",
-        scrub: .32, invalidateOnRefresh: true
-      }});
-      moment.fromTo(".moment-visual", {xPercent: -50, x: 0, scale: .94, y: 20}, {
-        scale: mobile ? 1 : 1.1, y: mobile ? 0 : -10, duration: 1, ease: "none"
-      }, 0);
-      moment.to(".moment-copy-a", {autoAlpha: 0, y: -35, duration: .25, ease: "none"}, .32)
-        .fromTo(".moment-copy-b", {autoAlpha: 0, y: 35}, {autoAlpha: 1, y: 0, duration: .3, ease: "none"}, .55);
       gsap.from(".gallery-surface", {
         y: 35, opacity: .55, duration: .7, ease: "power2.out",
         scrollTrigger: {trigger: ".gallery-surface", start: "top 88%", once: true}

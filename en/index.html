@@ -25,13 +25,13 @@
     <link rel="icon" type="image/svg+xml" href="../assets/app-icon.svg" />
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png" />
-    <link rel="stylesheet" href="../assets/homepage.css?v=20261002-caught-feature-r3" />
+    <link rel="stylesheet" href="../assets/homepage.css?v=20261002-unified-feature-r1" />
     <script src="../assets/language.js"></script>
     <script src="../assets/config.js?v=20260928-bug-report" defer></script>
     <script src="../assets/site.js?v=20261002-product-home-r1" defer></script>
     <script src="../assets/vendor/gsap.min.js?v=3.15.0" defer></script>
     <script src="../assets/vendor/ScrollTrigger.min.js?v=3.15.0" defer></script>
-    <script src="../assets/homepage.js?v=20261002-caught-feature-r3" defer></script>
+    <script src="../assets/homepage.js?v=20261002-unified-feature-r1" defer></script>
     <noscript><style>
       .game-picker { display: none; }
       .game-panel[hidden] { display: grid !important; }
@@ -67,7 +67,7 @@
           <figure class="hero-lineup" aria-label="Five YouIN game screens">
             <div class="hero-screen" data-position="-2"><img src="../assets/screenshots/last-kick-en.png" width="390" height="844" alt="Last Kick app screen" /></div>
             <div class="hero-screen" data-position="-1"><img src="../assets/screenshots/who-more-en.png" width="390" height="844" alt="Who More? app screen" /></div>
-            <div class="hero-screen hero-screen-main" data-position="0"><img src="../assets/screenshots/caught-you-en.png" width="390" height="844" fetchpriority="high" alt="Caught You app screen" /></div>
+            <div class="hero-screen hero-screen-main" data-position="0"><video id="caught-film" src="../assets/motion/caught-you-en.mp4" poster="../assets/screenshots/caught-you-en.png" width="390" height="844" data-motion-start="2" muted playsinline preload="metadata" aria-label="Caught You app video"></video></div>
             <div class="hero-screen" data-position="1"><img src="../assets/screenshots/punch-king-en.png" width="390" height="844" alt="Punch King app screen" /></div>
             <div class="hero-screen" data-position="2"><img src="../assets/screenshots/overflow-en.png" width="390" height="844" alt="Overflow app screen" /></div>
           </figure>
@@ -75,27 +75,8 @@
             <p>Caught You</p>
             <h2>That face. <br />Caught you.</h2>
             <p class="focus-description">Ask a friend a question.<br />Let their reaction play the round.</p>
+            <p class="focus-note">Entertainment only. It is not a scientific lie detector.</p>
           </div>
-        </div>
-      </section>
-
-      <section class="moment-track" id="caught-story" aria-labelledby="moment-title">
-        <div class="moment-stage">
-          <div class="moment-copy moment-copy-a">
-            <p class="game-name">Caught You</p>
-            <h2 id="moment-title">One question.<br />One reaction.</h2>
-            <p class="moment-description">One question. One suspicious expression.<br />Their reaction becomes the game.</p>
-            <p class="moment-note">Entertainment only. It is not a scientific lie detector.</p>
-          </div>
-          <div class="moment-copy moment-copy-b" aria-hidden="true">
-            <p class="game-name">Caught You</p>
-            <h2>Your reaction.<br />The game.</h2>
-            <p class="moment-description">One question. One suspicious expression.<br />Their reaction becomes the game.</p>
-            <p class="moment-note">Entertainment only. It is not a scientific lie detector.</p>
-          </div>
-          <figure class="moment-visual">
-            <video id="caught-film" src="../assets/motion/caught-you-en.mp4" poster="../assets/screenshots/caught-you-en.png" width="390" height="844" data-motion-start="2" muted playsinline preload="metadata" aria-label="Caught You app video"></video>
-          </figure>
         </div>
       </section>
 
