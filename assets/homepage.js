@@ -59,7 +59,11 @@
   };
 
   const fragmentId = () => {
-    try { return decodeURIComponent(location.hash.slice(1)); }
+    try {
+      const id = decodeURIComponent(location.hash.slice(1));
+      // Existing links to the former feature lead to its gallery panel.
+      return id === "overflow-story" ? "overflow" : id;
+    }
     catch (_) { return ""; }
   };
   const alignFragment = () => {
@@ -116,42 +120,45 @@
       const navHeight = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--nav-height"));
       document.documentElement.classList.add("motion-enabled");
       const heroStage = document.querySelector(".hero-stage");
+      const lineup = document.querySelector(".hero-lineup");
       // CSS sticky holds the stage. Only the visual follows scroll; wheel input stays native.
       const hero = gsap.timeline({scrollTrigger: {
         trigger: ".hero-track", start: `top ${navHeight}px`, end: "bottom bottom",
         scrub: .32, invalidateOnRefresh: true
       }});
-      hero.to(".hero-copy", {y: -80, autoAlpha: 0, duration: .45, ease: "none"}, .02);
+      hero.to(".hero-copy", {y: -60, autoAlpha: 0, duration: .32, ease: "none"}, .02);
+      hero.fromTo(".hero-brand-screen", {xPercent: -50, x: 0, y: 0, scale: 1, autoAlpha: 1}, {
+        y: -20, scale: 1.05, autoAlpha: 0, duration: .3, ease: "none"
+      }, .04);
       document.querySelectorAll(".hero-screen").forEach((screen) => {
         const index = Number(screen.dataset.position);
         hero.fromTo(screen, {
-          x: () => index * (mobile ? Math.min(innerWidth * .34, 150) : innerWidth * .16),
+          xPercent: -50,
+          x: () => index * innerWidth * (mobile ? .17 : .16),
           y: Math.abs(index) * 22, rotation: index * 5,
-          scale: 1 - Math.abs(index) * .08, autoAlpha: 1
+          scale: 1, autoAlpha: 1
         }, {
-          x: () => index ? index * innerWidth * .5 : (mobile ? 0 : innerWidth * .2),
+          x: () => {
+            if (!mobile) return index * innerWidth * .17;
+            return index < 0 ? (index === -2 ? -.15 : .15) * innerWidth : (index - 1) * innerWidth * .29;
+          },
           y: () => {
-            if (index) return 35;
-            const baseCenter = heroStage.offsetHeight - (mobile ? 32 : 25) - screen.offsetHeight / 2;
-            return heroStage.offsetHeight * (mobile ? .66 : .55) - baseCenter;
+            const baseCenter = lineup.offsetTop + screen.offsetHeight / 2;
+            const rowCenter = mobile ? (index < 0 ? .49 : .77) : .74;
+            return heroStage.offsetHeight * rowCenter - baseCenter;
           },
           rotation: 0,
-          scale: () => index ? .82 : heroStage.offsetHeight * (mobile ? .55 : .82) / screen.offsetHeight,
-          autoAlpha: index ? 0 : 1, duration: .7, ease: "none"
+          scale: () => {
+            const height = mobile
+              ? Math.min(heroStage.offsetHeight * .245, innerWidth * .6, 230)
+              : Math.min(heroStage.offsetHeight * .5, innerWidth * .31, 500);
+            return height / screen.offsetHeight;
+          },
+          autoAlpha: 1, duration: .7, ease: "none"
         }, .08);
       });
-      hero.fromTo(".hero-focus", {autoAlpha: 0, y: 25}, {autoAlpha: 1, y: 0, duration: .28, ease: "none"}, .55)
+      hero.fromTo(".hero-focus", {autoAlpha: 0, y: 25}, {autoAlpha: 1, y: 0, duration: .28, ease: "none"}, .48)
         .to({}, {duration: .18}, .83);
-
-      const moment = gsap.timeline({scrollTrigger: {
-        trigger: ".moment-track", start: `top ${navHeight}px`, end: "bottom bottom",
-        scrub: .32, invalidateOnRefresh: true
-      }});
-      moment.fromTo(".moment-visual", {scale: .94, y: 20}, {
-        scale: mobile ? 1 : 1.1, y: mobile ? 0 : -10, duration: 1, ease: "none"
-      }, 0);
-      moment.to(".moment-copy-a", {autoAlpha: 0, y: -35, duration: .25, ease: "none"}, .32)
-        .fromTo(".moment-copy-b", {autoAlpha: 0, y: 35}, {autoAlpha: 1, y: 0, duration: .3, ease: "none"}, .55);
       gsap.from(".gallery-surface", {
         y: 35, opacity: .55, duration: .7, ease: "power2.out",
         scrollTrigger: {trigger: ".gallery-surface", start: "top 88%", once: true}

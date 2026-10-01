@@ -44,32 +44,24 @@ main { padding-top: var(--nav-height); }
 .hero-description { margin-top: 6px; color: var(--secondary); font-size: 16px; }
 .hero-copy .action { margin-top: 22px; }
 .hero-lineup { position: absolute; bottom: 25px; left: 0; width: 100%; height: 48svh; max-height: 460px; }
-.hero-screen { position: absolute; left: 50%; top: 0; height: 100%; aspect-ratio: 390 / 844; translate: -50% 0; transform-origin: center; }
-.hero-screen img { width: 100%; height: 100%; border-radius: 20px; box-shadow: 0 20px 36px rgb(0 0 0 / .12); }
-.hero-screen[data-position="-2"] { transform: translate(-460px, 44px) rotate(-10deg) scale(.84); }
-.hero-screen[data-position="-1"] { transform: translate(-230px, 22px) rotate(-5deg) scale(.92); }
-.hero-screen[data-position="1"] { transform: translate(230px, 22px) rotate(5deg) scale(.92); }
-.hero-screen[data-position="2"] { transform: translate(460px, 44px) rotate(10deg) scale(.84); }
-.hero-screen-main { z-index: 2; }
-.hero-focus { display: none; position: absolute; top: 34%; left: max(7vw, calc((100% - 1160px) / 2)); z-index: 3; max-width: 45%; }
-.hero-focus > p:first-child { font-size: 20px; font-weight: 650; }
-.hero-focus h2 { margin-top: 22px; font-size: clamp(64px, 6.7vw, 96px); font-weight: 750; line-height: 1.07; }
-.focus-description { margin-top: 28px; color: var(--secondary); font-size: 18px; }
-.moment-stage { position: relative; min-height: 760px; padding-block: 80px; background: var(--surface); overflow: clip; }
-.moment-copy { width: 48%; max-width: 570px; margin-left: max(7vw, calc((100% - 1160px) / 2)); padding-top: 70px; }
+.hero-screen, .hero-brand-screen { position: absolute; left: 50%; top: 0; height: 100%; aspect-ratio: 390 / 844; transform: translateX(-50%); transform-origin: center; }
+.hero-screen img, .hero-brand-screen img { width: 100%; height: 100%; border-radius: 20px; box-shadow: 0 20px 36px rgb(0 0 0 / .12); }
+.hero-screen { z-index: 1; }
+.hero-screen[data-position="-1"], .hero-screen[data-position="1"] { z-index: 2; }
+.hero-screen[data-position="0"] { z-index: 3; }
+.hero-brand-screen { z-index: 4; }
+.hero-screen[data-position="-2"] { transform: translate(calc(-50% - 460px), 44px) rotate(-10deg); }
+.hero-screen[data-position="-1"] { transform: translate(calc(-50% - 230px), 22px) rotate(-5deg); }
+.hero-screen[data-position="1"] { transform: translate(calc(-50% + 230px), 22px) rotate(5deg); }
+.hero-screen[data-position="2"] { transform: translate(calc(-50% + 460px), 44px) rotate(10deg); }
+.hero-focus { display: none; position: absolute; top: 4%; left: 24px; right: 24px; z-index: 3; text-align: center; }
+.hero-focus > p:first-child { font-size: 16px; font-weight: 650; }
+.hero-focus h2 { margin-top: 14px; font-size: clamp(42px, 4.4vw, 64px); font-weight: 750; line-height: 1.1; }
+.focus-description { margin-top: 18px; color: var(--secondary); font-size: 16px; }
 .game-name { font-size: 19px; font-weight: 650; }
-.moment-copy h2 { margin-top: 24px; font-size: clamp(60px, 6.8vw, 96px); font-weight: 750; line-height: 1.08; }
-.moment-copy > p:last-child { margin-top: 30px; color: var(--secondary); font-size: 18px; }
-.moment-copy-b { display: none; }
-.moment-visual { position: absolute; top: 80px; bottom: 80px; left: 73%; width: min(49vw, 640px); translate: -50% 0; overflow: hidden; border-radius: 20px; box-shadow: 0 20px 40px rgb(0 0 0 / .1); }
-.moment-visual video { width: 100%; height: 100%; object-fit: cover; object-position: center 62%; }
 .motion-enabled .hero-track { height: 200svh; }
-.motion-enabled .moment-track { height: 205svh; }
-.motion-enabled .hero-stage, .motion-enabled .moment-stage { position: sticky; top: var(--nav-height); height: calc(100svh - var(--nav-height)); min-height: 0; }
+.motion-enabled .hero-stage { position: sticky; top: var(--nav-height); height: calc(100svh - var(--nav-height)); min-height: 0; }
 .motion-enabled .hero-focus { display: block; opacity: 0; visibility: hidden; }
-.motion-enabled .moment-copy { position: absolute; top: 20%; left: max(7vw, calc((100% - 1160px) / 2)); margin-left: 0; padding-top: 0; }
-.motion-enabled .moment-copy-b { display: block; opacity: 0; visibility: hidden; }
-.motion-enabled .moment-visual { top: 70px; bottom: 70px; }
 .games-section { padding-block: 125px 130px; }
 .gallery-heading h2 { font-size: clamp(42px, 4.7vw, 66px); font-weight: 750; line-height: 1.15; }
 .gallery-heading > p { margin-top: 25px; font-size: 19px; color: var(--secondary); }
@@ -105,18 +97,25 @@ main { padding-top: var(--nav-height); }
   .hero-copy h1 { font-size: min(12vw, 144px); }
   .hero-tagline { margin-top: 18px; font-size: 28px; }
   .hero-copy .action { margin-top: 15px; }
-  .hero-lineup { height: 44svh; bottom: 22px; }
-  .hero-focus { top: 28%; }
-  .hero-focus h2 { font-size: 68px; }
-  .moment-copy h2 { font-size: 64px; }
+  .hero-lineup { height: 40svh; bottom: 22px; }
 }
 @media (max-width: 1023px) {
   .content-width { width: calc(100% - 64px); }
   .local-nav { padding-inline: 24px; }
-  .moment-copy h2 { font-size: 64px; }
-  .moment-visual { left: 73%; width: 45vw; }
   .game-panel { padding-inline: 40px; gap: 35px; }
   .gallery-copy h3 { font-size: 36px; }
+}
+@media (min-width: 768px) and (max-height: 680px) {
+  .hero-copy { top: 20px; }
+  .hero-copy h1 { font-size: 100px; }
+  .hero-tagline { margin-top: 14px; font-size: 23px; }
+  .hero-description { font-size: 14px; }
+  .hero-copy .action { margin-top: 12px; }
+  .hero-lineup { height: 34svh; }
+  .hero-focus { top: 16px; }
+  .hero-focus > p:first-child { font-size: 14px; }
+  .hero-focus h2 { margin-top: 12px; font-size: 36px; }
+  .focus-description { margin-top: 12px; font-size: 14px; }
 }
 @media (max-width: 767px) {
   :root { --nav-height: 54px; }
@@ -133,27 +132,17 @@ main { padding-top: var(--nav-height); }
   .hero-description { max-width: 265px; margin: 14px auto 0; font-size: 14px; }
   .hero-copy .action { margin-top: 22px; }
   .hero-lineup { height: 43svh; min-height: 300px; bottom: 32px; }
-  .hero-screen img { border-radius: 15px; }
-  .hero-screen[data-position="-2"] { transform: translate(-260px, 44px) rotate(-10deg) scale(.84); }
-  .hero-screen[data-position="-1"] { transform: translate(-130px, 22px) rotate(-5deg) scale(.92); }
-  .hero-screen[data-position="1"] { transform: translate(130px, 22px) rotate(5deg) scale(.92); }
-  .hero-screen[data-position="2"] { transform: translate(260px, 44px) rotate(10deg) scale(.84); }
-  .hero-focus { top: 32px; left: 24px; max-width: 90%; }
+  .hero-screen img, .hero-brand-screen img { border-radius: 15px; }
+  .hero-screen[data-position="-2"] { transform: translate(calc(-50% - 34vw), 44px) rotate(-10deg); }
+  .hero-screen[data-position="-1"] { transform: translate(calc(-50% - 17vw), 22px) rotate(-5deg); }
+  .hero-screen[data-position="1"] { transform: translate(calc(-50% + 17vw), 22px) rotate(5deg); }
+  .hero-screen[data-position="2"] { transform: translate(calc(-50% + 34vw), 44px) rotate(10deg); }
+  .hero-focus { top: 32px; }
   .hero-focus > p:first-child { font-size: 15px; }
-  .hero-focus h2 { margin-top: 14px; font-size: 44px; }
-  .hero-focus h2 br { display: none; }
+  .hero-focus h2 { margin-top: 14px; font-size: clamp(30px, 9.7vw, 40px); line-height: 1.15; }
   .focus-description { margin-top: 14px; font-size: 14px; }
   .motion-enabled .hero-track { height: 185svh; }
-  .motion-enabled .moment-track { height: 180svh; }
-  .moment-stage { min-height: 850px; padding: 45px 24px; }
-  .moment-copy { width: 100%; margin: 0; padding-top: 0; }
-  .moment-copy h2 { margin-top: 18px; font-size: 48px; }
-  .moment-copy > p:last-child { margin-top: 22px; font-size: 15px; }
   .game-name { font-size: 16px; }
-  .moment-visual { top: auto; height: 430px; bottom: 45px; left: 50%; width: auto; aspect-ratio: 390 / 844; }
-  .moment-visual video { object-fit: contain; }
-  .motion-enabled .moment-copy { top: 35px; left: 24px; right: 24px; width: auto; }
-  .motion-enabled .moment-visual { top: auto; bottom: 30px; height: 49svh; max-height: 430px; }
   .games-section { padding-block: 85px; }
   .gallery-heading h2 { font-size: 42px; }
   .gallery-heading > p { font-size: 16px; }
@@ -176,9 +165,6 @@ main { padding-top: var(--nav-height); }
   .motion-enabled .hero-stage { min-height: 600px; }
   .motion-enabled .hero-track { height: auto; }
   .motion-enabled .hero-focus { display: none; }
-  .motion-enabled .moment-track { height: auto; }
-  .motion-enabled .moment-stage { position: relative; top: auto; height: 750px; }
-  .motion-enabled .moment-copy-b { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
