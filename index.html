@@ -105,18 +105,14 @@
           <p>친구의 표정부터 마지막 한 발까지.<br />오늘의 게임을 골라보세요.</p>
         </div>
         <div class="game-picker" role="tablist" aria-label="게임 선택">
-          <button id="tab-caught" role="tab" aria-selected="true" aria-controls="caught" tabindex="0" data-game="caught">딱 걸렸어</button>
-          <button id="tab-last-kick" role="tab" aria-selected="false" aria-controls="last-kick" tabindex="-1" data-game="last-kick">라스트 킥</button>
+          <button id="tab-last-kick" role="tab" aria-selected="true" aria-controls="last-kick" tabindex="0" data-game="last-kick">라스트 킥</button>
           <button id="tab-who-more" role="tab" aria-selected="false" aria-controls="who-more" tabindex="-1" data-game="who-more">누가 더?</button>
           <button id="tab-punch-king" role="tab" aria-selected="false" aria-controls="punch-king" tabindex="-1" data-game="punch-king">펀치 킹</button>
           <button id="tab-overflow" role="tab" aria-selected="false" aria-controls="overflow" tabindex="-1" data-game="overflow">간당간당</button>
+          <button id="tab-caught" role="tab" aria-selected="false" aria-controls="caught" tabindex="-1" data-game="caught">딱 걸렸어</button>
         </div>
         <div class="gallery-surface">
-          <section class="game-panel" id="caught" role="tabpanel" aria-labelledby="tab-caught" tabindex="0">
-            <figure class="gallery-visual"><video src="assets/motion/caught-you.mp4" poster="assets/screenshots/caught-you.png" width="390" height="844" muted playsinline loop preload="none" aria-label="딱 걸렸어 앱 영상"></video></figure>
-            <div class="gallery-copy"><p class="game-name">딱 걸렸어</p><h3>질문은 직접.<br />표정은 카메라가.</h3><p>질문 하나에 흔들리는 표정. 친구의 반응이 그대로 게임이 되는 순간.</p><p class="game-note">오락용 게임이며 과학적 거짓말 탐지기가 아닙니다.</p></div>
-          </section>
-          <section class="game-panel" id="last-kick" role="tabpanel" aria-labelledby="tab-last-kick" tabindex="0" hidden>
+          <section class="game-panel" id="last-kick" role="tabpanel" aria-labelledby="tab-last-kick" tabindex="0">
             <figure class="gallery-visual"><img src="assets/screenshots/last-kick.png" width="390" height="844" loading="lazy" alt="라스트 킥 앱 화면" /></figure>
             <div class="gallery-copy"><p class="game-name">라스트 킥</p><h3>마지막 한 발까지<br />아무도 모른다.</h3><p>친구와 바로 연결하고, 짧게 겨루고, 결과 한 장으로 오래 놀리는 승부.</p></div>
           </section>
@@ -131,6 +127,10 @@
           <section class="game-panel" id="overflow" role="tabpanel" aria-labelledby="tab-overflow" tabindex="0" hidden>
             <figure class="gallery-visual"><video src="assets/motion/overflow.mp4" poster="assets/screenshots/overflow.png" width="390" height="844" muted playsinline loop preload="none" aria-label="간당간당 앱 영상"></video></figure>
             <div class="gallery-copy"><p class="game-name">간당간당</p><h3>한 방울만 더.<br />넘치면 네가 진다.</h3><p>같은 컵에 돌아가며 물을 붓는 2~6인 눈치 게임. 멈출 타이밍을 놓친 한 사람이 마지막 물방울의 주인이 됩니다.</p></div>
+          </section>
+          <section class="game-panel" id="caught" role="tabpanel" aria-labelledby="tab-caught" tabindex="0" hidden>
+            <figure class="gallery-visual"><video src="assets/motion/caught-you.mp4" poster="assets/screenshots/caught-you.png" width="390" height="844" muted playsinline loop preload="none" aria-label="딱 걸렸어 앱 영상"></video></figure>
+            <div class="gallery-copy"><p class="game-name">딱 걸렸어</p><h3>질문은 직접.<br />표정은 카메라가.</h3><p>질문 하나에 흔들리는 표정. 친구의 반응이 그대로 게임이 되는 순간.</p><p class="game-note">오락용 게임이며 과학적 거짓말 탐지기가 아닙니다.</p></div>
           </section>
         </div>
       </section>
