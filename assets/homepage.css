@@ -114,7 +114,7 @@ main { padding-top: var(--nav-height); }
   .hero-focus { top: 28%; }
   .hero-focus h2 { font-size: 68px; }
   .story-copy { top: 20%; }
-  .story-copy h2 { font-size: 60px; }
+  .story-copy h2 { font-size: clamp(40px, 5.4vw, 60px); }
   .story-visual { top: 60px; bottom: 60px; }
 }
 @media (max-width: 1023px) {
@@ -132,7 +132,7 @@ main { padding-top: var(--nav-height); }
   .hero-lineup { height: 34svh; }
   .hero-focus { top: 18%; }
   .hero-focus h2 { font-size: 52px; }
-  .story-copy h2 { font-size: 46px; }
+  .story-copy h2 { font-size: clamp(36px, 4.5vw, 46px); }
   .story-description { margin-top: 22px; font-size: 16px; }
   .story-link { margin-top: 20px; }
   .story-overflow .story-visual video { object-position: center 62%; }
