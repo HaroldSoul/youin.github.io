@@ -63,15 +63,15 @@ main { padding-top: var(--nav-height); }
 .story-stage { position: relative; min-height: 740px; height: calc(100svh - var(--nav-height)); overflow: clip; }
 .story-overflow .story-stage { background: var(--surface); }
 .story-copy { position: absolute; top: 24%; left: max(7vw, calc((100% - 1160px) / 2)); width: 38%; max-width: 520px; }
-.story-kick .story-copy { left: 57%; }
+.story-punch .story-copy { left: 57%; }
 .story-copy h2 { margin-top: 24px; font-size: clamp(52px, 5.4vw, 78px); font-weight: 750; line-height: 1.12; }
 .story-description { margin-top: 28px; color: var(--secondary); font-size: 18px; }
 .story-link { display: inline-flex; align-items: center; gap: 18px; min-height: 44px; margin-top: 25px; font-size: 14px; text-decoration: underline; text-underline-offset: 6px; }
 .story-link:hover { color: var(--secondary); }
 .story-visual { position: absolute; top: 50%; left: 73%; height: min(75svh, 720px); aspect-ratio: 390 / 844; transform: translate(-50%, -50%); overflow: hidden; border-radius: 22px; box-shadow: 0 22px 45px rgb(35 34 31 / .12); }
-.story-kick .story-visual { left: 27%; }
+.story-punch .story-visual { left: 27%; }
 .story-visual > img, .story-visual > video { width: 100%; height: 100%; object-fit: contain; }
-.motion-enabled .story-kick { height: 165svh; }
+.motion-enabled .story-punch { height: 165svh; }
 .motion-enabled .story-overflow { height: 170svh; }
 .motion-enabled .story-stage { position: sticky; top: var(--nav-height); height: calc(100svh - var(--nav-height)); min-height: 0; }
 .games-section { padding-block: 125px 130px; }
@@ -163,11 +163,11 @@ main { padding-top: var(--nav-height); }
   .motion-enabled .hero-track { height: 185svh; }
   .game-name { font-size: 16px; }
   .story-stage { display: flex; flex-direction: column; gap: 36px; height: auto; min-height: 0; padding: 64px 24px; }
-  .story-copy, .story-kick .story-copy { position: relative; top: auto; left: auto; width: 100%; max-width: none; }
+  .story-copy, .story-punch .story-copy { position: relative; top: auto; left: auto; width: 100%; max-width: none; }
   .story-copy h2 { margin-top: 18px; font-size: clamp(36px, 10.5vw, 44px); }
   .story-description { margin-top: 20px; font-size: 15px; }
   .story-link { margin-top: 18px; font-size: 13px; }
-  .story-visual, .story-kick .story-visual { position: relative; top: auto; left: auto; width: min(70vw, 250px); height: auto; transform: none; align-self: center; border-radius: 18px; }
+  .story-visual, .story-punch .story-visual { position: relative; top: auto; left: auto; width: min(70vw, 250px); height: auto; transform: none; align-self: center; border-radius: 18px; }
   .motion-enabled .story-track { height: auto; }
   .motion-enabled .story-stage { position: relative; top: auto; height: auto; padding: 64px 24px; }
   .games-section { padding-block: 85px; }
