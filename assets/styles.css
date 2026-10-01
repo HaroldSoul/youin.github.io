@@ -1213,6 +1213,10 @@ p {
 .details-grid .button {
   margin-top: 26px;
 }
+.home-page #privacy,
+.home-page #release {
+  scroll-margin-top: 110px;
+}
 .idea-note {
   max-width: 460px;
   margin-top: 14px;
@@ -1374,6 +1378,10 @@ p {
   }
   .details-scene-inner {
     padding-block: 90px 40px;
+  }
+  .home-page #privacy,
+  .home-page #release {
+    scroll-margin-top: 90px;
   }
   .details-grid {
     grid-template-columns: 1fr;
