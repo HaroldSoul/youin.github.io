@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#f7f5ee" />
+    <meta name="theme-color" content="#faf9f6" />
     <title>YOU IN? - Think of a friend. Call them out.</title>
     <meta name="description" content="A social party game for friends. Explore Caught You, Last Kick, Who More?, Punch King, and Overflow. Coming to iOS and Android." />
     <link rel="canonical" href="https://haroldsoul.github.io/youin.github.io/en/" />
@@ -25,10 +25,10 @@
     <link rel="icon" type="image/svg+xml" href="../assets/app-icon.svg" />
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png" />
-    <link rel="stylesheet" href="../assets/styles.css?v=20261001-bright-home-r1" />
+    <link rel="stylesheet" href="../assets/styles.css?v=20261001-neutral-home-r1" />
     <script src="../assets/language.js"></script>
     <script src="../assets/config.js?v=20260928-bug-report" defer></script>
-    <script src="../assets/site.js?v=20261001-bright-home-r1" defer></script>
+    <script src="../assets/site.js?v=20261001-neutral-home-r1" defer></script>
   </head>
   <body class="home-page">
     <a class="skip" href="#main">Skip to content</a>
@@ -48,44 +48,33 @@
       </nav>
     </header>
 
-    <nav class="page-rail" aria-label="Homepage sections">
-      <a href="#intro" data-scene-link="intro" aria-label="Introduction"><span>00</span><i>INTRO</i></a>
-      <a href="#caught" data-scene-link="caught" aria-label="Caught You"><span>01</span><i>CAUGHT</i></a>
-      <a href="#last-kick" data-scene-link="last-kick" aria-label="Last Kick"><span>02</span><i>KICK</i></a>
-      <a href="#who-more" data-scene-link="who-more" aria-label="Who More?"><span>03</span><i>WHO</i></a>
-      <a href="#punch-king" data-scene-link="punch-king" aria-label="Punch King"><span>04</span><i>PUNCH</i></a>
-      <a href="#overflow" data-scene-link="overflow" aria-label="Overflow"><span>05</span><i>OVERFLOW</i></a>
-      <a href="#next-game" data-scene-link="next-game" aria-label="Suggest a game"><span>06</span><i>NEXT</i></a>
-      <a href="#privacy" data-scene-link="privacy" aria-label="Privacy principle"><span>07</span><i>DEVICE</i></a>
-      <a href="#release" data-scene-link="release" aria-label="Release information"><span>08</span><i>READY</i></a>
-    </nav>
-
     <main id="main" class="home-main" tabindex="-1">
       <section class="scene scene-hero" id="intro" data-scene aria-labelledby="hero-title">
         <div class="wrap scene-hero-grid">
           <div class="scene-hero-copy">
-            <div class="eyebrow">THE PARTY STARTS WITH YOU.</div>
             <h1 id="hero-title">Think of a friend.<br />Call them out.</h1>
             <p>Questions, reactions, and playful penalties.<br />A social party game for your kind of friends.</p>
             <a class="button" href="#caught">Meet the games <span class="arrow" aria-hidden="true">↓</span></a>
+            <nav class="game-index" aria-label="Browse the games">
+              <a href="#caught" data-scene-link="caught">Caught You</a>
+              <a href="#last-kick" data-scene-link="last-kick">Last Kick</a>
+              <a href="#who-more" data-scene-link="who-more">Who More?</a>
+              <a href="#punch-king" data-scene-link="punch-king">Punch King</a>
+              <a href="#overflow" data-scene-link="overflow">Overflow</a>
+            </nav>
           </div>
           <figure class="scene-hero-visual">
-            <div class="hero-phone hero-phone-back">
+            <div class="hero-phone">
               <img src="../assets/screenshots/home-en.png?v=1cd8cad-en-20260928" width="390" height="844" fetchpriority="high" alt="YouIN app home screen with five games in English" />
             </div>
-            <div class="hero-phone hero-phone-front">
-              <img src="../assets/screenshots/overflow-en.png?v=overflow-en-r1-20260929" width="390" height="844" fetchpriority="high" alt="Overflow gameplay as water spills over the cup" />
-            </div>
-            <figcaption>ACTUAL APP SCREENS / DEVELOPMENT BUILD</figcaption>
+            <figcaption>Actual app screen · Development build</figcaption>
           </figure>
-          <div class="scene-counter" aria-hidden="true"><span>00</span><b>08</b></div>
         </div>
       </section>
 
       <section class="scene game-scene scene-caught" id="caught" data-scene aria-labelledby="caught-title">
         <div class="wrap game-scene-grid">
           <div class="game-scene-copy">
-            <p class="scene-label"><span>01</span> REACTION GAME</p>
             <h2 id="caught-title">Caught You</h2>
             <p class="scene-tagline">Your question.<br />The camera catches the reaction.</p>
             <p class="scene-description">One question. One suspicious expression. Put a friend on the spot and let their reaction play the round.</p>
@@ -95,15 +84,12 @@
             <video data-game-motion="caught" src="../assets/motion/caught-you-en.mp4?v=1cd8cad-en-20260928" poster="../assets/screenshots/caught-you-en-start.webp?v=scroll-start-en-r1-20260929" width="390" height="844" muted playsinline preload="none" aria-hidden="true"></video>
             <span>Actual app motion <span aria-hidden="true">↗</span></span>
           </a>
-          <div class="scene-word" aria-hidden="true">CAUGHT</div>
-          <div class="scene-counter" aria-hidden="true"><span>01</span><b>08</b></div>
         </div>
       </section>
 
       <section class="scene game-scene scene-kick" id="last-kick" data-scene aria-labelledby="kick-title">
         <div class="wrap game-scene-grid scene-grid-reverse">
           <div class="game-scene-copy">
-            <p class="scene-label"><span>02</span> NEARBY BATTLE</p>
             <h2 id="kick-title">Last Kick</h2>
             <p class="scene-tagline">Nobody knows<br />until the final kick.</p>
             <p class="scene-description">Connect nearby, play a quick round, and keep teasing the result long after the game is over.</p>
@@ -112,15 +98,12 @@
             <img src="../assets/screenshots/last-kick-en.png?v=1cd8cad-en-20260928" width="390" height="844" loading="lazy" decoding="async" alt="Penalty shootout showing the Kicker Wins result" />
             <span>Actual app screen <span aria-hidden="true">↗</span></span>
           </a>
-          <div class="scene-word" aria-hidden="true">LAST KICK</div>
-          <div class="scene-counter" aria-hidden="true"><span>02</span><b>08</b></div>
         </div>
       </section>
 
       <section class="scene game-scene scene-who" id="who-more" data-scene aria-labelledby="who-title">
         <div class="wrap game-scene-grid">
           <div class="game-scene-copy">
-            <p class="scene-label"><span>03</span> RANDOM CHOICE</p>
             <h2 id="who-title">Who More?</h2>
             <p class="scene-tagline">Whose type<br />am I today?</p>
             <p class="scene-description">A fictional NPC with a different taste every round. The choice is fun precisely because it means nothing.</p>
@@ -130,15 +113,12 @@
             <video data-game-motion="who-more" src="../assets/motion/who-more-en.mp4?v=who-more-doyun-20260929" poster="../assets/screenshots/who-more-en-start.webp?v=who-more-doyun-20260929" width="390" height="844" muted playsinline preload="none" aria-hidden="true"></video>
             <span>Actual app motion <span aria-hidden="true">↗</span></span>
           </a>
-          <div class="scene-word" aria-hidden="true">WHO MORE</div>
-          <div class="scene-counter" aria-hidden="true"><span>03</span><b>08</b></div>
         </div>
       </section>
 
       <section class="scene game-scene scene-punch" id="punch-king" data-scene aria-labelledby="punch-title">
         <div class="wrap game-scene-grid scene-grid-reverse">
           <div class="game-scene-copy">
-            <p class="scene-label"><span>04</span> QUICK CHALLENGE</p>
             <h2 id="punch-title">Punch King</h2>
             <p class="scene-tagline">One challenge.<br />One big laugh.</p>
             <p class="scene-description">Step up while your friends watch, take a playful swing, and turn a quick challenge into the loudest moment.</p>
@@ -147,15 +127,12 @@
             <video data-game-motion="punch-king" src="../assets/motion/punch-king-en.mp4?v=1cd8cad-en-20260928" poster="../assets/screenshots/punch-king-en-start.webp?v=scroll-start-en-r1-20260929" width="390" height="844" muted playsinline preload="none" aria-hidden="true"></video>
             <span>Actual app motion <span aria-hidden="true">↗</span></span>
           </a>
-          <div class="scene-word" aria-hidden="true">PUNCH</div>
-          <div class="scene-counter" aria-hidden="true"><span>04</span><b>08</b></div>
         </div>
       </section>
 
       <section class="scene game-scene scene-overflow" id="overflow" data-scene aria-labelledby="overflow-title">
         <div class="wrap game-scene-grid">
           <div class="game-scene-copy">
-            <p class="scene-label"><span>05</span> PUSH YOUR LUCK</p>
             <h2 id="overflow-title">Overflow</h2>
             <p class="scene-tagline">One drop too far.<br />You lose.</p>
             <p class="scene-description">Take turns pouring into the same cup in a 2–6 player game of nerve. Miss the moment to stop, and the final drop is yours.</p>
@@ -164,55 +141,33 @@
             <video data-game-motion="overflow" src="../assets/motion/overflow-en.mp4?v=overflow-en-r1-20260929" poster="../assets/screenshots/overflow-en-start.webp?v=scroll-start-en-r1-20260929" width="390" height="844" muted playsinline preload="none" aria-hidden="true"></video>
             <span>Actual app motion <span aria-hidden="true">↗</span></span>
           </a>
-          <div class="scene-word" aria-hidden="true">OVERFLOW</div>
-          <div class="scene-counter" aria-hidden="true"><span>05</span><b>08</b></div>
         </div>
       </section>
 
-      <section class="scene next-game-scene" id="next-game" data-scene aria-labelledby="next-game-title">
-        <div class="wrap next-game-grid">
-          <div class="next-game-copy">
-            <p class="scene-label"><span>06</span> YOUR TURN</p>
-            <h2 id="next-game-title">NEXT<br />GAME?</h2>
-            <p class="scene-tagline">The next game<br />is still unwritten.</p>
-            <p class="scene-description">Tell us which moment with friends should become a game. A great idea could be the start of the next YouIN.</p>
-            <a class="button next-game-button" href="https://docs.google.com/forms/d/e/1FAIpQLSc1MYcngYG8amJCzjuibhah1JOLcP3KrZ5KxR39UUlbij3KSg/viewform?usp=publish-editor" target="_blank" rel="noopener">Pitch this game! <span aria-hidden="true">↗</span></a>
-            <p class="idea-note">Your idea is sent through Google Forms. Please do not include personal information.</p>
+      <section class="scene details-scene" id="next-game" data-scene aria-labelledby="next-game-title">
+        <div class="wrap details-scene-inner">
+          <div class="details-grid">
+            <section class="next-game-copy" aria-labelledby="next-game-title">
+              <h2 id="next-game-title">The next game<br />is still unwritten.</h2>
+              <p class="scene-description">Tell us which moment with friends should become a game. A great idea could be the start of the next YouIN.</p>
+              <a class="button next-game-button" href="https://docs.google.com/forms/d/e/1FAIpQLSc1MYcngYG8amJCzjuibhah1JOLcP3KrZ5KxR39UUlbij3KSg/viewform?usp=publish-editor" target="_blank" rel="noopener">Pitch this game! <span aria-hidden="true">↗</span></a>
+              <p class="idea-note">Your idea is sent through Google Forms. Please do not include personal information.</p>
+            </section>
+            <section class="privacy-scene-copy" id="privacy" aria-labelledby="privacy-title">
+              <h2 id="privacy-title">Camera data stays<br />on your device.</h2>
+              <p>Camera footage and photos are processed on your device for reaction effects and gameplay. Originals are not uploaded to our servers or stored permanently.</p>
+              <p>Temporary face-analysis data is designed to be discarded after a round or when you exit the game.</p>
+              <a class="button button-outline" href="privacy/">Privacy policy <span aria-hidden="true">↗</span></a>
+            </section>
           </div>
-          <div class="idea-deck" aria-hidden="true">
-            <div class="idea-card idea-card-back"><span>WHO?</span></div>
-            <div class="idea-card idea-card-middle"><span>WHERE?</span></div>
-            <div class="idea-card idea-card-front"><small>NEXT GAME / 001</small><strong>YOUR<br />IDEA</strong><span>WHAT HAPPENS?</span></div>
-          </div>
-          <div class="scene-counter" aria-hidden="true"><span>06</span><b>08</b></div>
-        </div>
-      </section>
-
-      <section class="scene privacy-scene" id="privacy" data-scene aria-labelledby="privacy-title">
-        <div class="wrap privacy-scene-grid">
-          <div>
-            <p class="scene-label"><span>07</span> YOUR CAMERA. YOUR DEVICE.</p>
-            <h2 id="privacy-title">The fun stays with friends.<br />Camera data stays<br />on your device.</h2>
-          </div>
-          <div class="privacy-scene-copy">
-            <p>Camera footage and photos are processed on your device for reaction effects and gameplay. Originals are not uploaded to our servers or stored permanently.</p>
-            <p>Temporary face-analysis data is designed to be discarded after a round or when you exit the game.</p>
-            <a class="button button-outline" href="privacy/">Privacy policy <span aria-hidden="true">↗</span></a>
-          </div>
-          <div class="privacy-orbit" aria-hidden="true"><span>ON DEVICE</span><i></i><b>LOCAL</b></div>
-          <div class="scene-counter" aria-hidden="true"><span>07</span><b>08</b></div>
-        </div>
-      </section>
-
-      <section class="scene release-scene" id="release" data-scene aria-labelledby="release-title">
-        <div class="wrap release-scene-inner">
-          <p class="scene-label"><span>08</span> COMING SOON</p>
-          <h2 id="release-title">Next game night.<br />YOU IN?</h2>
-          <p>Getting ready for iOS and Android.</p>
-          <div class="release-actions"><span>iOS / COMING SOON</span><span>Android / COMING SOON</span></div>
-          <nav class="release-links" aria-label="Footer"><a href="privacy/">Privacy policy</a><a href="support/">Support</a></nav>
-          <footer class="scene-footer"><strong>YOU IN?</strong><span>© 2026 YouIN</span></footer>
-          <div class="scene-counter" aria-hidden="true"><span>08</span><b>08</b></div>
+          <footer class="home-footer" id="release" aria-label="Release information">
+            <div class="release-summary">
+              <strong>YOU IN?</strong>
+              <p>Getting ready for iOS and Android.</p>
+            </div>
+            <nav class="release-links" aria-label="Footer"><a href="privacy/">Privacy policy</a><a href="support/">Support</a></nav>
+            <span class="copyright">© 2026 YouIN</span>
+          </footer>
         </div>
       </section>
     </main>
