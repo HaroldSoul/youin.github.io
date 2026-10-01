@@ -151,22 +151,28 @@
       let target;
       if (direction > 0) {
         // Taller chapters must remain scrollable before advancing to the next one.
-        if (y < current.offsetTop + current.offsetHeight - window.innerHeight - 2) return;
-        if (index === scenes.length - 1) return;
-        target = scenes[index + 1].offsetTop;
+        if (y >= current.offsetTop + current.offsetHeight - window.innerHeight - 2
+          && index < scenes.length - 1) target = scenes[index + 1].offsetTop;
       } else if (y > current.offsetTop + 2) {
-        if (current.offsetHeight > window.innerHeight + 2) return;
-        target = current.offsetTop;
-      } else {
-        if (index === 0) return;
+        if (current.offsetHeight > window.innerHeight + 2) {
+          const bottom = current.offsetTop + current.offsetHeight - window.innerHeight;
+          // Reversing between chapters returns to the taller chapter's visible bottom.
+          if (y > bottom + 2) target = bottom;
+        } else {
+          target = current.offsetTop;
+        }
+      } else if (index > 0) {
         const previous = scenes[index - 1];
         target = Math.max(previous.offsetTop,
           previous.offsetTop + previous.offsetHeight - window.innerHeight);
       }
-      if (Math.abs(target - y) < 2) return;
+      if (target === undefined || Math.abs(target - y) < 2) {
+        releaseWheel();
+        return;
+      }
 
       event.preventDefault();
-      releaseWheel();
+      cancelAnimationFrame(wheelFrame);
       wheelTarget = target;
       wheelDirection = direction;
       document.documentElement.classList.add("wheel-paging");
@@ -187,6 +193,8 @@
       wheelFrame = requestAnimationFrame(move);
     }, { passive: false });
     window.addEventListener("resize", releaseWheel);
+    window.addEventListener("hashchange", releaseWheel);
+    window.addEventListener("popstate", releaseWheel);
     document.addEventListener("pointerdown", releaseWheel, { passive: true });
     document.addEventListener("keydown", releaseWheel);
 
