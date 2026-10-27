@@ -7,7 +7,7 @@
     <title>Privacy policy - YOU IN?</title>
     <meta
       name="description"
-      content="YouIN privacy: on-device camera and microphone processing, nearby connections, planned advertising, your choices, and support."
+      content="YouIN privacy: on-device camera and microphone processing, nearby connections, advertising, analytics, and crash diagnostics, your choices, and support."
     />
     <link
       rel="canonical"
@@ -21,7 +21,7 @@
     <meta property="og:title" content="Privacy policy - YOU IN?" />
     <meta
       property="og:description"
-      content="YouIN privacy: on-device camera and microphone processing, nearby connections, planned advertising, your choices, and support."
+      content="YouIN privacy: on-device camera and microphone processing, nearby connections, advertising, analytics, and crash diagnostics, your choices, and support."
     />
     <meta
       property="og:url"
@@ -54,7 +54,7 @@
     />
     <link rel="stylesheet" href="../../assets/styles.css?v=20261001-neutral-home-r1" />
     <script src="../../assets/language.js"></script>
-    <script src="../../assets/config.js?v=20260928-bug-report" defer></script>
+    <script src="../../assets/config.js?v=20261027-privacy" defer></script>
     <script src="../../assets/site.js?v=20261002-product-home-r1" defer></script>
   </head>
   <body>
@@ -102,8 +102,8 @@
             What stays on your device, what may be exchanged, and the choices
             you have.
           </p>
-          <time class="date" datetime="2026-09-28"
-            >Last updated: September 28, 2026</time
+          <time class="date" datetime="2026-10-27"
+            >Last updated: October 27, 2026</time
           >
         </div>
         <div class="document-layout">
@@ -118,7 +118,7 @@
               <li><a href="#on-device">On-device face processing</a></li>
               <li><a href="#nearby">Nearby device connections</a></li>
               <li>
-                <a href="#advertising">Advertising and consent: planned</a>
+                <a href="#advertising">Advertising, analytics, and crash diagnostics</a>
               </li>
               <li><a href="#children">Children and guardians</a></li>
               <li><a href="#retention">Retention and deletion</a></li>
@@ -130,317 +130,96 @@
           </nav>
           <article class="document">
             <div class="notice">
-              <p>
-                YouIN is preparing for release. AdMob advertising and UMP
-                consent management are planned for launch. This policy
-                distinguishes those plans from confirmed camera-processing
-                principles.
-              </p>
+              <p>Original camera, photo, and microphone input is processed on-device. The app’s advertising, analytics, and crash SDKs separately collect and transmit information. Advertising choices do not also disable Firebase collection.</p>
             </div>
             <section id="scope">
-              <h2>01. Scope and release status</h2>
-              <p>
-                This policy explains information handling in the YouIN app and
-                official website. The app is preparing for release. Planned
-                features, including advertising and consent management, are
-                identified separately below. If the release version changes how
-                information is handled, we will update this policy before those
-                changes are made public.
-              </p>
-              <p>
-                This website has no advertising SDK, visitor analytics tool, or
-                camera feature. It may save your language preference in your
-                browser’s local storage. GitHub Pages, which hosts the website,
-                may process web-request information such as IP addresses under
-                its own policy.
-              </p>
+              <h2>01. Scope and current status</h2>
+              <p>This policy explains information handling in the YouIN app and official website, based on the implementation in app version 0.1.13 (build 15). The app includes Google AdMob and UMP, Firebase Analytics, and Crashlytics. It does not provide account creation or external account login.</p>
+              <p>This website has no advertising SDK, visitor analytics tool, or camera feature. It may save your language preference in your browser’s local storage. GitHub Pages, which hosts the website, may process web-request information such as IP addresses under its own policy.</p>
             </section>
             <section id="information">
               <h2>02. Information processed</h2>
               <ul>
-                <li>
-                  <strong>Camera and photo information during play:</strong>
-                  camera footage, photos you capture or select, and temporary
-                  face-analysis results are processed on your device for
-                  reaction effects and gameplay.
-                </li>
-                <li>
-                  <strong>Nearby play information:</strong> connection
-                  information and gameplay messages may be exchanged between
-                  participating devices to discover peers and run a game.
-                </li>
-                <li>
-                  <strong>Microphone and sound-reaction information:</strong>
-                  when you enable sound reactions in Overflow, microphone sound
-                  levels are processed on your device. Original audio is not
-                  stored or uploaded to YouIN servers.
-                </li>
-                <li>
-                  <strong>Advertising information:</strong> after an ad SDK is
-                  introduced at launch, it may process advertising identifiers,
-                  IP addresses, approximate location, diagnostics, and ad
-                  interactions. See the advertising section below.
-                </li>
-                <li>
-                  <strong>Bug reports and support requests:</strong> we use the
-                  issue description, optional device information, and optional
-                  contact address you voluntarily submit through the Google
-                  Forms bug report to investigate and follow up. If you use
-                  GitHub Issues for privacy or other inquiries, your public
-                  profile and post may also be available. Do not submit face
-                  photos or sensitive personal information.
-                </li>
+              <li><strong>Camera and photo information during play:</strong> camera footage, photos you capture or select, and temporary face-analysis results are processed on your device for reaction effects and gameplay. Original media is not provided to advertising or analytics SDKs.</li>
+              <li><strong>Microphone and sound reactions:</strong> when you enable sound reactions in Overflow, microphone sound levels are processed on your device. Original audio is not saved as a file or uploaded. Derived game events may be exchanged with a nearby player or retained in local game records.</li>
+              <li><strong>Motion and game records:</strong> Punch King uses motion sensors on a phone or supported Apple Watch for scoring and visual feedback. Game results, play times, player display names, scores, game data for recreating play, and preferences may be saved on your device. Punch King uses a hash of an operating-system device identifier locally to distinguish device-specific records.</li>
+              <li><strong>Nearby play:</strong> display names and connection identifiers used to find peers, and messages containing game settings, inputs, and results, are exchanged between participating devices. There is no free-text chat feature.</li>
+              <li><strong>Advertising, analytics, and diagnostics:</strong> SDKs collect approximate location, app or ad interactions, crash logs, diagnostics, and device or other identifiers. Advertising SDKs may share these types of information, except crash logs, for advertising, analytics, and fraud prevention. The sections below explain each service.</li>
+              <li><strong>Bug reports and support:</strong> we use issue descriptions, device information, contact details, and other information you voluntarily send through Google Forms or email to investigate and follow up. If you choose GitHub Issues, your profile and post may be public. Do not submit face photos or sensitive personal information.</li>
               </ul>
             </section>
             <section id="permissions">
               <h2>03. Camera, photo-library, and microphone permissions</h2>
-              <p>
-                Camera permission is used for capture and real-time processing
-                needed for face-reaction effects and gameplay. Photo-library
-                access is used when you choose a photo for a game. Where your
-                operating system supports it, you can grant access only to
-                selected photos.
-              </p>
-              <p>
-                Microphone permission is used to detect sound levels when you
-                enable the optional sound reaction in Overflow. Processing
-                happens on your device. Original audio is not kept as a
-                recording or sent to YouIN servers. You can play without
-                microphone permission when sound reactions are off.
-              </p>
-              <p>
-                You can deny or revoke permissions in device settings. Features
-                that need a denied permission may be unavailable or limited.
-                Only use another person’s photo with their consent.
-              </p>
+              <p>Camera permission is used for capture and real-time processing needed for face-reaction effects and gameplay. Photo-library access or the operating system’s photo picker is used when you choose a photo for a game. Where supported, you can grant access only to selected photos.</p>
+              <p>Microphone permission is used to detect sound levels when you enable the optional sound reaction in Overflow. Processing happens on your device. Original audio is not kept as a recording or sent to servers. You can play without microphone permission when sound reactions are off.</p>
+              <p>You can deny or revoke permissions in device settings. Features that need a denied permission may be limited. Only use another person’s photo with their consent. Permissions for nearby connections are explained below.</p>
             </section>
             <section id="on-device">
               <h2>04. On-device face processing</h2>
-              <p>
-                Camera footage and photos you capture or select are processed on
-                your device for reaction effects and gameplay. Original footage
-                and photos are not uploaded to YouIN servers or stored
-                permanently. Temporary face-analysis data is designed to be
-                discarded when a round ends or you exit the game.
-              </p>
-              <p>
-                We do not infer sensitive attributes such as identity, gender,
-                age, race, or skin color. “Caught You” is an entertainment game,
-                not a scientific lie detector. It must not be used for important
-                decisions involving employment, legal matters, medicine,
-                finance, or relationship surveillance. “Who More?” results
-                reflect fictional NPC preferences that change from game to game,
-                not an objective assessment of appearance.
-              </p>
-              <p>
-                This camera-processing principle does not mean that all
-                information stays on your device. Nearby gameplay messages,
-                planned advertising SDKs, and website hosting involve separate
-                information handling.
-              </p>
+              <p>Camera footage and photos you capture or select are processed on your device to calculate face landmarks, expression and face-shape values for gameplay. Original footage, photos, and temporary face-analysis values are not automatically uploaded to YouIN or SDK providers’ servers. Temporary images and face-analysis objects are released when the game session is cleaned up. Local records such as result text and scores may remain.</p>
+              <p>We do not infer sensitive attributes such as identity, gender, age, race, or skin color. “Caught You” is an entertainment game, not a scientific lie detector. It must not be used for important decisions involving employment, legal matters, medicine, finance, or relationship surveillance. “Who More?” results reflect fictional NPC preferences that change from game to game, not an objective assessment of appearance.</p>
+              <p>If you choose to share a result, the app creates an image file on your device that may include photos and results visible on screen, and passes it to the operating system’s share feature. You choose the destination. The receiving app or service’s policies then apply. Separately, nearby game messages, advertising, analytics and diagnostic SDKs, and website hosting process information as described below.</p>
             </section>
             <section id="nearby">
               <h2>05. Nearby device connections</h2>
-              <p>
-                Nearby play in Last Kick and Overflow may use Nearby
-                Connections. When you join nearby play, connection information
-                and gameplay messages are exchanged between participating
-                devices. Depending on the operating system and feature,
-                Bluetooth, Wi-Fi, nearby-device, or local-network permissions
-                may be needed.
-              </p>
-              <p>
-                The Google Play services Nearby SDK may process usage
-                diagnostics, including connection-performance metrics and device
-                information. Google says users can manage usage and diagnostics
-                sharing in Google settings on supported Android devices.
-                Connection messages are separate from original camera media; we
-                do not transmit original camera media for nearby connections.
-              </p>
+              <p>Nearby play in Last Kick, Overflow, and Punch King uses Nearby Connections. Devices exchange connection information and game messages, without transmitting original camera footage, photos, or microphone audio. Derived sound intensity, motion-based game inputs, and scores may be exchanged. With a supported Apple Watch, motion and score information needed for play also passes between the watch and its connected iPhone.</p>
+              <p>Bluetooth, Wi-Fi, nearby-device, or local-network permissions may be needed, depending on the operating system. Some older Android versions may require location permission to discover nearby devices.</p>
+              <p>The Google Play services Nearby SDK on Android sends usage diagnostics, including connection performance and device information, to Google. On supported devices, you can manage this collection in Settings &gt; Google &gt; Usage &amp; diagnostics. This setting does not also disable YouIN’s Firebase collection or control advertising choices.</p>
             </section>
             <section id="advertising">
-              <h2>06. Advertising and consent: planned</h2>
-              <p>
-                We plan to introduce Google AdMob advertising and Google User
-                Messaging Platform (UMP) consent management when the service
-                launches. This website does not include those advertising SDKs.
-                This section describes information handling planned for the app
-                at launch.
-              </p>
-              <p>
-                The Google Mobile Ads SDK may process
-                <strong
-                  >advertising and other device identifiers, IP addresses,
-                  approximate location inferred from information such as IP
-                  addresses, diagnostics, and interactions such as ad
-                  impressions and clicks</strong
-                >
-                for ad delivery, measurement, diagnostics, and fraud prevention.
-                The specific information depends on the operating system, SDK
-                version, ad settings, and consent status. Processing camera data
-                on-device does not mean that advertising data also stays
-                on-device.
-              </p>
-              <p>
-                We plan to use UMP to present privacy choices and consent where
-                required, and provide in-app privacy options when changes to
-                those choices are required. Refusing consent does not
-                necessarily stop every kind of processing. Limited advertising
-                or fraud-prevention processing may still apply; refer to the
-                actual consent screen and Google’s policies.
-              </p>
+              <h2>06. Advertising, analytics, and crash diagnostics</h2>
+              <p><strong>Google AdMob and UMP:</strong> the app uses AdMob advertising and UMP consent management. For advertising, measurement, and fraud prevention, it may collect and share advertising and other identifiers, IP addresses and approximate location derived from them, app or ad interactions, and diagnostics. Information varies with the operating system, SDK, and consent status.</p>
+              <p>The app refreshes UMP consent information at startup and initializes and requests ads when the SDK allows ad requests. It shows consent forms where needed. When UMP requires it, you can revisit choices through “Ad privacy choices” in MY settings. Refusing consent or restricting an advertising identifier does not stop all SDK processing.</p>
+              <p><strong>Firebase Analytics:</strong> for usage analysis, it processes basic app activity such as sessions and screen views, app-instance and advertising identifiers, and approximate location derived from IP addresses.</p>
+              <p><strong>Firebase Crashlytics:</strong> for stability analysis, it processes crash traces, app state and version, device and operating-system information, installation and session identifiers, and basic Analytics events preceding a crash. Android native crashes include NDK diagnostics.</p>
+              <p>Firebase Analytics and Crashlytics collection is on by default. The current app has no separate switch to disable all of it. UMP advertising choices and Nearby usage-and-diagnostics settings do not control Firebase collection. Advertising, analytics, and crash information is sent to Google servers, and the relevant Google SDKs encrypt data in transit. This website does not include these SDKs.</p>
             </section>
             <section id="children">
               <h2>07. Children and guardians</h2>
-              <p>
-                Check the age rating and usage guidance in the app stores at
-                launch. Minors should review camera, photo, microphone,
-                nearby-play, and advertising choices with a guardian. Guardians should help
-                manage children’s permissions and app use, and prevent the use
-                or disclosure of other people’s photos without consent.
-              </p>
-              <p>
-                If your local rules require a guardian’s consent, decide whether
-                to use the app together with a guardian. If you believe a
-                child’s personal information has been unintentionally provided
-                in a bug report or support request, contact support. Do not add
-                the child’s name, photos, or contact details to the bug report
-                form or a public issue.
-              </p>
+              <p>YouIN is intended for people aged 13 and over and is not directed to children under 13. Also check the app-store age rating and usage guidance. Minors should review camera, photo, microphone, nearby-play, and advertising choices with a guardian. Guardians should help prevent using or sharing other people’s photos without consent.</p>
+              <p>If your local rules require a guardian’s consent, decide whether to use the app together with a guardian. If you believe information about a child under 13 was provided in a bug report or support request, contact the email below. Do not add the child’s name, photos, or contact details to a public issue.</p>
             </section>
             <section id="retention">
               <h2>08. Retention and deletion</h2>
-              <p>
-                Original camera footage, photos, and microphone audio used by
-                Overflow are not uploaded to servers or stored permanently.
-                Temporary face-analysis data and sound-level values used during
-                a game are designed to be discarded at the end of a round or
-                when the game is exited. Selecting an existing photo does not
-                delete the original from your photo library.
-              </p>
-              <p>
-                You can delete the website’s language preference by clearing
-                browser storage. Bug-report and support information is used for
-                as long as necessary to investigate and follow up. Retention
-                and deletion of Google Forms responses and public posts also
-                depend on each support provider’s features and policies. You
-                can request deletion without repeating sensitive information.
-              </p>
-              <p>
-                Retention by planned Google advertising services and Nearby
-                services is subject to each provider’s policies and settings. We
-                do not guarantee that YouIN can directly delete all information
-                held by those providers.
-              </p>
+              <p>There is no automatic server upload of original camera footage, photos, or microphone audio. Temporary buffers and analysis objects used for live camera and sound processing are released when the relevant session is cleaned up. This does not mean all game data is deleted as soon as a round ends. Selecting a photo does not delete the original in your photo library.</p>
+              <p>The app keeps up to 100 match-history entries locally, with individual deletion in the history screen. Punch King best scores, recent attempts and device-key hashes, game preferences, ad-frequency information, and images created for sharing may also remain in app storage. Overflow records may contain derived sound events but no original audio. You can clear local app data using the operating system’s app-data removal or uninstall features. Copies already shared to another app and operating-system backups must be managed separately through the relevant service or device settings.</p>
+              <p>Clear browser storage to delete the website’s language preference. Bug-report and support information is used as needed to investigate and follow up. Retention and deletion of email, Google Forms responses, and public posts also depend on each provider’s features and policies. Send deletion requests to the email below.</p>
+              <p>Information processed on servers by advertising, Analytics, Crashlytics, and Nearby services follows their retention policies and settings. Exiting the app, deleting local history, revoking permissions, or uninstalling does not immediately delete information already sent to servers. We review the request’s scope, whether records can be identified, and the provider’s deletion features. We do not guarantee that we can locate and directly delete all SDK data.</p>
             </section>
             <section id="third-parties">
               <h2>09. Third-party services</h2>
-              <p>
-                The following official resources explain each provider’s role:
-              </p>
+              <p>The following official resources explain each provider’s role:</p>
               <ul>
-                <li>
-                  <a href="https://policies.google.com/privacy"
-                    >Google Privacy Policy</a
-                  >
-                  : information handling for the Google Forms bug report,
-                  AdMob, UMP, and other Google services.
-                </li>
-                <li>
-                  <a
-                    href="https://developers.google.com/admob/android/privacy/play-data-disclosure"
-                    >Google Mobile Ads SDK data disclosure</a
-                  >
-                  and
-                  <a href="https://developers.google.com/admob/android/privacy"
-                    >UMP guidance</a
-                  >
-                  : planned advertising and consent management.
-                </li>
-                <li>
-                  <a
-                    href="https://developers.google.com/nearby/connections/overview"
-                    >Nearby Connections overview</a
-                  >
-                  : nearby connections and usage diagnostics.
-                </li>
-                <li>
-                  <a
-                    href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement"
-                    >GitHub General Privacy Statement</a
-                  >
-                  : website hosting and the public channel for privacy or other
-                  inquiries.
-                </li>
+              <li><a href="https://policies.google.com/privacy">Google Privacy Policy</a>: Google Forms, email, and Google services.</li>
+              <li><a href="https://developers.google.com/admob/android/privacy/play-data-disclosure">Google Mobile Ads SDK data disclosure</a> and <a href="https://developers.google.com/admob/android/privacy">UMP guidance</a>: advertising and consent management.</li>
+              <li><a href="https://firebase.google.com/docs/android/play-data-disclosure">Firebase SDK data disclosure</a>, <a href="https://support.google.com/analytics/answer/11582702">Analytics data disclosure</a>, and <a href="https://firebase.google.com/support/privacy">Firebase privacy and security</a>: usage analysis, crash diagnostics, retention, and deletion.</li>
+              <li><a href="https://developers.google.com/nearby/connections/overview">Nearby Connections overview</a>: nearby connections and usage diagnostics.</li>
+              <li><a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub General Privacy Statement</a>: website hosting and public issues you choose to post.</li>
               </ul>
-              <p>
-                Following these links takes you to services governed by their
-                providers’ policies. Google may process advertising and
-                diagnostic information on its own servers. Its policies explain
-                processing locations and details.
-              </p>
+              <p>Following these links takes you to services governed by their providers’ policies. Providers such as Google may process information on their servers, including in other countries. Consult each provider’s policies and settings for processing locations, retention, and other details.</p>
             </section>
             <section id="choices">
               <h2>10. Your choices</h2>
               <ul>
-                <li>
-                  Change camera, photo, microphone, nearby-device, and local-network
-                  permissions in device settings.
-                </li>
-                <li>
-                  End a round or exit the app to stop face processing for that
-                  game.
-                </li>
-                <li>
-                  After launch, revisit consent through in-app privacy options
-                  where provided. You can also manage advertising-identifier and
-                  tracking settings in your operating system.
-                </li>
-                <li>
-                  Manage usage and diagnostics sharing in Google settings on
-                  supported devices.
-                </li>
-                <li>
-                  Clear browser storage or use KO/EN to change the website’s
-                  language preference.
-                </li>
-                <li>
-                  Use support to request access to, correction of, or deletion
-                  of information you submitted. We will review the request and
-                  explain what action is available within the relevant service.
-                </li>
+              <li>Change camera, photo, microphone, nearby-device, and local-network permissions in device settings.</li>
+              <li>Exit a game to stop its face or motion processing. Turn off Overflow sound reactions or revoke microphone permission.</li>
+              <li>Delete individual match-history entries, or use operating-system features to remove local app data.</li>
+              <li>When UMP requires it, review advertising choices through “Ad privacy choices” in MY settings. You can also manage advertising-identifier and tracking settings in your operating system. These choices do not disable all Firebase collection.</li>
+              <li>Manage Nearby usage and diagnostics sharing in Google settings on supported Android devices. The current app does not provide a separate Firebase collection opt-out switch.</li>
+              <li>Clear browser storage or use KO/EN to change the website’s language preference.</li>
+              <li>Use the email below to request access to, correction of, or deletion of information you provided. We review the scope and explain what action is available within the relevant service. There are no app accounts, so no account-deletion feature is provided.</li>
               </ul>
             </section>
             <section id="changes">
               <h2>11. Policy changes</h2>
-              <p>
-                We will update this page and its revision date when features,
-                SDKs, or actual information handling change. We plan to
-                communicate significant changes through the website, in-app
-                notices, or another appropriate method. Before release, we will
-                review consistency between the app’s actual behavior, app-store
-                privacy disclosures, and this policy.
-              </p>
+              <p>We update this page and its revision date when features, SDKs, or actual information handling change. Significant changes are communicated through the website, in-app notices, or another appropriate method. When updating the app and publishing store disclosures, we review consistency between actual app behavior, store privacy disclosures, and this policy.</p>
             </section>
             <section class="document-contact" id="contact">
               <h2>12. Contact</h2>
-              <p data-contact-intro>
-                Use the channel below for YouIN privacy and support requests. A
-                dedicated support email has not yet been published.
-              </p>
-              <p class="contact-note" data-contact-note>
-                Our temporary support channel is GitHub Issues. Posts are public
-                and a GitHub account is needed to submit. Do not include face
-                photos, personal contact details, or other sensitive
-                information.
-              </p>
+              <p data-contact-intro>Use the email below for YouIN privacy and support requests.</p>
+              <p class="contact-note" data-contact-note>Contact: haroldsouldev@gmail.com. Please do not send photos of faces or sensitive personal information. Do not post personal information in public GitHub Issues.</p>
               <div class="contact-actions">
-                <a
-                  class="button"
-                  data-support-link
-                  href="https://github.com/HaroldSoul/youin.github.io/issues"
-                  >Open a support issue</a
-                >
+              <a class="button" data-support-link href="mailto:haroldsouldev@gmail.com">Email support</a>
               </div>
             </section>
           </article>
